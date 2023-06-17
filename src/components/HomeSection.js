@@ -11,14 +11,23 @@ import nextJS from "../assets/nextjs.webp";
 import nodeJS from "../assets/nodejs.webp";
 
 function HomeSection() {
-    const homeRef = useRef(null);
-    const portfolioRef = useRef(null);
-    const clickToHome = () => {
-        homeRef.current?.scrollIntoView({behavior: "smooth"});
-    }
-    const clickToPortfolio = () => {
-        portfolioRef.current?.scrollIntoView({behavior: "smooth"});
-    }
+  const homeRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const resumeRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const clickToHome = () => {
+    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const clickToPortfolio = () => {
+    portfolioRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const clickToResume = () => {
+    resumeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const clickToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -62,8 +71,8 @@ function HomeSection() {
             <div className="navbar-item">
               <li onClick={clickToHome}>About Me</li>
               <li onClick={clickToPortfolio}>Portfolio</li>
-              <li>Resume</li>
-              <li>Contact Me</li>
+              <li onClick={clickToResume}>Resume</li>
+              <li onClick={clickToContact}>Contact Me</li>
             </div>
           </div>
         </ul>
@@ -130,6 +139,14 @@ function HomeSection() {
       <div className="home-mid container-layout" ref={portfolioRef}>
         <h1 className="h1-green-left">Portfolio</h1>
         <h3>1. Hyundai Motors</h3>
+      </div>
+
+      <div className="home-mid-2 container-layout" ref={resumeRef}>
+        <h1 className="h1-green-left">Resume</h1>
+      </div>
+
+      <div className="home-mid-3 container-layout" ref={contactRef}>
+        <h1 className="h1-green-left">Contact Me</h1>
       </div>
     </>
   );
