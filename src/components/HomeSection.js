@@ -1,6 +1,7 @@
 import "./HomeSection.css";
 import { SocialIcon } from "react-social-icons";
 import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import jun from "../assets/JunLee.webp";
 import html from "../assets/html-5.webp";
 import css from "../assets/css-3.webp";
@@ -86,22 +87,46 @@ function HomeSection() {
     }
   };
 
+  const form = useRef();
   const handleSubmit = (e) => {
-    let firstName = document.querySelector("#firstName").value;
-    let lastName = document.querySelector("#lastName").value;
-    let message = document.querySelector("#message").value;
+    let firstName = document.querySelector("#FN").value;
+    let lastName = document.querySelector("#LN").value;
+    let email = document.querySelector("#EM").value;
+    let message = document.querySelector("#MA").value;
 
     if (firstName == "") {
-      alert("Please enter your first name.");
       e.preventDefault();
+      alert("Please enter your first name!");
     } else if (lastName == "") {
-      alert("Please enter your last name.");
       e.preventDefault();
+      alert("Please enter your last name!");
+    } else if (email == "") {
+      e.preventDefault();
+      alert("Please enter your email!");
     } else if (message == "") {
-      alert("Please enter the message.");
       e.preventDefault();
+      alert("Please enter the message!");
     } else {
-      alert("The message was successfully sent!");
+      e.preventDefault();
+      e.preventDefault();
+      emailjs
+        .sendForm(
+          "service_wmziyym",
+          "template_88iu1vq",
+          form.current,
+          "pcJjne1oLOj6u9K6j"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      window.location.reload();
+      window.scrollTo(0, 0);
+      alert("Your message was successfully sent!");
     }
   };
 
@@ -240,28 +265,36 @@ function HomeSection() {
 
         <div className="mid-3-flex-container">
           <div className="mid-3-flexbox1">
-            <form id="myForm" onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit}>
               <h2>Get In Touch With Me :)</h2>
               <div style={{ display: "flex" }}>
                 <div style={{ width: "100%" }}>
-                  <label htmlFor="firstName">
+                  <label htmlFor="FN">
                     <h4>First Name</h4>
                   </label>
-                  <input type="text" id="firstName"></input>
+                  <input type="text" name="firstName" id="FN"></input>
                 </div>
                 <div style={{ width: "100%" }}>
-                  <label htmlFor="lastName">
+                  <label htmlFor="LN">
                     <h4>Last Name</h4>
                   </label>
-                  <input type="text" id="lastName"></input>
+                  <input type="text" name="lastName" id="LN"></input>
                 </div>
               </div>
               <div style={{ display: "flex" }}>
                 <div style={{ width: "100%" }}>
-                  <label htmlFor="message">
+                  <label htmlFor="EM">
+                    <h4>Email</h4>
+                  </label>
+                  <input name="email" type="email" id="EM"></input>
+                </div>
+              </div>
+              <div style={{ display: "flex" }}>
+                <div style={{ width: "100%" }}>
+                  <label htmlFor="MA">
                     <h4>Message</h4>
                   </label>
-                  <textarea id="message"></textarea>
+                  <textarea name="message" id="MA"></textarea>
                 </div>
               </div>
 

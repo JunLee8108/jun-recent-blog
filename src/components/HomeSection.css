@@ -213,6 +213,12 @@ input[type="text"] {
     margin-bottom: 30px;
 }
 
+input[type="email"] {
+    height: 35px;
+    width: 40%;
+    margin-bottom: 30px;
+}
+
 .mid-3-flexbox1 button {
     margin-bottom: 30px;
 }
@@ -220,7 +226,7 @@ input[type="text"] {
 textarea {
     width: 81%;
     height: 150px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     resize: none;
 }
 
