@@ -30,7 +30,7 @@ function HomeSection() {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Dark Mode
+  // dark mode
   let [isDark, setDark] = useState(false);
   const darkMode = () => {
     if (isDark) {
