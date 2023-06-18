@@ -9,11 +9,16 @@ import react from "../assets/react.webp";
 import vue from "../assets/vue.webp";
 import nextJS from "../assets/nextjs.webp";
 import nodeJS from "../assets/nodejs.webp";
+import email from "../assets/mail.png";
+import resume from "../assets/resume.png";
+import linkedin from "../assets/linkedin.png";
+import me from "../assets/user.png";
+import portfolio from "../assets/profile.png";
+import contact from "../assets/contact-information.png";
 
 function HomeSection() {
   const homeRef = useRef(null);
   const portfolioRef = useRef(null);
-  const resumeRef = useRef(null);
   const contactRef = useRef(null);
 
   const clickToHome = () => {
@@ -21,9 +26,6 @@ function HomeSection() {
   };
   const clickToPortfolio = () => {
     portfolioRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-  const clickToResume = () => {
-    resumeRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   const clickToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -69,10 +71,19 @@ function HomeSection() {
             </div>
 
             <div className="navbar-item">
-              <li onClick={clickToHome}>About Me</li>
-              <li onClick={clickToPortfolio}>Portfolio</li>
-              <li onClick={clickToResume}>Resume</li>
-              <li onClick={clickToContact}>Contact Me</li>
+              <li onClick={clickToHome}>
+                <img src={me}></img>
+                About Me
+              </li>
+              <li onClick={clickToPortfolio}>
+                <img src={portfolio}></img>
+                Portfolio
+              </li>
+              <li onClick={clickToContact}>
+                <img src={contact}></img>
+                Contact Me
+              </li>
+              <li>Dark Mode</li>
             </div>
           </div>
         </ul>
@@ -110,9 +121,8 @@ function HomeSection() {
             <h4>Vanilla Javascript</h4>
           </div>
           <div className="top-2-flexbox">
-            <div style={{ width: "100%" }}>
-              <img src={react}></img>
-            </div>
+            <img src={react}></img>
+
             <h4>React</h4>
           </div>
           <div className="top-2-flexbox">
@@ -141,12 +151,60 @@ function HomeSection() {
         <h3>1. Hyundai Motors</h3>
       </div>
 
-      <div className="home-mid-2 container-layout" ref={resumeRef}>
-        <h1 className="h1-green-left">Resume</h1>
-      </div>
-
       <div className="home-mid-3 container-layout" ref={contactRef}>
         <h1 className="h1-green-left">Contact Me</h1>
+
+        <div className="mid-3-flex-container">
+          <div className="mid-3-flexbox1">
+            <form>
+              <h2>Get In Touch With Me</h2>
+              <div style={{ display: "flex" }}>
+                <div style={{ width: "100%" }}>
+                  <label htmlFor="firstName">
+                    <h4>First Name</h4>
+                  </label>
+                  <input type="text" id="firstName"></input>
+                </div>
+                <div style={{ width: "100%" }}>
+                  <label htmlFor="lastName">
+                    <h4>Last Name</h4>
+                  </label>
+                  <input type="text" id="lastName"></input>
+                </div>
+              </div>
+              <div style={{ display: "flex" }}>
+                <div style={{ width: "100%" }}>
+                  <label htmlFor="message">
+                    <h4>Message</h4>
+                  </label>
+                  <textarea id="message"></textarea>
+                </div>
+              </div>
+
+              <button type="submit" className="green-button">
+                Submit
+              </button>
+            </form>
+          </div>
+          <div className="mid-3-flexbox2">
+            <div className="flexbox">
+              <h2>Email</h2>
+              <a href="mailto:lejhn1@gmail.com">
+                <img src={email} />
+              </a>
+            </div>
+            <div className="flexbox">
+              <h2>Linkedin</h2>
+              <a href="https://www.linkedin.com/in/jeong-hyun-lee-a5362319a/">
+                <img src={linkedin} />
+              </a>
+            </div>
+            <div className="flexbox">
+              <h2>Resume</h2>
+              <img src={resume} />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
