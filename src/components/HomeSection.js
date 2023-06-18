@@ -1,6 +1,6 @@
 import "./HomeSection.css";
 import { SocialIcon } from "react-social-icons";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import jun from "../assets/JunLee.webp";
 import html from "../assets/html-5.webp";
 import css from "../assets/css-3.webp";
@@ -20,7 +20,6 @@ function HomeSection() {
   const homeRef = useRef(null);
   const portfolioRef = useRef(null);
   const contactRef = useRef(null);
-
   const clickToHome = () => {
     homeRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -31,8 +30,64 @@ function HomeSection() {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Dark Mode
+  let [isDark, setDark] = useState(false);
+  const darkMode = () => {
+    if (isDark) {
+      setDark(false);
+      document.querySelector(".navbar-container").style.background =
+        "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
+      document.querySelector(".navbar-container").style.color = "white";
+      document.querySelector(".home").style.color = "black";
+      document.querySelector(".home-top-1").style.background =
+        "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
+      document.querySelector(".home-top-2").style.background =
+        "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
+      document.querySelector(".home-mid").style.background =
+        "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
+      document.querySelector(".home-mid-3").style.background =
+        "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
+      document.querySelector(".mid-3-flexbox1").style.background =
+        "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
+      document.querySelector(".mid-3-flexbox2").style.background =
+        "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
+      document.querySelector(".top-1-flexbox1-button").style.background =
+        "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
+      let borderDark = document.querySelectorAll(".h1-green-left");
+      for (let i = 0; i < borderDark.length; i++) {
+        document.querySelectorAll(".h1-green-left")[i].style.borderLeft =
+          "solid #0ba360 5px";
+      }
+    } else {
+      setDark(true);
+      document.querySelector(".navbar-container").style.background =
+        "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
+      document.querySelector(".navbar-container").style.color = "white";
+      document.querySelector(".home").style.color = "white";
+      document.querySelector(".home-top-1").style.background =
+        "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)";
+      document.querySelector(".home-top-2").style.background =
+        "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)";
+      document.querySelector(".home-mid").style.background =
+        "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)";
+      document.querySelector(".home-mid-3").style.background =
+        "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)";
+      document.querySelector(".mid-3-flexbox1").style.background =
+        "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
+      document.querySelector(".mid-3-flexbox2").style.background =
+        "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
+      document.querySelector(".top-1-flexbox1-button").style.background =
+        "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
+      let borderDark = document.querySelectorAll(".h1-green-left");
+      for (let i = 0; i < borderDark.length; i++) {
+        document.querySelectorAll(".h1-green-left")[i].style.borderLeft =
+          "solid silver 3px";
+      }
+    }
+  };
+
   return (
-    <>
+    <div className="home">
       <div className="navbar-container">
         <ul>
           <div className="profile text-center">
@@ -83,7 +138,15 @@ function HomeSection() {
                 <img src={contact}></img>
                 Contact Me
               </li>
-              <li>Dark Mode</li>
+              <li>
+                <label className="switch" htmlFor="dark">
+                  <input type="checkbox" onClick={darkMode} id="dark" />
+                  <span className="slider round"></span>
+                </label>
+                <label htmlFor="dark" style={{ cursor: "pointer" }}>
+                  Dark Mode
+                </label>
+              </li>
             </div>
           </div>
         </ul>
@@ -99,7 +162,9 @@ function HomeSection() {
             efficient code and specialized in frontend development for complex
             web apps.
           </p>
-          <button onClick={clickToPortfolio}>View Portfolio</button>
+          <button onClick={clickToPortfolio} className="top-1-flexbox1-button">
+            View Portfolio
+          </button>
         </div>
         <div className="top-1-flexbox2"></div>
       </div>
@@ -206,7 +271,7 @@ function HomeSection() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
