@@ -30,7 +30,7 @@ function HomeSection() {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // dark mode
+  // Dark Mode
   let [isDark, setDark] = useState(false);
   const darkMode = () => {
     if (isDark) {
@@ -83,6 +83,25 @@ function HomeSection() {
         document.querySelectorAll(".h1-green-left")[i].style.borderLeft =
           "solid silver 3px";
       }
+    }
+  };
+
+  const handleSubmit = (e) => {
+    let firstName = document.querySelector("#firstName").value;
+    let lastName = document.querySelector("#lastName").value;
+    let message = document.querySelector("#message").value;
+
+    if (firstName == "") {
+      alert("Please enter your first name.");
+      e.preventDefault();
+    } else if (lastName == "") {
+      alert("Please enter your last name.");
+      e.preventDefault();
+    } else if (message == "") {
+      alert("Please enter the message.");
+      e.preventDefault();
+    } else {
+      alert("The message was successfully sent!");
     }
   };
 
@@ -221,8 +240,8 @@ function HomeSection() {
 
         <div className="mid-3-flex-container">
           <div className="mid-3-flexbox1">
-            <form>
-              <h2>Get In Touch With Me</h2>
+            <form id="myForm" onSubmit={handleSubmit}>
+              <h2>Get In Touch With Me :)</h2>
               <div style={{ display: "flex" }}>
                 <div style={{ width: "100%" }}>
                   <label htmlFor="firstName">
@@ -246,7 +265,7 @@ function HomeSection() {
                 </div>
               </div>
 
-              <button type="submit" className="green-button">
+              <button type="submit" className="submit-button">
                 Submit
               </button>
             </form>
