@@ -267,20 +267,21 @@ function HomeSection() {
           <div className="mid-3-flexbox1">
             <form ref={form} onSubmit={handleSubmit}>
               <h2>Get In Touch With Me :)</h2>
-              <div style={{ display: "flex" }}>
-                <div style={{ width: "100%" }}>
+              <div className="input-flex-container">
+                <div className="input-flexbox">
                   <label htmlFor="FN">
                     <h4>First Name</h4>
                   </label>
                   <input type="text" name="firstName" id="FN"></input>
                 </div>
-                <div style={{ width: "100%" }}>
+                <div className="input-flexbox">
                   <label htmlFor="LN">
                     <h4>Last Name</h4>
                   </label>
                   <input type="text" name="lastName" id="LN"></input>
                 </div>
               </div>
+
               <div style={{ display: "flex" }}>
                 <div style={{ width: "100%" }}>
                   <label htmlFor="EM">
