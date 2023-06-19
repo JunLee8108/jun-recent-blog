@@ -523,6 +523,7 @@ input:checked+.slider:before {
         margin-right: 0px;
         margin-bottom: 30px;
         padding: 10px;
+        width: 100%;
     }
 
     input[type="text"] {
@@ -535,6 +536,7 @@ input:checked+.slider:before {
 
     .mid-3-flexbox2 {
         flex-direction: column;
+        width: 100%;
     }
 
     .flexbox img {
