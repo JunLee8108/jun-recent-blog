@@ -107,14 +107,13 @@ li img {
 
 /* home-top (about me) */
 .home-top-1 {
-    height: 50vh;
+    height: 100%;
     display: flex;
     background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
 .top-1-flexbox1 {
     width: 60%;
-
 }
 
 .top-1-flexbox1-button {
@@ -125,6 +124,7 @@ li img {
     font-weight: bold;
     border-radius: 5px;
     color: white;
+    margin-top: 20px;
     cursor: pointer;
 }
 
@@ -137,16 +137,18 @@ li img {
 .top-1-flexbox2 {
     width: 40%;
     padding: 50px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .top-1-flexbox2 img {
-    width: 40%;
-    height: 40%;
+    width: 25%;
+    max-width: 250px;
 }
 
 .home-top-2 {
-    height: 50vh;
+    height: 100%;
     background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
@@ -220,12 +222,16 @@ input[type="text"] {
     height: 35px;
     width: 60%;
     margin-bottom: 30px;
+    border-radius: 5px;
+    border: none;
 }
 
 input[type="email"] {
     height: 35px;
     width: 40%;
     margin-bottom: 30px;
+    border-radius: 5px;
+    border: none;
 }
 
 .mid-3-flexbox1 button {
@@ -237,6 +243,8 @@ textarea {
     height: 150px;
     margin-bottom: 50px;
     resize: none;
+    border-radius: 5px;
+    border: none;
 }
 
 .mid-3-flexbox2 {
@@ -356,6 +364,10 @@ input:checked+.slider:before {
 
     .top-1-flexbox2 {
         width: 100%;
+    }
+
+    .top-1-flexbox2 img {
+        visibility: hidden;
     }
 
     .home-top-2 {

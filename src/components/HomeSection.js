@@ -16,6 +16,7 @@ import linkedin from "../assets/linkedin.png";
 import me from "../assets/user.png";
 import portfolio from "../assets/profile.png";
 import contact from "../assets/contact-information.png";
+import developer from "../assets/code.png";
 
 function HomeSection() {
   const homeRef = useRef(null);
@@ -34,6 +35,7 @@ function HomeSection() {
   // Dark Mode
   let [isDark, setDark] = useState(false);
   const darkMode = () => {
+    // dark mode off
     if (isDark) {
       setDark(false);
       document.querySelector(".navbar-container").style.background =
@@ -59,6 +61,7 @@ function HomeSection() {
         document.querySelectorAll(".h1-green-left")[i].style.borderLeft =
           "solid #0ba360 5px";
       }
+      // dark mode on
     } else {
       setDark(true);
       document.querySelector(".navbar-container").style.background =
@@ -210,7 +213,9 @@ function HomeSection() {
             View Portfolio
           </button>
         </div>
-        <div className="top-1-flexbox2"></div>
+        <div className="top-1-flexbox2">
+          <img src={developer}></img>
+        </div>
       </div>
 
       <div className="home-top-2 container-layout">
