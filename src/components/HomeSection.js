@@ -1,22 +1,25 @@
 import "./HomeSection.css";
 import { SocialIcon } from "react-social-icons";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import jun from "../assets/JunLee.webp";
-import html from "../assets/html-5.webp";
-import css from "../assets/css-3.webp";
-import js from "../assets/js.webp";
-import react from "../assets/react.webp";
-import vue from "../assets/vue.webp";
-import nextJS from "../assets/nextjs.webp";
-import nodeJS from "../assets/nodejs.webp";
-import email from "../assets/mail.png";
-import resume from "../assets/resume.png";
-import linkedin from "../assets/linkedin.png";
-import me from "../assets/user.png";
-import portfolio from "../assets/profile.png";
-import contact from "../assets/contact-information.png";
-import developer from "../assets/code.png";
+import { useRef } from "react";
+import {
+  jun,
+  html,
+  css,
+  js,
+  react,
+  vue,
+  nextJS,
+  nodeJS,
+  email,
+  resume,
+  linkedin,
+  me,
+  portfolio,
+  contact,
+  developer,
+} from "./helpher/imgData";
+import { darkMode } from "./helpher/dark";
+import SendingEmailJS from "./helpher/SendingEmailJS";
 
 function HomeSection() {
   const homeRef = useRef(null);
@@ -32,109 +35,9 @@ function HomeSection() {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Dark Mode
-  let [isDark, setDark] = useState(false);
-  const darkMode = () => {
-    // dark mode off
-    if (isDark) {
-      setDark(false);
-      document.querySelector(".navbar-container").style.background =
-        "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
-      document.querySelector(".navbar-container").style.color = "white";
-      document.querySelector(".home").style.color = "black";
-      document.querySelector(".home-top-1").style.background =
-        "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
-      document.querySelector(".home-top-2").style.background =
-        "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
-      document.querySelector(".home-mid").style.background =
-        "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
-      document.querySelector(".home-mid-3").style.background =
-        "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
-      document.querySelector(".mid-3-flexbox1").style.background =
-        "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
-      document.querySelector(".mid-3-flexbox2").style.background =
-        "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
-      document.querySelector(".top-1-flexbox1-button").style.background =
-        "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
-      let borderDark = document.querySelectorAll(".h1-green-left");
-      for (let i = 0; i < borderDark.length; i++) {
-        document.querySelectorAll(".h1-green-left")[i].style.borderLeft =
-          "solid #0ba360 5px";
-      }
-      // dark mode on
-    } else {
-      setDark(true);
-      document.querySelector(".navbar-container").style.background =
-        "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
-      document.querySelector(".navbar-container").style.color = "white";
-      document.querySelector(".home").style.color = "white";
-      document.querySelector(".home-top-1").style.background =
-        "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)";
-      document.querySelector(".home-top-2").style.background =
-        "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)";
-      document.querySelector(".home-mid").style.background =
-        "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)";
-      document.querySelector(".home-mid-3").style.background =
-        "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)";
-      document.querySelector(".mid-3-flexbox1").style.background =
-        "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
-      document.querySelector(".mid-3-flexbox2").style.background =
-        "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
-      document.querySelector(".top-1-flexbox1-button").style.background =
-        "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
-      let borderDark = document.querySelectorAll(".h1-green-left");
-      for (let i = 0; i < borderDark.length; i++) {
-        document.querySelectorAll(".h1-green-left")[i].style.borderLeft =
-          "solid silver 5px";
-      }
-    }
-  };
-
-  const form = useRef();
-  const handleSubmit = (e) => {
-    let firstName = document.querySelector("#FN").value;
-    let lastName = document.querySelector("#LN").value;
-    let email = document.querySelector("#EM").value;
-    let message = document.querySelector("#MA").value;
-
-    if (firstName == "") {
-      e.preventDefault();
-      alert("Please enter your first name!");
-    } else if (lastName == "") {
-      e.preventDefault();
-      alert("Please enter your last name!");
-    } else if (email == "") {
-      e.preventDefault();
-      alert("Please enter your email!");
-    } else if (message == "") {
-      e.preventDefault();
-      alert("Please enter the message!");
-    } else {
-      e.preventDefault();
-      e.preventDefault();
-      emailjs
-        .sendForm(
-          "service_wmziyym",
-          "template_88iu1vq",
-          form.current,
-          "pcJjne1oLOj6u9K6j"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-      window.location.reload();
-      window.scrollTo(0, 0);
-      alert("Your message was successfully sent!");
-    }
-  };
-
   return (
     <div className="home">
+      {/* Side Navbar */}
       <div className="navbar-container">
         <ul>
           <div className="profile text-center">
@@ -199,6 +102,7 @@ function HomeSection() {
         </ul>
       </div>
 
+      {/* About Me 1 - Introduction */}
       <div className="home-top-1 container-layout" ref={homeRef}>
         <div className="top-1-flexbox1">
           <h1 className="h1-green-left">Jeong Hyun Lee</h1>
@@ -218,6 +122,7 @@ function HomeSection() {
         </div>
       </div>
 
+      {/* About Me 2 - Tech Stack */}
       <div className="home-top-2 container-layout">
         <h1 className="h1-green-left">Tech Stack</h1>
         <div className="top-2-flex-container">
@@ -260,54 +165,18 @@ function HomeSection() {
         </div>
       </div>
 
+      {/* Portfolio */}
       <div className="home-mid container-layout" ref={portfolioRef}>
         <h1 className="h1-green-left">Portfolio</h1>
         <h3>1. Hyundai Motors</h3>
       </div>
 
+      {/* Contact Me */}
       <div className="home-mid-3 container-layout" ref={contactRef}>
         <h1 className="h1-green-left">Contact Me</h1>
-
         <div className="mid-3-flex-container">
           <div className="mid-3-flexbox1">
-            <form ref={form} onSubmit={handleSubmit}>
-              <h2>Get In Touch With Me :)</h2>
-              <div className="input-flex-container">
-                <div className="input-flexbox">
-                  <label htmlFor="FN">
-                    <h4>First Name</h4>
-                  </label>
-                  <input type="text" name="firstName" id="FN"></input>
-                </div>
-                <div className="input-flexbox">
-                  <label htmlFor="LN">
-                    <h4>Last Name</h4>
-                  </label>
-                  <input type="text" name="lastName" id="LN"></input>
-                </div>
-              </div>
-
-              <div style={{ display: "flex" }}>
-                <div style={{ width: "100%" }}>
-                  <label htmlFor="EM">
-                    <h4>Email</h4>
-                  </label>
-                  <input name="email" type="email" id="EM"></input>
-                </div>
-              </div>
-              <div style={{ display: "flex" }}>
-                <div style={{ width: "100%" }}>
-                  <label htmlFor="MA">
-                    <h4>Message</h4>
-                  </label>
-                  <textarea name="message" id="MA"></textarea>
-                </div>
-              </div>
-
-              <button type="submit" className="submit-button">
-                Submit
-              </button>
-            </form>
+            <SendingEmailJS></SendingEmailJS>
           </div>
           <div className="mid-3-flexbox2">
             <div className="flexbox">
