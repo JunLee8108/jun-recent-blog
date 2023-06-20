@@ -85,7 +85,7 @@ function HomeSection() {
       let borderDark = document.querySelectorAll(".h1-green-left");
       for (let i = 0; i < borderDark.length; i++) {
         document.querySelectorAll(".h1-green-left")[i].style.borderLeft =
-          "solid silver 3px";
+          "solid silver 5px";
       }
     }
   };

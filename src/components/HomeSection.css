@@ -7,6 +7,7 @@
     padding-left: 10px;
     padding-bottom: 5px;
     border-left: solid #0ba360 5px;
+    border-radius: 5px;
     margin-bottom: 30px;
 }
 
@@ -46,6 +47,7 @@
     background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
     overflow: auto;
     color: white;
+    border-radius: 3px;
 }
 
 .navbar-container p {
@@ -63,7 +65,7 @@ ul {
     width: 160px;
     height: 170px;
     margin-top: 10px;
-    background-color: white;
+    background-color: snow;
     border-radius: 100px;
 }
 
@@ -132,7 +134,7 @@ li img {
 .top-1-flexbox1 button:hover {
     transform: scale(1.1);
     transition: all 0.2s linear;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .top-1-flexbox2 {
@@ -200,6 +202,8 @@ li img {
     color: white;
     text-align: center;
     background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .input-flex-container {
@@ -213,10 +217,15 @@ li img {
 .mid-3-flexbox2 {
     width: 100%;
     height: 100%;
-    padding: 15px;
     color: white;
     text-align: left;
     background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
 }
 
 input[type="text"] {
@@ -248,13 +257,6 @@ textarea {
     border: none;
 }
 
-.mid-3-flexbox2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-}
-
 .flexbox {
     width: 100%;
     text-align: center;
@@ -272,6 +274,8 @@ textarea {
 .flexbox img:hover {
     transform: scale(1.2);
     transition: all 0.2s linear;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
 }
 
 /* slider */
