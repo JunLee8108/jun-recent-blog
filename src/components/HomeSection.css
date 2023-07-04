@@ -15,7 +15,8 @@
     width: calc(100% - 320px);
     left: 320px;
     position: relative;
-    padding: 50px;
+    padding: 20px;
+    padding-left: 30px;
 }
 
 .submit-button {
@@ -127,7 +128,7 @@ li img {
     font-weight: bold;
     border-radius: 5px;
     color: white;
-    margin-top: 40px;
+    margin-top: 20px;
     cursor: pointer;
 }
 
