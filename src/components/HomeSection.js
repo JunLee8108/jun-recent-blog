@@ -17,6 +17,8 @@ import {
   portfolio,
   contact,
   developer,
+  portfolio1,
+  portfolio2,
 } from "./helpher/imgData";
 import { darkMode } from "./helpher/dark";
 import SendingEmailJS from "./helpher/SendingEmailJS";
@@ -42,7 +44,7 @@ function HomeSection() {
         <ul>
           <div className="profile text-center">
             <h3>Jeong Hyun Lee</h3>
-            <img src={jun} />
+            <img src={jun} alt="Jun's Profile"/>
           </div>
 
           <div>
@@ -77,15 +79,15 @@ function HomeSection() {
 
             <div className="navbar-item">
               <li onClick={clickToHome}>
-                <img src={me}></img>
+                <img src={me} alt="About emoticon"></img>
                 About Me
               </li>
               <li onClick={clickToPortfolio}>
-                <img src={portfolio}></img>
+                <img src={portfolio} alt="Portfolio emoticon"></img>
                 Portfolio
               </li>
               <li onClick={clickToContact}>
-                <img src={contact}></img>
+                <img src={contact} alt="Contact emoticon"></img>
                 Contact Me
               </li>
               <li>
@@ -106,19 +108,24 @@ function HomeSection() {
       <div className="home-top-1 container-layout" ref={homeRef}>
         <div className="top-1-flexbox1">
           <h1 className="h1-green-left">Jeong Hyun Lee</h1>
-          <h4 style={{ color: "grey" }}>Frontend Developer</h4>
-          <p style={{ lineHeight: "30px" }}>
-            UI/UX Designer for designing beautiful and intuitive user
-            experiences, and a developer who focuses on writing clean and
-            efficient code and specialized in frontend development for complex
-            web apps.
-          </p>
-          <button onClick={clickToPortfolio} className="top-1-flexbox1-button">
-            View Portfolio
-          </button>
+          <div className="top-1-introBox">
+            <h4 style={{ color: "grey" }}>Frontend Developer</h4>
+            <p style={{ lineHeight: "30px" }}>
+              UI/UX Designer for designing beautiful and intuitive user
+              experiences, and a developer who focuses on writing clean and
+              efficient code and specialized in frontend development for complex
+              web apps.
+            </p>
+            <button
+              onClick={clickToPortfolio}
+              className="top-1-flexbox1-button"
+            >
+              View Portfolio
+            </button>
+          </div>
         </div>
         <div className="top-1-flexbox2">
-          <img src={developer}></img>
+          <img src={developer} alt="Developer emoticon"></img>
         </div>
       </div>
 
@@ -128,37 +135,37 @@ function HomeSection() {
         <div className="top-2-flex-container">
           <div className="top-2-flexbox">
             <div style={{ width: "100%" }}>
-              <img src={html}></img>
-              <img src={css}></img>
+              <img src={html} alt="HTML"></img>
+              <img src={css} alt="CSS"></img>
             </div>
             <h4>HTML & CSS</h4>
           </div>
           <div className="top-2-flexbox">
             <div style={{ width: "100%" }}>
-              <img src={js}></img>
+              <img src={js} alt="JavaScript"></img>
             </div>
             <h4>Vanilla Javascript</h4>
           </div>
           <div className="top-2-flexbox">
-            <img src={react}></img>
+            <img src={react} alt="React"></img>
 
             <h4>React</h4>
           </div>
           <div className="top-2-flexbox">
             <div style={{ width: "100%" }}>
-              <img src={vue}></img>
+              <img src={vue} alt="Vue"></img>
             </div>
             <h4>Vue</h4>
           </div>
           <div className="top-2-flexbox">
             <div style={{ width: "100%" }}>
-              <img src={nextJS}></img>
+              <img src={nextJS} alt="NextJS"></img>
             </div>
             <h4>Next.js</h4>
           </div>
           <div className="top-2-flexbox">
             <div style={{ width: "100%" }}>
-              <img src={nodeJS}></img>
+              <img src={nodeJS} alt="NodeJS"></img>
             </div>
             <h4>Node.js</h4>
           </div>
@@ -168,7 +175,50 @@ function HomeSection() {
       {/* Portfolio */}
       <div className="home-mid container-layout" ref={portfolioRef}>
         <h1 className="h1-green-left">Portfolio</h1>
-        <h3>1. Hyundai Motors</h3>
+
+        <div className="home-mid-textbox-container">
+          <h3>1. Hyundai Motors</h3>
+          <img src={portfolio1} alt="Hyundai motors main"/>
+          <div className="home-mid-textbox">
+            <h4>Demo: </h4>
+            <SocialIcon
+              url="https://main.dv90aq3ksc428.amplifyapp.com/"
+              bgColor="black"
+              fgColor="white"
+              className="portfolio-icon"
+              style={{ width: "30px", height: "30px", marginRight: "30px" }}
+            />
+            <h4>Github: </h4>
+            <SocialIcon
+              url="https://github.com/JunLee8108"
+              bgColor="black"
+              fgColor="white"
+              className="portfolio-icon"
+              style={{ width: "30px", height: "30px" }}
+            />
+          </div>
+
+          <h3>2. Woojoon's Gallery</h3>
+          <img src={portfolio2} alt="Woojoon's gallery main" />
+          <div className="home-mid-textbox">
+            <h4>Demo: </h4>
+            <SocialIcon
+              url="https://main.d2uscgl8cg14gb.amplifyapp.com/"
+              bgColor="rgb(85, 88, 218)"
+              fgColor="white"
+              className="portfolio-icon"
+              style={{ width: "30px", height: "30px", marginRight: "30px" }}
+            />
+            <h4>Github: </h4>
+            <SocialIcon
+              url="https://github.com/JunLee8108/woojoon-gallery"
+              bgColor="rgb(85, 88, 218)"
+              fgColor="white"
+              className="portfolio-icon"
+              style={{ width: "30px", height: "30px" }}
+            />
+          </div>
+        </div>
       </div>
 
       {/* Contact Me */}
@@ -182,18 +232,18 @@ function HomeSection() {
             <div className="flexbox">
               <h2>Email</h2>
               <a href="mailto:lejhn1@gmail.com">
-                <img src={email} />
+                <img src={email} alt="Email emoticon" />
               </a>
             </div>
             <div className="flexbox">
               <h2>Linkedin</h2>
               <a href="https://www.linkedin.com/in/jeong-hyun-lee-a5362319a/">
-                <img src={linkedin} />
+                <img src={linkedin} alt="LinkedIn emoticon" />
               </a>
             </div>
             <div className="flexbox">
               <h2>Resume</h2>
-              <img src={resume} />
+              <img src={resume} alt="Resume emoticon" />
             </div>
           </div>
         </div>
