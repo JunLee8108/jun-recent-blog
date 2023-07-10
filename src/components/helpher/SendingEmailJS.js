@@ -25,7 +25,6 @@ function SendingEmailJS() {
       alert("Please enter the message!");
     } else {
       e.preventDefault();
-      e.preventDefault();
       emailjs
         .sendForm(
           "service_wmziyym",
@@ -57,6 +56,7 @@ function SendingEmailJS() {
           </label>
           <input type="text" name="firstName" id="FN"></input>
         </div>
+        
         <div className="input-flexbox">
           <label htmlFor="LN">
             <h4>Last Name</h4>

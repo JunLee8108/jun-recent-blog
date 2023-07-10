@@ -1,6 +1,6 @@
 import "./HomeSection.css";
 import { SocialIcon } from "react-social-icons";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import {
   jun,
   html,
@@ -37,6 +37,35 @@ function HomeSection() {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  let [scrollContact, setScrollContact] = useState(false);
+  let [scrollPortfolio, setScrollPortfolio] = useState(false);
+
+  const scrollEvent = () => {
+    if (window.scrollY > 300 && window.scrollY < 1500) {
+      setScrollPortfolio(true);
+    } else {
+      setScrollPortfolio(false);
+    }
+
+    if (window.scrollY > 1286) {
+      setScrollContact(true);
+    } else {
+      setScrollContact(false);
+    }
+
+    // console.log(window.scrollY);
+  };
+
+  useEffect(() => {
+    let timer = setInterval(() => {
+      window.addEventListener("scroll", scrollEvent);
+    }, 100);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("scroll", scrollEvent);
+    };
+  }, []);
+
   return (
     <div className="home">
       {/* Side Navbar */}
@@ -44,7 +73,7 @@ function HomeSection() {
         <ul>
           <div className="profile text-center">
             <h3>Jeong Hyun Lee</h3>
-            <img src={jun} alt="Jun's Profile"/>
+            <img src={jun} alt="Jun's Profile" />
           </div>
 
           <div>
@@ -176,9 +205,13 @@ function HomeSection() {
       <div className="home-mid container-layout" ref={portfolioRef}>
         <h1 className="h1-green-left">Portfolio</h1>
 
-        <div className="home-mid-textbox-container">
+        <div
+          className={`home-mid-textbox-container ${
+            scrollPortfolio && "home-mid-textbox-container-scroll-event"
+          }`}
+        >
           <h3>1. Hyundai Motors</h3>
-          <img src={portfolio1} alt="Hyundai motors main"/>
+          <img src={portfolio1} alt="Hyundai motors main" />
           <div className="home-mid-textbox">
             <h4>Demo: </h4>
             <SocialIcon
@@ -224,7 +257,11 @@ function HomeSection() {
       {/* Contact Me */}
       <div className="home-mid-3 container-layout" ref={contactRef}>
         <h1 className="h1-green-left">Contact Me</h1>
-        <div className="mid-3-flex-container">
+        <div
+          className={`mid-3-flex-container ${
+            scrollContact && "mid-3-scroll-event"
+          }`}
+        >
           <div className="mid-3-flexbox1">
             <SendingEmailJS></SendingEmailJS>
           </div>

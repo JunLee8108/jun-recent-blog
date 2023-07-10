@@ -189,12 +189,18 @@ li img {
 }
 
 .home-mid img {
-  width: 100%;
+  width: 50%;
   max-width: 800px;
 }
 
 .home-mid-textbox-container {
   padding-left: 20px;
+  transition: 1s all;
+  opacity: 0;
+}
+
+.home-mid-textbox-container-scroll-event {
+  opacity: 1;
 }
 
 .home-mid-textbox {
@@ -222,6 +228,14 @@ li img {
 
 .mid-3-flex-container {
   display: flex;
+  transform: translateY(-10%);
+  opacity: 0;
+  transition: 1s all;
+}
+
+.mid-3-scroll-event {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 .mid-3-flexbox1 {
@@ -234,6 +248,7 @@ li img {
   background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
   border-radius: 5px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
 }
 
 .input-flex-container {
