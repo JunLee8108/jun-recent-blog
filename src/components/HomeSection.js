@@ -41,19 +41,35 @@ function HomeSection() {
   let [scrollPortfolio, setScrollPortfolio] = useState(false);
 
   const scrollEvent = () => {
-    if (window.scrollY > 300 && window.scrollY < 1500) {
-      setScrollPortfolio(true);
-    } else {
-      setScrollPortfolio(false);
+    // Mobile & Tablet & 4K
+    if (document.documentElement.scrollHeight > 3900 && document.documentElement.scrollHeight < 4600) {
+      if (window.scrollY > 1500 && window.scrollY < 2363) {
+        setScrollPortfolio(true);
+      } else {
+        setScrollPortfolio(false);
+      }
+      if (window.scrollY > 2032) {
+        setScrollContact(true);
+      } else {
+        setScrollContact(false);
+      }
+    }
+    // Laptop & FHD & QHD
+    else if (document.documentElement.scrollHeight < 3900) {
+      if (window.scrollY > 300 && window.scrollY < 2000) {
+        setScrollPortfolio(true);
+      } else {
+        setScrollPortfolio(false);
+      }
+      if (window.scrollY > 1286) {
+        setScrollContact(true);
+      } else {
+        setScrollContact(false);
+      }
     }
 
-    if (window.scrollY > 1286) {
-      setScrollContact(true);
-    } else {
-      setScrollContact(false);
-    }
-
-    // console.log(window.scrollY);
+    console.log(document.documentElement.scrollHeight);
+    console.log(window.scrollY);
   };
 
   useEffect(() => {
