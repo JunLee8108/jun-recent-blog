@@ -195,7 +195,7 @@ li img {
 
 .home-mid-textbox-container {
   padding-left: 20px;
-  transition: 1s all;
+  transition: 2s all;
   opacity: 0;
 }
 
@@ -228,9 +228,9 @@ li img {
 
 .mid-3-flex-container {
   display: flex;
-  transform: translateY(-10%);
+  transform: translateY(-25%);
   opacity: 0;
-  transition: 1s all;
+  transition: 2s all;
 }
 
 .mid-3-scroll-event {

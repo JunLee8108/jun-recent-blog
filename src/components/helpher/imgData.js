@@ -17,4 +17,59 @@ import developer from "../../assets/code.webp";
 import portfolio1 from "../../assets/hyundai-portfolio-1.webp";
 import portfolio2 from "../../assets/hyundai-portfolio-2.webp";
 
-export {jun, html, css, js, react, vue, nextJS, nodeJS, email, resume, linkedin, me, portfolio, contact, developer, portfolio1, portfolio2};
+const techStackImg = [
+    { 
+        id: 0, 
+        name: "HTML & CSS",
+        img: html,
+        img2: css,
+    },
+    {
+        id: 1,
+        name: "JavaScript",
+        img: js
+    },
+    {
+        id: 2,
+        name: "React",
+        img: react
+    },
+    {
+        id: 3,
+        name: "Vue",
+        img: vue
+    },
+    {
+        id: 4,
+        name: "Next.js",
+        img: nextJS
+    },
+    {
+        id: 5,
+        name: "Node.js",
+        img: nodeJS
+    },
+]
+
+const contactMeInfo = [
+    {
+        id: 0,
+        name: "Email",
+        img: email,
+        aHref: "mailto:lejhn1@gmail.com"
+    },
+    {
+        id: 1,
+        name: "LinkedIn",
+        img: linkedin,
+        aHref: "https://www.linkedin.com/in/jeong-hyun-lee-a5362319a/"
+    },
+    {
+        id: 2,
+        name: "Resume",
+        img: resume,
+        aHref: "#"
+    },
+]
+
+export {jun, techStackImg, contactMeInfo, email, resume, linkedin, me, portfolio, contact, developer, portfolio1, portfolio2};

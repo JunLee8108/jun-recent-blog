@@ -1,18 +1,12 @@
 import "./HomeSection.css";
 import { SocialIcon } from "react-social-icons";
 import { useRef, useEffect, useState } from "react";
+import { darkMode } from "./helpher/dark";
+import SendingEmailJS from "./helpher/SendingEmailJS";
+import { techStackImg } from "./helpher/imgData";
+import { contactMeInfo } from "./helpher/imgData";
 import {
   jun,
-  html,
-  css,
-  js,
-  react,
-  vue,
-  nextJS,
-  nodeJS,
-  email,
-  resume,
-  linkedin,
   me,
   portfolio,
   contact,
@@ -20,8 +14,6 @@ import {
   portfolio1,
   portfolio2,
 } from "./helpher/imgData";
-import { darkMode } from "./helpher/dark";
-import SendingEmailJS from "./helpher/SendingEmailJS";
 
 function HomeSection() {
   const homeRef = useRef(null);
@@ -41,8 +33,17 @@ function HomeSection() {
   let [scrollPortfolio, setScrollPortfolio] = useState(false);
 
   const scrollEvent = () => {
+    let scrollHeight = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
+    );
+
     // Mobile & Tablet & 4K
-    if (document.documentElement.scrollHeight > 3900 && document.documentElement.scrollHeight < 4600) {
+    if (scrollHeight > 3900 && scrollHeight < 4600) {
       if (window.scrollY > 1500 && window.scrollY < 2363) {
         setScrollPortfolio(true);
       } else {
@@ -55,7 +56,7 @@ function HomeSection() {
       }
     }
     // Laptop & FHD & QHD
-    else if (document.documentElement.scrollHeight < 3900) {
+    else if (scrollHeight < 3900) {
       if (window.scrollY > 300 && window.scrollY < 2000) {
         setScrollPortfolio(true);
       } else {
@@ -68,6 +69,7 @@ function HomeSection() {
       }
     }
 
+    console.log(scrollHeight);
     console.log(document.documentElement.scrollHeight);
     console.log(window.scrollY);
   };
@@ -178,49 +180,32 @@ function HomeSection() {
       <div className="home-top-2 container-layout">
         <h1 className="h1-green-left">Tech Stack</h1>
         <div className="top-2-flex-container">
-          <div className="top-2-flexbox">
-            <div style={{ width: "100%" }}>
-              <img src={html} alt="HTML"></img>
-              <img src={css} alt="CSS"></img>
-            </div>
-            <h4>HTML & CSS</h4>
-          </div>
-          <div className="top-2-flexbox">
-            <div style={{ width: "100%" }}>
-              <img src={js} alt="JavaScript"></img>
-            </div>
-            <h4>Vanilla Javascript</h4>
-          </div>
-          <div className="top-2-flexbox">
-            <img src={react} alt="React"></img>
-
-            <h4>React</h4>
-          </div>
-          <div className="top-2-flexbox">
-            <div style={{ width: "100%" }}>
-              <img src={vue} alt="Vue"></img>
-            </div>
-            <h4>Vue</h4>
-          </div>
-          <div className="top-2-flexbox">
-            <div style={{ width: "100%" }}>
-              <img src={nextJS} alt="NextJS"></img>
-            </div>
-            <h4>Next.js</h4>
-          </div>
-          <div className="top-2-flexbox">
-            <div style={{ width: "100%" }}>
-              <img src={nodeJS} alt="NodeJS"></img>
-            </div>
-            <h4>Node.js</h4>
-          </div>
+          {techStackImg.map(function (a, index) {
+            return (
+              <div className="top-2-flexbox" key={index}>
+                <div style={{ width: "100%" }}>
+                  {index == 0 ? (
+                    <>
+                      <img src={techStackImg[index].img} alt="tech-stack"></img>
+                      <img
+                        src={techStackImg[index].img2}
+                        alt="tech-stack"
+                      ></img>
+                    </>
+                  ) : (
+                    <img src={techStackImg[index].img} alt="tech-stack"></img>
+                  )}
+                </div>
+                <h4>{techStackImg[index].name}</h4>
+              </div>
+            );
+          })}
         </div>
       </div>
 
       {/* Portfolio */}
       <div className="home-mid container-layout" ref={portfolioRef}>
         <h1 className="h1-green-left">Portfolio</h1>
-
         <div
           className={`home-mid-textbox-container ${
             scrollPortfolio && "home-mid-textbox-container-scroll-event"
@@ -282,22 +267,16 @@ function HomeSection() {
             <SendingEmailJS></SendingEmailJS>
           </div>
           <div className="mid-3-flexbox2">
-            <div className="flexbox">
-              <h2>Email</h2>
-              <a href="mailto:lejhn1@gmail.com">
-                <img src={email} alt="Email emoticon" />
-              </a>
-            </div>
-            <div className="flexbox">
-              <h2>Linkedin</h2>
-              <a href="https://www.linkedin.com/in/jeong-hyun-lee-a5362319a/">
-                <img src={linkedin} alt="LinkedIn emoticon" />
-              </a>
-            </div>
-            <div className="flexbox">
-              <h2>Resume</h2>
-              <img src={resume} alt="Resume emoticon" />
-            </div>
+            {contactMeInfo.map(function (a, index) {
+              return (
+                <div className="flexbox" key={index}>
+                  <h2>{contactMeInfo[index].name}</h2>
+                  <a href={contactMeInfo[index].aHref}>
+                    <img src={contactMeInfo[index].img} alt="emoticon" />
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
