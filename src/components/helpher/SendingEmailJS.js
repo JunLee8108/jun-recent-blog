@@ -3,7 +3,6 @@ import "../HomeSection.css";
 import { useRef } from "react";
 
 function SendingEmailJS() {
-
   const form = useRef();
   const handleSubmit = (e) => {
     let firstName = document.querySelector("#FN").value;
@@ -11,16 +10,16 @@ function SendingEmailJS() {
     let email = document.querySelector("#EM").value;
     let message = document.querySelector("#MA").value;
 
-    if (firstName == "") {
+    if (firstName === "") {
       e.preventDefault();
       alert("Please enter your first name!");
-    } else if (lastName == "") {
+    } else if (lastName === "") {
       e.preventDefault();
       alert("Please enter your last name!");
-    } else if (email == "") {
+    } else if (email === "") {
       e.preventDefault();
       alert("Please enter your email!");
-    } else if (message == "") {
+    } else if (message === "") {
       e.preventDefault();
       alert("Please enter the message!");
     } else {
@@ -48,7 +47,7 @@ function SendingEmailJS() {
 
   return (
     <form ref={form} onSubmit={handleSubmit}>
-      <h2>Get In Touch With Me :)</h2>
+      <h2>Get In Touch With Me</h2>
       <div className="input-flex-container">
         <div className="input-flexbox">
           <label htmlFor="FN">
@@ -56,7 +55,7 @@ function SendingEmailJS() {
           </label>
           <input type="text" name="firstName" id="FN"></input>
         </div>
-        
+
         <div className="input-flexbox">
           <label htmlFor="LN">
             <h4>Last Name</h4>

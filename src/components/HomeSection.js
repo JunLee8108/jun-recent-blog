@@ -11,8 +11,7 @@ import {
   portfolio,
   contact,
   developer,
-  portfolio1,
-  portfolio2,
+  portfolioData,
 } from "./helpher/imgData";
 
 function HomeSection() {
@@ -43,13 +42,13 @@ function HomeSection() {
     );
 
     // Mobile & Tablet & 4K
-    if (scrollHeight > 3900 && scrollHeight < 4600) {
-      if (window.scrollY > 1500 && window.scrollY < 2363) {
+    if (scrollHeight > 3900 && scrollHeight < 5500) {
+      if (window.scrollY > 1350) {
         setScrollPortfolio(true);
       } else {
         setScrollPortfolio(false);
       }
-      if (window.scrollY > 2032) {
+      if (window.scrollY > 2400) {
         setScrollContact(true);
       } else {
         setScrollContact(false);
@@ -57,7 +56,7 @@ function HomeSection() {
     }
     // Laptop & FHD & QHD
     else if (scrollHeight < 3900) {
-      if (window.scrollY > 300 && window.scrollY < 2000) {
+      if (window.scrollY > 350) {
         setScrollPortfolio(true);
       } else {
         setScrollPortfolio(false);
@@ -70,7 +69,7 @@ function HomeSection() {
     }
 
     console.log(scrollHeight);
-    console.log(document.documentElement.scrollHeight);
+    // console.log(document.documentElement.scrollHeight);
     console.log(window.scrollY);
   };
 
@@ -184,7 +183,7 @@ function HomeSection() {
             return (
               <div className="top-2-flexbox" key={index}>
                 <div style={{ width: "100%" }}>
-                  {index == 0 ? (
+                  {index === 0 ? (
                     <>
                       <img src={techStackImg[index].img} alt="tech-stack"></img>
                       <img
@@ -211,47 +210,42 @@ function HomeSection() {
             scrollPortfolio && "home-mid-textbox-container-scroll-event"
           }`}
         >
-          <h3>1. Hyundai Motors</h3>
-          <img src={portfolio1} alt="Hyundai motors main" />
-          <div className="home-mid-textbox">
-            <h4>Demo: </h4>
-            <SocialIcon
-              url="https://main.dv90aq3ksc428.amplifyapp.com/"
-              bgColor="black"
-              fgColor="white"
-              className="portfolio-icon"
-              style={{ width: "30px", height: "30px", marginRight: "30px" }}
-            />
-            <h4>Github: </h4>
-            <SocialIcon
-              url="https://github.com/JunLee8108"
-              bgColor="black"
-              fgColor="white"
-              className="portfolio-icon"
-              style={{ width: "30px", height: "30px" }}
-            />
-          </div>
-
-          <h3>2. Woojoon's Gallery</h3>
-          <img src={portfolio2} alt="Woojoon's gallery main" />
-          <div className="home-mid-textbox">
-            <h4>Demo: </h4>
-            <SocialIcon
-              url="https://main.d2uscgl8cg14gb.amplifyapp.com/"
-              bgColor="rgb(85, 88, 218)"
-              fgColor="white"
-              className="portfolio-icon"
-              style={{ width: "30px", height: "30px", marginRight: "30px" }}
-            />
-            <h4>Github: </h4>
-            <SocialIcon
-              url="https://github.com/JunLee8108/woojoon-gallery"
-              bgColor="rgb(85, 88, 218)"
-              fgColor="white"
-              className="portfolio-icon"
-              style={{ width: "30px", height: "30px" }}
-            />
-          </div>
+          {portfolioData.map((a, index) => {
+            return (
+              <div className="home-mid-textbox-flexbox" key={index}>
+                <div style={{ width: "100%" }}>
+                  <h3>
+                    {portfolioData[index].id}. {portfolioData[index].title}
+                  </h3>
+                </div>
+                <a href={portfolioData[index].iconURL1}>
+                  <img src={portfolioData[index].img} alt="" />
+                </a>
+                <div className="home-mid-textbox">
+                  <h4>Demo: </h4>
+                  <SocialIcon
+                    url={portfolioData[index].iconURL1}
+                    bgColor={portfolioData[index].iconBgColor}
+                    fgColor={portfolioData[index].iconFgColor}
+                    className="portfolio-icon"
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      marginRight: "30px",
+                    }}
+                  />
+                  <h4>Github: </h4>
+                  <SocialIcon
+                    url={portfolioData[index].iconURL2}
+                    bgColor={portfolioData[index].iconBgColor}
+                    fgColor={portfolioData[index].iconFgColor}
+                    className="portfolio-icon"
+                    style={{ width: "30px", height: "30px" }}
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 
