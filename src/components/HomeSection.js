@@ -68,9 +68,9 @@ function HomeSection() {
       }
     }
 
-    console.log(scrollHeight);
+    // console.log(scrollHeight);
     // console.log(document.documentElement.scrollHeight);
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
   };
 
   useEffect(() => {
