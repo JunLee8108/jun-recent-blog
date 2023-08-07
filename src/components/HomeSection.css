@@ -192,7 +192,7 @@ li img {
   width: 100%;
   cursor: pointer;
   max-width: 800px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .home-mid img:hover {
@@ -534,7 +534,7 @@ input:checked + .slider:before {
     /* background-color: red; */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
   }
 }
@@ -677,7 +677,7 @@ input:checked + .slider:before {
     /* background-color: red; */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
   }
 }
