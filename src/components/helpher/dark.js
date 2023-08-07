@@ -17,9 +17,11 @@ const darkMode = () => {
     document.querySelector(".home-mid-3").style.background =
       "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
     document.querySelector(".mid-3-flexbox1").style.background =
-      "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
+      "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
+    document.querySelector(".mid-3-flexbox1").style.color = "black";
     document.querySelector(".mid-3-flexbox2").style.background =
-      "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
+      "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)";
+    document.querySelector(".mid-3-flexbox2").style.color = "black";
     document.querySelector(".top-1-flexbox1-button").style.background =
       "linear-gradient(to top, #0ba360 0%, #3cba92 100%)";
     let borderDark = document.querySelectorAll(".h1-green-left");
@@ -44,8 +46,10 @@ const darkMode = () => {
       "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)";
     document.querySelector(".mid-3-flexbox1").style.background =
       "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
+    document.querySelector(".mid-3-flexbox1").style.color = "white";
     document.querySelector(".mid-3-flexbox2").style.background =
       "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
+    document.querySelector(".mid-3-flexbox2").style.color = "white";
     document.querySelector(".top-1-flexbox1-button").style.background =
       "radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%)";
     let borderDark = document.querySelectorAll(".h1-green-left");
@@ -56,4 +60,4 @@ const darkMode = () => {
   }
 };
 
-export {darkMode};
+export { darkMode };

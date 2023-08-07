@@ -258,7 +258,7 @@ function HomeSection() {
           }`}
         >
           <div className="mid-3-flexbox1">
-            <SendingEmailJS></SendingEmailJS>
+            <SendingEmailJS />
           </div>
           <div className="mid-3-flexbox2">
             {contactMeInfo.map(function (a, index) {
