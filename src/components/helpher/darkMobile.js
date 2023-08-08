@@ -1,6 +1,6 @@
 // Dark Mode
 let isDark = false;
-const darkMode = () => {
+const darkModeMobile = () => {
   // dark mode off
   if (isDark) {
     isDark = false;
@@ -29,6 +29,11 @@ const darkMode = () => {
       document.querySelectorAll(".h1-green-left")[i].style.borderLeft =
         "solid #0ba360 5px";
     }
+    const mobileNavbar = document.querySelectorAll(".navbar-mobile-flexbox");
+    for (let j = 0; j < mobileNavbar.length; j++) {
+      mobileNavbar[j].style.background =
+        "linear-gradient(to top, #0ba360 0%, #3cba92 0%)";
+    }
     // dark mode on
   } else {
     isDark = true;
@@ -56,7 +61,11 @@ const darkMode = () => {
     for (let i = 0; i < borderDark.length; i++) {
       borderDark[i].style.borderLeft = "solid silver 5px";
     }
+    const mobileNavbar = document.querySelectorAll(".navbar-mobile-flexbox");
+    for (let j = 0; j < mobileNavbar.length; j++) {
+      mobileNavbar[j].style.background = "grey";
+    }
   }
 };
 
-export { darkMode };
+export { darkModeMobile };

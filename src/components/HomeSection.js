@@ -2,6 +2,7 @@ import "./HomeSection.css";
 import { SocialIcon } from "react-social-icons";
 import { useRef, useEffect, useState } from "react";
 import { darkMode } from "./helpher/dark";
+import { darkModeMobile } from "./helpher/darkMobile";
 import SendingEmailJS from "./helpher/SendingEmailJS";
 import { techStackImg } from "./helpher/imgData";
 import { contactMeInfo } from "./helpher/imgData";
@@ -13,6 +14,7 @@ import {
   developer,
   portfolioData,
 } from "./helpher/imgData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function HomeSection() {
   const homeRef = useRef(null);
@@ -20,12 +22,15 @@ function HomeSection() {
   const contactRef = useRef(null);
   const clickToHome = () => {
     homeRef.current?.scrollIntoView({ behavior: "smooth" });
+    setModal(false);
   };
   const clickToPortfolio = () => {
     portfolioRef.current?.scrollIntoView({ behavior: "smooth" });
+    setModal(false);
   };
   const clickToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
+    setModal(false);
   };
 
   let [scrollContact, setScrollContact] = useState(false);
@@ -83,9 +88,59 @@ function HomeSection() {
     };
   }, []);
 
+  const [isModal, setModal] = useState(false);
+
+  const controlModal = () => {
+    setModal((isModal) => !isModal);
+  };
+
+  const [modalDarkMode, setModalDarkMode] = useState(false);
+
   return (
     <div className="home">
       {/* Side Navbar */}
+
+      <div className="navbar-mobile">
+        <div className="navbar-mobile-flexbox">
+          <h5>JEONG HYUN LEE</h5>
+        </div>
+        <div className="navbar-mobile-flexbox">
+          {isModal ? (
+            <FontAwesomeIcon
+              icon="fa-solid fa-circle-xmark"
+              size="lg"
+              onClick={() => {
+                controlModal();
+              }}
+            />
+          ) : (
+            <FontAwesomeIcon
+              icon="fa-solid fa-bars"
+              size="lg"
+              onClick={() => {
+                controlModal();
+              }}
+            />
+          )}
+        </div>
+      </div>
+
+      {isModal ? (
+        <div
+          className={
+            modalDarkMode
+              ? "navbar-modal-container navbar-modal-container-darkmode"
+              : "navbar-modal-container"
+          }
+        >
+          <ul>
+            <li onClick={clickToHome}>About Me</li>
+            <li onClick={clickToPortfolio}>Portfolio</li>
+            <li onClick={clickToContact}>Contact Me</li>
+          </ul>
+        </div>
+      ) : null}
+
       <div className="navbar-container">
         <ul>
           <div className="profile text-center">
@@ -121,6 +176,32 @@ function HomeSection() {
                 className="icon"
                 style={{ width: "35px", height: "35px" }}
               />
+            </div>
+
+            <div className="navbar-item-mobile">
+              <li>
+                <label className="switch" htmlFor="dark">
+                  <input
+                    type="checkbox"
+                    onClick={() => {
+                      darkModeMobile();
+                      setModalDarkMode((modalDarkMode) => !modalDarkMode);
+                    }}
+                    id="dark"
+                  />
+                  <span className="slider round"></span>
+                </label>
+                <label
+                  htmlFor="dark"
+                  style={{ cursor: "pointer", fontSize: "14px" }}
+                >
+                  <FontAwesomeIcon
+                    icon="fa-solid fa-moon"
+                    size="xl"
+                    style={{ color: "yellow" }}
+                  />
+                </label>
+              </li>
             </div>
 
             <div className="navbar-item">

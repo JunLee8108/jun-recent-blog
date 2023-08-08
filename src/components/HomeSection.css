@@ -4,6 +4,14 @@
 }
 
 /* PC - LAPTOP OR DESKTOP */
+.navbar-mobile {
+  display: none;
+}
+
+.navbar-item-mobile {
+  display: none;
+}
+
 .h1-green-left {
   padding-left: 10px;
   padding-bottom: 5px;
@@ -29,13 +37,6 @@
   border-radius: 5px;
   font-weight: bold;
   color: black;
-}
-
-.submit-button:hover {
-  background-color: black;
-  color: white;
-  transform: scale(1.1);
-  transition: all 0.2s linear;
 }
 
 /* side navbar */
@@ -83,12 +84,6 @@ ul {
   border-bottom: 3px solid white;
 }
 
-.icon:hover {
-  transform: scale(1.2);
-  transition: all 0.2s linear;
-  opacity: 0.7;
-}
-
 li {
   margin-bottom: 15px;
   padding: 5px;
@@ -96,12 +91,6 @@ li {
   font-weight: bold;
   cursor: pointer;
   display: flex;
-}
-
-li:hover {
-  color: black;
-  transform: scale(1.1);
-  transition: all 0.1s linear;
 }
 
 li img {
@@ -135,12 +124,6 @@ li img {
   color: white;
   margin-top: 20px;
   cursor: pointer;
-}
-
-.top-1-flexbox1 button:hover {
-  transform: scale(1.1);
-  transition: all 0.2s linear;
-  opacity: 0.5;
 }
 
 .top-1-flexbox2 {
@@ -351,6 +334,36 @@ textarea {
   font-size: 17px;
 }
 
+.navbar-modal-container {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+  /* background-color: white; */
+  z-index: 5;
+}
+
+.navbar-modal-container-darkmode {
+  background: grey;
+}
+
+.navbar-modal-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.navbar-modal-container li {
+  font-size: 13px;
+  padding-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+}
+
+.navbar-modal-container li:nth-child(1) {
+  margin-top: -15px;
+}
+
 /* slider */
 /* The switch - the box around the slider */
 .switch {
@@ -418,6 +431,38 @@ input:checked + .slider:before {
 
 /* MOBILE - TABLET */
 @media screen and (max-width: 1180px) {
+  .navbar-mobile {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 50px;
+    z-index: 5;
+  }
+
+  .navbar-mobile-flexbox {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    color: white;
+    background: linear-gradient(to top, #0ba360 0%, #3cba92 0%);
+  }
+
+  .navbar-mobile-flexbox:nth-child(1) {
+    /* background-color: red; */
+    justify-content: flex-start;
+    padding-left: 15px;
+  }
+
+  .navbar-mobile-flexbox:nth-child(2) {
+    /* background-color: yellow; */
+    justify-content: flex-end;
+    padding-right: 15px;
+  }
+
+  .profile h3 {
+    display: none;
+  }
+
   .navbar-container {
     width: 100%;
     height: auto;
@@ -521,12 +566,6 @@ input:checked + .slider:before {
     width: 40%;
   }
 
-  li:hover {
-    color: black;
-    transform: none;
-    transition: all 0.1s linear;
-  }
-
   .home-mid-textbox-flexbox {
     width: 100%;
     /* background-color: red; */
@@ -542,15 +581,80 @@ input:checked + .slider:before {
   .home-mid img:hover {
     opacity: 0.5;
   }
+
+  li:hover {
+    color: black;
+    transform: scale(1.1);
+    transition: all 0.1s linear;
+  }
+
+  .submit-button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+  }
+
+  .icon:hover {
+    transform: scale(1.2);
+    transition: all 0.2s linear;
+    opacity: 0.7;
+  }
+
+  .top-1-flexbox1 button:hover {
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+    opacity: 0.5;
+  }
 }
 
 /* MOBILE - SMARTPHONE */
 @media screen and (max-width: 767px) {
+  .navbar-mobile {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 50px;
+    z-index: 5;
+  }
+
+  .navbar-item-mobile {
+    display: block;
+  }
+
+  .navbar-mobile-flexbox {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    color: white;
+    background: linear-gradient(to top, #0ba360 0%, #3cba92 0%);
+  }
+
+  .navbar-mobile-flexbox:nth-child(1) {
+    /* background-color: red; */
+    justify-content: flex-start;
+    padding-left: 15px;
+  }
+
+  .navbar-mobile-flexbox:nth-child(2) {
+    /* background-color: yellow; */
+    justify-content: flex-end;
+    padding-right: 15px;
+  }
+
+  .profile h3 {
+    display: none;
+  }
+
   .navbar-container {
     width: 100%;
     height: auto;
     max-width: none;
     position: static;
+  }
+
+  .navbar-item {
+    display: none;
   }
 
   h1 {
@@ -575,10 +679,6 @@ input:checked + .slider:before {
 
   .container-layout {
     padding: 30px;
-  }
-
-  .navbar-item {
-    display: block;
   }
 
   .home-top-1 {
@@ -665,12 +765,6 @@ input:checked + .slider:before {
 
   input[type="email"] {
     width: 60%;
-  }
-
-  li:hover {
-    color: black;
-    transform: none;
-    transition: all 0.1s linear;
   }
 
   .portfolio-icon {
