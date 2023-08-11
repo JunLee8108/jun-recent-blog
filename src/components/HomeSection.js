@@ -95,6 +95,7 @@ function HomeSection() {
   };
 
   const [modalDarkMode, setModalDarkMode] = useState(false);
+  const [isDark, setDark] = useState(false);
 
   return (
     <div className="home">
@@ -217,14 +218,26 @@ function HomeSection() {
                 <img src={contact} alt="Contact emoticon"></img>
                 Contact Me
               </li>
-              <li>
-                <label className="switch" htmlFor="dark">
-                  <input type="checkbox" onClick={darkMode} id="dark" />
-                  <span className="slider round"></span>
-                </label>
-                <label htmlFor="dark" style={{ cursor: "pointer" }}>
-                  Dark Mode
-                </label>
+              <li
+                onClick={() => {
+                  darkMode();
+                  setDark((isDark) => !isDark);
+                }}
+              >
+                {isDark ? (
+                  <FontAwesomeIcon
+                    icon="fa-solid fa-toggle-on"
+                    size="xl"
+                    style={{ marginRight: "10px", color: "silver" }}
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    icon="fa-solid fa-toggle-off"
+                    size="xl"
+                    style={{ marginRight: "10px", color: "white" }}
+                  />
+                )}
+                Dark Mode
               </li>
             </div>
           </div>

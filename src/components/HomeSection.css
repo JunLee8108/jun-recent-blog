@@ -319,15 +319,9 @@ textarea {
 .flexbox img {
   width: 30%;
   max-width: 70px;
-  margin-bottom: 25px;
+  padding-bottom: 15px;
   cursor: pointer;
-}
-
-.flexbox img:hover {
-  transform: scale(1.2);
-  transition: all 0.2s linear;
-  padding-bottom: 10px;
-  border-bottom: 2px solid white;
+  border: 2px transparent solid;
 }
 
 .flexbox h2 {
@@ -605,6 +599,12 @@ input:checked + .slider:before {
     transform: scale(1.1);
     transition: all 0.2s linear;
     opacity: 0.5;
+  }
+
+  .flexbox img:hover {
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+    border-bottom: 2px solid black;
   }
 }
 
