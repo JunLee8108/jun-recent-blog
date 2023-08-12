@@ -34,6 +34,7 @@ const darkModeMobile = () => {
       mobileNavbar[j].style.background =
         "linear-gradient(to top, #0ba360 0%, #3cba92 0%)";
     }
+    document.body.style.backgroundColor = "white";
     // dark mode on
   } else {
     isDark = true;
@@ -65,6 +66,7 @@ const darkModeMobile = () => {
     for (let j = 0; j < mobileNavbar.length; j++) {
       mobileNavbar[j].style.background = "grey";
     }
+    document.body.style.backgroundColor = "black";
   }
 };
 

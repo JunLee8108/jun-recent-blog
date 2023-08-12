@@ -29,6 +29,7 @@ const darkMode = () => {
       document.querySelectorAll(".h1-green-left")[i].style.borderLeft =
         "solid #0ba360 5px";
     }
+    document.body.style.backgroundColor = "white";
     // dark mode on
   } else {
     isDark = true;
@@ -56,6 +57,7 @@ const darkMode = () => {
     for (let i = 0; i < borderDark.length; i++) {
       borderDark[i].style.borderLeft = "solid silver 5px";
     }
+    document.body.style.backgroundColor = "black";
   }
 };
 
