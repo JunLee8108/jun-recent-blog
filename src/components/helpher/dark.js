@@ -30,6 +30,10 @@ const darkMode = () => {
         "solid #0ba360 5px";
     }
     document.body.style.backgroundColor = "white";
+    let brown = document.querySelectorAll(".home-mid-title");
+    for (let j = 0; j < brown.length; j++) {
+      brown[j].style.color = "#4b2d0b";
+    }
     // dark mode on
   } else {
     isDark = true;
@@ -58,6 +62,10 @@ const darkMode = () => {
       borderDark[i].style.borderLeft = "solid silver 5px";
     }
     document.body.style.backgroundColor = "black";
+    let brown = document.querySelectorAll(".home-mid-title");
+    for (let j = 0; j < brown.length; j++) {
+      brown[j].style.color = "#E2E2E2";
+    }
   }
 };
 

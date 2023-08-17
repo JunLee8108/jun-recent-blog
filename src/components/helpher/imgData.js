@@ -81,6 +81,11 @@ const portfolioData = [
     iconURL2: "https://github.com/JunLee8108/Refined",
     iconBgColor: "#E5C899",
     iconFgColor: "white",
+    description: [
+      "Fictional luxury fashion brand 'Refined Seoul'",
+      "Used React.js & Redux",
+      "Fully responsive on mobile",
+    ],
   },
   {
     id: 2,
@@ -90,6 +95,11 @@ const portfolioData = [
     iconURL2: "https://github.com/JunLee8108",
     iconBgColor: "black",
     iconFgColor: "white",
+    description: [
+      "Redesign of Hyundai Motor's offical website",
+      "Used React.js",
+      "Fully responsive on mobile",
+    ],
   },
   {
     id: 3,
@@ -97,8 +107,13 @@ const portfolioData = [
     img: portfolio2,
     iconURL1: "https://main.d2uscgl8cg14gb.amplifyapp.com/",
     iconURL2: "https://github.com/JunLee8108/woojoon-gallery",
-    iconBgColor: "rgb(85, 88, 218)",
+    iconBgColor: "#77DD66",
     iconFgColor: "white",
+    description: [
+      "Fine art painter Woojoon Kim's gallery",
+      "Used React.js",
+      "Fully responsive on mobile",
+    ],
   },
 ];
 

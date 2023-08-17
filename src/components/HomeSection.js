@@ -66,16 +66,16 @@ function HomeSection() {
       } else {
         setScrollPortfolio(false);
       }
-      if (window.scrollY > 1286) {
+      if (window.scrollY > 1015) {
         setScrollContact(true);
       } else {
         setScrollContact(false);
       }
     }
 
-    // console.log(scrollHeight);
     // console.log(document.documentElement.scrollHeight);
-    // console.log(window.scrollY);
+    console.log(scrollHeight);
+    console.log(window.scrollY);
   };
 
   useEffect(() => {
@@ -228,13 +228,13 @@ function HomeSection() {
                   <FontAwesomeIcon
                     icon="fa-solid fa-toggle-on"
                     size="xl"
-                    style={{ marginRight: "10px", color: "silver" }}
+                    style={{ marginRight: "16px", color: "silver" }}
                   />
                 ) : (
                   <FontAwesomeIcon
                     icon="fa-solid fa-toggle-off"
                     size="xl"
-                    style={{ marginRight: "10px", color: "white" }}
+                    style={{ marginRight: "16px", color: "white" }}
                   />
                 )}
                 Dark Mode
@@ -307,34 +307,51 @@ function HomeSection() {
           {portfolioData.map((a, index) => {
             return (
               <div className="home-mid-textbox-flexbox" key={index}>
-                <div style={{ width: "100%" }}>
-                  <h3>
-                    {portfolioData[index].id}. {portfolioData[index].title}
-                  </h3>
-                </div>
                 <a href={portfolioData[index].iconURL1}>
                   <img src={portfolioData[index].img} alt="" />
                 </a>
+                <div
+                  style={{
+                    width: "100%",
+                    textAlign: "center",
+                    marginBottom: "0",
+                  }}
+                >
+                  <h3 className="home-mid-title">
+                    {portfolioData[index].title}
+                  </h3>
+                </div>
+
+                <div className="home-mid-description">
+                  {portfolioData[index].description.map((a, index2) => {
+                    return (
+                      <h4 style={{ marginBottom: "0" }} key={index2}>
+                        {portfolioData[index].description[index2]}
+                      </h4>
+                    );
+                  })}
+                </div>
+
                 <div className="home-mid-textbox">
-                  <h4>Demo: </h4>
+                  <h5>Demo: </h5>
                   <SocialIcon
                     url={portfolioData[index].iconURL1}
                     bgColor={portfolioData[index].iconBgColor}
                     fgColor={portfolioData[index].iconFgColor}
                     className="portfolio-icon"
                     style={{
-                      width: "30px",
-                      height: "30px",
+                      width: "28px",
+                      height: "28px",
                       marginRight: "30px",
                     }}
                   />
-                  <h4>Github: </h4>
+                  <h5>Github: </h5>
                   <SocialIcon
                     url={portfolioData[index].iconURL2}
                     bgColor={portfolioData[index].iconBgColor}
                     fgColor={portfolioData[index].iconFgColor}
                     className="portfolio-icon"
-                    style={{ width: "30px", height: "30px" }}
+                    style={{ width: "28px", height: "28px" }}
                   />
                 </div>
               </div>

@@ -35,6 +35,10 @@ const darkModeMobile = () => {
         "linear-gradient(to top, #0ba360 0%, #3cba92 0%)";
     }
     document.body.style.backgroundColor = "white";
+    let brown = document.querySelectorAll(".home-mid-title");
+    for (let j = 0; j < brown.length; j++) {
+      brown[j].style.color = "#4b2d0b";
+    }
     // dark mode on
   } else {
     isDark = true;
@@ -67,6 +71,10 @@ const darkModeMobile = () => {
       mobileNavbar[j].style.background = "grey";
     }
     document.body.style.backgroundColor = "black";
+    let brown = document.querySelectorAll(".home-mid-title");
+    for (let j = 0; j < brown.length; j++) {
+      brown[j].style.color = "#E2E2E2";
+    }
   }
 };
 
