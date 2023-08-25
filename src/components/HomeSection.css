@@ -236,6 +236,11 @@ li img {
   opacity: 0.7;
 }
 
+.portfolio-icon:not(:hover) {
+  transform: scale(1);
+  transition: all 0.2s linear;
+}
+
 .home-mid-description {
   margin-bottom: 15px;
   width: 90%;
@@ -603,12 +608,23 @@ input:checked + .slider:before {
 /* ONLY PC */
 @media (hover: hover) {
   .home-mid img:hover {
+    transition: all 0.15s linear;
     opacity: 0.5;
+  }
+
+  .home-mid img:not(:hover) {
+    transition: all 0.15s linear;
+    opacity: 1;
   }
 
   li:hover {
     color: black;
     transform: scale(1.1);
+    transition: all 0.1s linear;
+  }
+
+  li:not(:hover) {
+    transform: scale(1);
     transition: all 0.1s linear;
   }
 
@@ -619,22 +635,44 @@ input:checked + .slider:before {
     transition: all 0.2s linear;
   }
 
+  .submit-button:not(:hover) {
+    transform: scale(1);
+    transition: all 0.2s linear;
+  }
+
   .icon:hover {
     transform: scale(1.2);
     transition: all 0.2s linear;
     opacity: 0.7;
   }
 
-  .top-1-flexbox1 button:hover {
-    transform: scale(1.1);
+  .icon:not(:hover) {
+    transform: scale(1);
     transition: all 0.2s linear;
+    opacity: 1;
+  }
+
+  .top-1-flexbox1 button:hover {
+    transform: scale(1.05);
+    transition: all 0.15s linear;
     opacity: 0.5;
+  }
+
+  .top-1-flexbox1 button:not(:hover) {
+    transform: scale(1);
+    transition: all 0.15s linear;
+    opacity: 1;
   }
 
   .flexbox img:hover {
     transform: scale(1.1);
-    transition: all 0.2s linear;
+    transition: all 0.15s linear;
     border-bottom: 2px solid black;
+  }
+
+  .flexbox img:not(:hover) {
+    transform: scale(1);
+    transition: all 0.15s linear;
   }
 }
 
