@@ -299,7 +299,7 @@ function HomeSection() {
       {/* Portfolio */}
       <div className="home-mid container-layout" ref={portfolioRef}>
         <h1 className="h1-green-left">
-          Portfolio <span style={{ fontSize: "18px" }}>- Projects</span>
+          Portfolio <span style={{ fontSize: "15px" }}>- Projects</span>
         </h1>
 
         <div
