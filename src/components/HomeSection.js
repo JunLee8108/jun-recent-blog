@@ -74,8 +74,8 @@ function HomeSection() {
     }
 
     // console.log(document.documentElement.scrollHeight);
-    console.log(scrollHeight);
-    console.log(window.scrollY);
+    // console.log(scrollHeight);
+    // console.log(window.scrollY);
   };
 
   useEffect(() => {
@@ -298,7 +298,10 @@ function HomeSection() {
 
       {/* Portfolio */}
       <div className="home-mid container-layout" ref={portfolioRef}>
-        <h1 className="h1-green-left">Portfolio</h1>
+        <h1 className="h1-green-left">
+          Portfolio <span style={{ fontSize: "18px" }}>- Projects</span>
+        </h1>
+
         <div
           className={`home-mid-textbox-container ${
             scrollPortfolio && "home-mid-textbox-container-scroll-event"
@@ -310,6 +313,7 @@ function HomeSection() {
                 <a href={portfolioData[index].iconURL1}>
                   <img src={portfolioData[index].img} alt="" />
                 </a>
+
                 <div
                   style={{
                     width: "100%",

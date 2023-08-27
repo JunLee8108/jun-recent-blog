@@ -82,7 +82,8 @@ const portfolioData = [
     iconBgColor: "#E5C899",
     iconFgColor: "white",
     description: [
-      "Fictional luxury fashion brand 'Refined Seoul'",
+      "Fictional luxury fashion brand",
+      "'Refined Seoul'",
       "Used React.js & Redux",
       "Fully responsive on mobile",
     ],
@@ -97,6 +98,7 @@ const portfolioData = [
     iconFgColor: "white",
     description: [
       "Redesign of Hyundai Motor's offical website",
+      "Explore all vehicles and build your own car",
       "Used React.js",
       "Fully responsive on mobile",
     ],
@@ -111,6 +113,7 @@ const portfolioData = [
     iconFgColor: "white",
     description: [
       "Fine art painter Woojoon Kim's gallery",
+      "Virtual art gallery concept",
       "Used React.js",
       "Fully responsive on mobile",
     ],
