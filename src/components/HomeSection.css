@@ -608,7 +608,7 @@ input:checked + .slider:before {
 /* ONLY PC */
 @media (hover: hover) {
   .home-mid-textbox-flexbox:hover {
-    border: 2px solid red;
+    border: 2px solid goldenrod;
     transition: all 0.3s linear;
     transform: translateY(-3%);
     /* opacity: 0.5; */
