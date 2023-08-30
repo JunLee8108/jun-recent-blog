@@ -46,21 +46,50 @@ function HomeSection() {
       document.documentElement.clientHeight
     );
 
-    // Mobile & Tablet & 4K
-    if (scrollHeight > 3900 && scrollHeight < 5500) {
-      if (window.scrollY > 1350) {
+    // Mobile & Tablet
+    // if (scrollHeight > 3900 && scrollHeight < 5500) {
+    //   if (window.scrollY > 1350) {
+    //     setScrollPortfolio(true);
+    //   } else {
+    //     setScrollPortfolio(false);
+    //   }
+    //   if (window.scrollY > 2400) {
+    //     setScrollContact(true);
+    //   } else {
+    //     setScrollContact(false);
+    //   }
+    // }
+    // // Laptop & FHD & QHD
+    // else if (scrollHeight < 3900) {
+    //   if (window.scrollY > 350) {
+    //     setScrollPortfolio(true);
+    //   } else {
+    //     setScrollPortfolio(false);
+    //   }
+    //   if (window.scrollY > 1015) {
+    //     setScrollContact(true);
+    //   } else {
+    //     setScrollContact(false);
+    //   }
+    // }
+
+    const BrowserWidth = document.body.scrollWidth;
+    // 4K
+    if (BrowserWidth >= 3840) {
+      if (window.scrollY > 445) {
         setScrollPortfolio(true);
       } else {
         setScrollPortfolio(false);
       }
-      if (window.scrollY > 2400) {
+      if (window.scrollY > 1300) {
         setScrollContact(true);
       } else {
         setScrollContact(false);
       }
     }
-    // Laptop & FHD & QHD
-    else if (scrollHeight < 3900) {
+
+    // Laptop, FHD, QHD
+    if (BrowserWidth <= 2560) {
       if (window.scrollY > 350) {
         setScrollPortfolio(true);
       } else {
@@ -73,7 +102,36 @@ function HomeSection() {
       }
     }
 
+    // Tablet
+    if (BrowserWidth >= 768 && BrowserWidth <= 1280) {
+      if (window.scrollY > 1053) {
+        setScrollPortfolio(true);
+      } else {
+        setScrollPortfolio(false);
+      }
+      if (window.scrollY > 3350) {
+        setScrollContact(true);
+      } else {
+        setScrollContact(false);
+      }
+    }
+
+    // Phone
+    if (BrowserWidth < 768) {
+      if (window.scrollY > 1350) {
+        setScrollPortfolio(true);
+      } else {
+        setScrollPortfolio(false);
+      }
+      if (window.scrollY > 2400) {
+        setScrollContact(true);
+      } else {
+        setScrollContact(false);
+      }
+    }
+
     // console.log(document.documentElement.scrollHeight);
+    // console.log(document.body.scrollWidth);
     // console.log(scrollHeight);
     // console.log(window.scrollY);
   };
