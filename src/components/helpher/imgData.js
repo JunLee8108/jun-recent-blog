@@ -68,7 +68,8 @@ const contactMeInfo = [
     id: 2,
     name: "RESUME",
     img: resume,
-    aHref: "#",
+    aHref:
+      "https://drive.google.com/file/d/14UDP8z1ogfYVtx4Z5vE08H7toz7ZxRkt/view?usp=sharing",
   },
 ];
 
