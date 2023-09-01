@@ -6,19 +6,15 @@ import { darkModeMobile } from "./helpher/darkMobile";
 import SendingEmailJS from "./helpher/SendingEmailJS";
 import { techStackImg } from "./helpher/imgData";
 import { contactMeInfo } from "./helpher/imgData";
-import {
-  jun,
-  me,
-  portfolio,
-  contact,
-  developer,
-  portfolioData,
-} from "./helpher/imgData";
+import { jun, me, portfolio, contact, developer } from "./helpher/imgData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Portfolio from "./helpher/Portfolio";
+import TechStackModal from "./helpher/TechStackModal";
 
 function HomeSection() {
   const [controlStackModal, setControlStackModal] = useState(false);
   const [techStackModal, setTechStackModal] = useState(false);
+  const [techStackName, setTechStackName] = useState("");
   const isMounted = useRef(false);
 
   const homeRef = useRef(null);
@@ -302,7 +298,7 @@ function HomeSection() {
         <div className="top-1-flexbox1">
           <h1 className="h1-green-left">Jeong Hyun Lee</h1>
           <div className="top-1-introBox">
-            <h4 style={{ color: "grey" }}>Future Frontend Developer</h4>
+            <h4 style={{ color: "grey" }}>- Future Frontend Developer</h4>
             <p>
               I'm a dedicated computer science student who's on a path to
               becoming a frontend developer. With a strong foundation in
@@ -332,6 +328,9 @@ function HomeSection() {
       {/* About Me 2 - Tech Stack */}
       <div className="home-top-2 container-layout">
         <h1 className="h1-green-left">Tech Stack</h1>
+        <h4 style={{ color: "grey", paddingLeft: "20px" }}>
+          - Click each icon to see the details
+        </h4>
         <div className="top-2-flex-container">
           {techStackImg.map(function (a, index) {
             return (
@@ -340,6 +339,8 @@ function HomeSection() {
                 key={index}
                 onClick={() => {
                   setControlStackModal(true);
+                  setTechStackName(techStackImg[index].name);
+                  document.body.style.overflow = "hidden";
                 }}
               >
                 <div style={{ width: "100%" }}>
@@ -363,34 +364,11 @@ function HomeSection() {
       </div>
 
       {techStackModal ? (
-        <>
-          <div
-            className={
-              controlStackModal
-                ? "tech-stack-modal-bg animated-bg"
-                : "tech-stack-modal-bg animated-hide-bg"
-            }
-            onClick={(e) => {
-              const target = document.querySelector(".tech-stack-modal-bg");
-              if (e.target === target) {
-                setControlStackModal(false);
-              }
-            }}
-          >
-            <div
-              className={
-                controlStackModal
-                  ? "tech-stack-modal animated"
-                  : "tech-stack-modal animated-hide"
-              }
-              onClick={() => {
-                setControlStackModal(false);
-              }}
-            >
-              <h1 style={{ color: "black" }}>asd</h1>
-            </div>
-          </div>
-        </>
+        <TechStackModal
+          setControlStackModal={setControlStackModal}
+          controlStackModal={controlStackModal}
+          techStackName={techStackName}
+        />
       ) : null}
 
       {/* Portfolio */}
@@ -404,60 +382,7 @@ function HomeSection() {
             scrollPortfolio && "home-mid-textbox-container-scroll-event"
           }`}
         >
-          {portfolioData.map((a, index) => {
-            return (
-              <div className="home-mid-textbox-flexbox" key={index}>
-                <a href={portfolioData[index].iconURL1}>
-                  <img src={portfolioData[index].img} alt="" />
-                </a>
-
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "center",
-                    marginBottom: "0",
-                  }}
-                >
-                  <h3 className="home-mid-title">
-                    {portfolioData[index].title}
-                  </h3>
-                </div>
-
-                <div className="home-mid-description">
-                  {portfolioData[index].description.map((a, index2) => {
-                    return (
-                      <h4 style={{ marginBottom: "0" }} key={index2}>
-                        {portfolioData[index].description[index2]}
-                      </h4>
-                    );
-                  })}
-                </div>
-
-                <div className="home-mid-textbox">
-                  <h5>Demo: </h5>
-                  <SocialIcon
-                    url={portfolioData[index].iconURL1}
-                    bgColor={portfolioData[index].iconBgColor}
-                    fgColor={portfolioData[index].iconFgColor}
-                    className="portfolio-icon"
-                    style={{
-                      width: "28px",
-                      height: "28px",
-                      marginRight: "30px",
-                    }}
-                  />
-                  <h5>Github: </h5>
-                  <SocialIcon
-                    url={portfolioData[index].iconURL2}
-                    bgColor={portfolioData[index].iconBgColor}
-                    fgColor={portfolioData[index].iconFgColor}
-                    className="portfolio-icon"
-                    style={{ width: "28px", height: "28px" }}
-                  />
-                </div>
-              </div>
-            );
-          })}
+          <Portfolio />
         </div>
       </div>
 

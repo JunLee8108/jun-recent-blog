@@ -24,36 +24,64 @@ const techStackImg = [
     name: "HTML & CSS",
     img: html,
     img2: css,
+    description: [],
   },
   {
     id: 1,
     name: "JavaScript",
     img: js,
+    description: [],
   },
   {
     id: 2,
     name: "TypeScript",
     img: ts,
+    description: [],
   },
   {
     id: 3,
     name: "React",
     img: react,
+    description: [
+      {
+        main: "State management",
+        support:
+          "Understand state management libraries like Redux for managing complex application states.",
+      },
+      {
+        main: "Routing",
+        support:
+          "Familiarize myself with React Router or any other routing library to handle navigation in single-page applications.",
+      },
+      {
+        main: "Responsive design and styling",
+        support:
+          "Master CSS and CSS frameworks like Bootstrap or CSS-in-JS libraries like styled-components.",
+      },
+      {
+        main: "API Integration",
+        support:
+          "Make API requests using libraries like Axios or the built-in fetch API.",
+      },
+    ],
   },
   {
     id: 4,
     name: "Vue.js",
     img: vue,
+    description: [],
   },
   {
     id: 5,
     name: "Next.js",
     img: nextJS,
+    description: [],
   },
   {
     id: 6,
     name: "Node.js",
     img: nodeJS,
+    description: [],
   },
 ];
 
@@ -107,6 +135,7 @@ const portfolioData = [
       "Redesign of Hyundai Motor's offical website",
       "Explore all vehicles and build your own car",
       "Used React for frontend development",
+      "Used Styled Component",
       "Fully responsive on mobile",
     ],
   },
