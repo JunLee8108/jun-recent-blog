@@ -209,8 +209,8 @@ function HomeSection() {
 
           <div>
             <p>
-              ‣ Hello, my name is Jeong Hyun Lee. I'm a UI/UX designer, and a
-              frontend developer.
+              ‣ Hello, my name is Jeong Hyun Lee. I'm a computer science student
+              who seek a frontend developer.
             </p>
 
             <div className="social-icons text-center">
@@ -307,12 +307,19 @@ function HomeSection() {
         <div className="top-1-flexbox1">
           <h1 className="h1-green-left">Jeong Hyun Lee</h1>
           <div className="top-1-introBox">
-            <h4 style={{ color: "grey" }}>Frontend Developer</h4>
-            <p style={{ lineHeight: "30px" }}>
-              UI/UX Designer for designing beautiful and intuitive user
-              experiences, and a developer who focuses on writing clean and
-              efficient code and specialized in frontend development for complex
-              web apps.
+            <h4 style={{ color: "grey" }}>Future Frontend Developer</h4>
+            <p>
+              I'm a dedicated computer science student who's on a path to
+              becoming a frontend developer. With a strong foundation in
+              programming and a passion for creating intuitive user interfaces,
+              I proficiently work with HTML/CSS, JavaScript/TypeScript, React,
+              and Next.js – the modern trending languages and frameworks of web
+              development. Moreover, I am adept at utilizing Express with
+              Node.js for backend development, enabling me to create full-stack
+              applications. I'm eager to combine my technical skills with
+              creativity to craft engaging web experiences. I'm excited about
+              the opportunity to learn and grow in the world of frontend
+              development.
             </p>
             <button
               onClick={clickToPortfolio}

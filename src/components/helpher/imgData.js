@@ -2,6 +2,7 @@ import jun from "../../assets/JunLee.webp";
 import html from "../../assets/html-5.webp";
 import css from "../../assets/css-3.webp";
 import js from "../../assets/js.webp";
+import ts from "../../assets/typescript.webp";
 import react from "../../assets/react.webp";
 import vue from "../../assets/vue.webp";
 import nextJS from "../../assets/nextjs.webp";
@@ -31,21 +32,26 @@ const techStackImg = [
   },
   {
     id: 2,
+    name: "TypeScript",
+    img: ts,
+  },
+  {
+    id: 3,
     name: "React",
     img: react,
   },
   {
-    id: 3,
+    id: 4,
     name: "Vue",
     img: vue,
   },
   {
-    id: 4,
+    id: 5,
     name: "Next.js",
     img: nextJS,
   },
   {
-    id: 5,
+    id: 6,
     name: "Node.js",
     img: nodeJS,
   },
