@@ -17,7 +17,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function HomeSection() {
+  const [controlStackModal, setControlStackModal] = useState(false);
   const [techStackModal, setTechStackModal] = useState(false);
+  const isMounted = useRef(false);
 
   const homeRef = useRef(null);
   const portfolioRef = useRef(null);
@@ -129,6 +131,24 @@ function HomeSection() {
 
   const [modalDarkMode, setModalDarkMode] = useState(false);
   const [isDark, setDark] = useState(false);
+
+  useEffect(() => {
+    if (isMounted.current) {
+      let timer;
+      if (controlStackModal) {
+        setTechStackModal(true);
+      } else if (!controlStackModal) {
+        timer = setTimeout(() => {
+          setTechStackModal(false);
+        }, 200);
+      }
+      return () => {
+        clearTimeout(timer);
+      };
+    } else {
+      isMounted.current = true;
+    }
+  }, [controlStackModal]);
 
   return (
     <div className="home">
@@ -319,7 +339,7 @@ function HomeSection() {
                 className="top-2-flexbox"
                 key={index}
                 onClick={() => {
-                  setTechStackModal(true);
+                  setControlStackModal(true);
                 }}
               >
                 <div style={{ width: "100%" }}>
@@ -344,11 +364,27 @@ function HomeSection() {
 
       {techStackModal ? (
         <>
-          <div className="tech-stack-modal-bg">
+          <div
+            className={
+              controlStackModal
+                ? "tech-stack-modal-bg animated-bg"
+                : "tech-stack-modal-bg animated-hide-bg"
+            }
+            onClick={(e) => {
+              const target = document.querySelector(".tech-stack-modal-bg");
+              if (e.target === target) {
+                setControlStackModal(false);
+              }
+            }}
+          >
             <div
-              className="tech-stack-modal"
+              className={
+                controlStackModal
+                  ? "tech-stack-modal animated"
+                  : "tech-stack-modal animated-hide"
+              }
               onClick={() => {
-                setTechStackModal(false);
+                setControlStackModal(false);
               }}
             >
               <h1 style={{ color: "black" }}>asd</h1>
