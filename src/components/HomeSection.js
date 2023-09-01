@@ -17,6 +17,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function HomeSection() {
+  const [techStackModal, setTechStackModal] = useState(false);
+
   const homeRef = useRef(null);
   const portfolioRef = useRef(null);
   const contactRef = useRef(null);
@@ -45,35 +47,8 @@ function HomeSection() {
       document.body.clientHeight,
       document.documentElement.clientHeight
     );
-
-    // Mobile & Tablet
-    // if (scrollHeight > 3900 && scrollHeight < 5500) {
-    //   if (window.scrollY > 1350) {
-    //     setScrollPortfolio(true);
-    //   } else {
-    //     setScrollPortfolio(false);
-    //   }
-    //   if (window.scrollY > 2400) {
-    //     setScrollContact(true);
-    //   } else {
-    //     setScrollContact(false);
-    //   }
-    // }
-    // // Laptop & FHD & QHD
-    // else if (scrollHeight < 3900) {
-    //   if (window.scrollY > 350) {
-    //     setScrollPortfolio(true);
-    //   } else {
-    //     setScrollPortfolio(false);
-    //   }
-    //   if (window.scrollY > 1015) {
-    //     setScrollContact(true);
-    //   } else {
-    //     setScrollContact(false);
-    //   }
-    // }
-
     const BrowserWidth = document.body.scrollWidth;
+
     // 4K
     if (BrowserWidth >= 3840) {
       if (window.scrollY > 445) {
@@ -340,7 +315,13 @@ function HomeSection() {
         <div className="top-2-flex-container">
           {techStackImg.map(function (a, index) {
             return (
-              <div className="top-2-flexbox" key={index}>
+              <div
+                className="top-2-flexbox"
+                key={index}
+                onClick={() => {
+                  setTechStackModal(true);
+                }}
+              >
                 <div style={{ width: "100%" }}>
                   {index === 0 ? (
                     <>
@@ -360,6 +341,21 @@ function HomeSection() {
           })}
         </div>
       </div>
+
+      {techStackModal ? (
+        <>
+          <div className="tech-stack-modal-bg">
+            <div
+              className="tech-stack-modal"
+              onClick={() => {
+                setTechStackModal(false);
+              }}
+            >
+              <h1 style={{ color: "black" }}>asd</h1>
+            </div>
+          </div>
+        </>
+      ) : null}
 
       {/* Portfolio */}
       <div className="home-mid container-layout" ref={portfolioRef}>

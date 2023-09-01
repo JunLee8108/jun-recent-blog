@@ -42,7 +42,7 @@ const techStackImg = [
   },
   {
     id: 4,
-    name: "Vue",
+    name: "Vue.js",
     img: vue,
   },
   {
@@ -91,7 +91,7 @@ const portfolioData = [
     description: [
       "Fictional luxury fashion brand",
       "'Refined Seoul'",
-      "Used React.js & Redux",
+      "Used React & Redux for frontend development",
       "Fully responsive on mobile",
     ],
   },
@@ -106,7 +106,7 @@ const portfolioData = [
     description: [
       "Redesign of Hyundai Motor's offical website",
       "Explore all vehicles and build your own car",
-      "Used React.js",
+      "Used React for frontend development",
       "Fully responsive on mobile",
     ],
   },
@@ -121,7 +121,7 @@ const portfolioData = [
     description: [
       "Fine art painter Woojoon Kim's gallery",
       "Virtual art gallery concept",
-      "Used React.js",
+      "Used React for frontend development",
       "Fully responsive on mobile",
     ],
   },
