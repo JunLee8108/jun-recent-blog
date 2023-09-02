@@ -24,13 +24,65 @@ const techStackImg = [
     name: "HTML & CSS",
     img: html,
     img2: css,
-    description: [],
+    description: [
+      {
+        main: "Strong Foundation",
+        support:
+          "Master CSS fundamentals, including selectors, properties, values, and how styles cascade.",
+      },
+      {
+        main: "Responsive Design",
+        support:
+          "Know how to create responsive layouts using techniques like media queries and flexbox/grid layouts.",
+      },
+      {
+        main: "Browser Compatibility",
+        support:
+          "Familiar with cross-browser compatibility issues and learn how to write CSS that works consistently across different browsers.",
+      },
+      {
+        main: "Animation and Transitions",
+        support:
+          "Master CSS animations and transitions to add subtle or eye-catching effects to your web interfaces.",
+      },
+      {
+        main: "Performance Optimization",
+        support:
+          "Techniques to optimize CSS for performance, like minification, reducing redundancy, and using efficient selectors.",
+      },
+    ],
   },
   {
     id: 1,
     name: "JavaScript",
     img: js,
-    description: [],
+    description: [
+      {
+        main: "ES6+ Mastery",
+        support:
+          "Familiar with ES6+ features like arrow functions, destructuring, classes, template literals, async/await, and promises.",
+      },
+      {
+        main: "Functional Programming",
+        support:
+          "Functional programming concepts like higher-order functions, pure functions, immutability, and working with arrays and objects.",
+      },
+      {
+        main: "DOM Manipulation",
+        support:
+          "Know the Document Object Model (DOM) and how to manipulate it to create dynamic and interactive web interfaces",
+      },
+      {
+        main: "Event Handling",
+        support:
+          "Event handling in JavaScript, including event propagation, delegation, and working with event listeners.",
+      },
+      {
+        main: "AJAX and Fetch API",
+        support:
+          "Know how to make asynchronous requests to APIs using the Fetch API or XMLHttpRequest for dynamic data retrieval.",
+      },
+    ],
   },
   {
     id: 2,
@@ -44,17 +96,17 @@ const techStackImg = [
     img: react,
     description: [
       {
-        main: "State management",
+        main: "State Management",
         support:
-          "Understand state management libraries like Redux for managing complex application states.",
+          "Use state management libraries like Redux for managing complex application states.",
       },
       {
         main: "Routing",
         support:
-          "Familiarize myself with React Router or any other routing library to handle navigation in single-page applications.",
+          "Familiar with React Router or any other routing library to handle navigation in single-page applications.",
       },
       {
-        main: "Responsive design and styling",
+        main: "Responsive Design and Styling",
         support:
           "Master CSS and CSS frameworks like Bootstrap or CSS-in-JS libraries like styled-components.",
       },
@@ -75,7 +127,38 @@ const techStackImg = [
     id: 5,
     name: "Next.js",
     img: nextJS,
-    description: [],
+    description: [
+      {
+        main: "React Fundamentals",
+        support:
+          "Strong understanding of React, as Next.js builds upon React concepts.",
+      },
+      {
+        main: "Pages and Routing",
+        support:
+          "Know Next.js's file-based routing system and dynamic routing capabilities.",
+      },
+      {
+        main: "API Routes",
+        support:
+          "Know how to build API routes in Next.js, allowing me to create backend functionality within your frontend application.",
+      },
+      {
+        main: "Data Fetching",
+        support:
+          "Various data fetching methods in Next.js, including getStaticProps, getServerSideProps, and getInitialProps.",
+      },
+      {
+        main: "Authentication and Authorization",
+        support:
+          "Techniques for implementing user authentication and authorization in a Next.js application.",
+      },
+      {
+        main: "Error Handling and Debugging",
+        support:
+          "Debugging techniques specific to Next.js, such as diagnosing server-side errors and rendering issues.",
+      },
+    ],
   },
   {
     id: 6,
@@ -118,8 +201,8 @@ const portfolioData = [
     iconFgColor: "white",
     description: [
       "Fictional luxury fashion brand",
-      "'Refined Seoul'",
-      "Used React & Redux for frontend development",
+      "React for frontend development",
+      "Redux for state management",
       "Fully responsive on mobile",
     ],
   },
@@ -133,9 +216,8 @@ const portfolioData = [
     iconFgColor: "white",
     description: [
       "Redesign of Hyundai Motor's offical website",
-      "Explore all vehicles and build your own car",
-      "Used React for frontend development",
-      "Used Styled Component",
+      "React for frontend development",
+      "Used CSS-in-JS libraries styled-components",
       "Fully responsive on mobile",
     ],
   },

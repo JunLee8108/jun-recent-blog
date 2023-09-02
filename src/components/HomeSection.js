@@ -298,7 +298,7 @@ function HomeSection() {
         <div className="top-1-flexbox1">
           <h1 className="h1-green-left">Jeong Hyun Lee</h1>
           <div className="top-1-introBox">
-            <h4 style={{ color: "grey" }}>- Future Frontend Developer</h4>
+            <h4 style={{ color: "grey" }}>Future Frontend Developer</h4>
             <p>
               I'm a dedicated computer science student who's on a path to
               becoming a frontend developer. With a strong foundation in
@@ -329,7 +329,7 @@ function HomeSection() {
       <div className="home-top-2 container-layout">
         <h1 className="h1-green-left">Tech Stack</h1>
         <h4 style={{ color: "grey", paddingLeft: "20px" }}>
-          - Click each icon to see the details
+          Click each icon to see the details
         </h4>
         <div className="top-2-flex-container">
           {techStackImg.map(function (a, index) {
@@ -368,6 +368,8 @@ function HomeSection() {
           setControlStackModal={setControlStackModal}
           controlStackModal={controlStackModal}
           techStackName={techStackName}
+          isDark={isDark}
+          modalDarkMode={modalDarkMode}
         />
       ) : null}
 

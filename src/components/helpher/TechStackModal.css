@@ -12,12 +12,21 @@
   top: 10%;
   left: 35%;
   width: 35%;
-  height: auto;
+  height: 80%;
   z-index: 15;
-  background-color: #fffaed;
+  background: #fffaed;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
+}
+
+.dark {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(98, 114, 128) 0%,
+    rgb(52, 63, 51) 90.1%
+  );
 }
 
 .tech-stack-modal h1,
@@ -36,7 +45,7 @@ h3 {
   /* background-color: red; */
   width: 80%;
   max-width: 500px;
-  height: 100%;
+  height: auto;
   margin-bottom: 30px;
 }
 
@@ -139,6 +148,10 @@ h3 {
     width: 85%;
     height: 80%;
     overflow: auto;
+  }
+
+  .tech-stack-description {
+    height: auto;
   }
 
   .tech-stack-description-main {
