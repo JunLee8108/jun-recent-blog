@@ -375,9 +375,12 @@ function HomeSection() {
 
       {/* Portfolio */}
       <div className="home-mid container-layout" ref={portfolioRef}>
-        <h1 className="h1-green-left">
-          Portfolio <span style={{ fontSize: "15px" }}>- Projects</span>
-        </h1>
+        <h1 className="h1-green-left">Portfolio</h1>
+        <h4
+          style={{ color: "grey", marginBottom: "30px", paddingLeft: "20px" }}
+        >
+          Jeong's Personal Projects
+        </h4>
 
         <div
           className={`home-mid-textbox-container ${

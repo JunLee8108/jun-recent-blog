@@ -88,7 +88,33 @@ const techStackImg = [
     id: 2,
     name: "TypeScript",
     img: ts,
-    description: [],
+    description: [
+      {
+        main: "TypeScript Basics",
+        support:
+          "TypeScript's basic types, such as string, number, boolean, array, tuple, enum, and any.",
+      },
+      {
+        main: "Classes and Inheritance",
+        support:
+          "Define classes, interfaces for classes, and inheritance with TypeScript.",
+      },
+      {
+        main: "Generics",
+        support:
+          "Know concept of generics, which allow me to write flexible and reusable functions and classes.",
+      },
+      {
+        main: "Type Guards and Type Assertions",
+        support:
+          "Type guards to narrow down types within conditional statements.",
+      },
+      {
+        main: "Union and Intersection Types",
+        support:
+          "Union types to handle values that can be one of several types, and intersection types to combine multiple types.",
+      },
+    ],
   },
   {
     id: 3,
@@ -113,7 +139,12 @@ const techStackImg = [
       {
         main: "API Integration",
         support:
-          "Make API requests using libraries like Axios or the built-in fetch API.",
+          "API requests using libraries like Axios or the built-in fetch API. Handle data from APIs and update the component state accordingly",
+      },
+      {
+        main: "Component Architecture",
+        support:
+          "design and organize components in a modular and reusable manner.",
       },
     ],
   },
@@ -121,7 +152,37 @@ const techStackImg = [
     id: 4,
     name: "Vue.js",
     img: vue,
-    description: [],
+    description: [
+      {
+        main: "Vue Fundamentals:",
+        support:
+          "solid foundation by understanding Vue's core concepts: data binding, directives, computed properties, and watchers.",
+      },
+      {
+        main: "Vue Router",
+        support: "Dynamic routing, route guards, and nested routes.",
+      },
+      {
+        main: "State Management with Vuex",
+        support:
+          "Manage complex application states using Vuex, Vue's official state management library, and know concepts like actions, mutations, modules, and getters.",
+      },
+      {
+        main: "Lifecycle Hooks",
+        support:
+          "Familiar with Vue's component lifecycle hooks and understand when to use them for initialization, manipulation, or cleanup.",
+      },
+      {
+        main: "Vue CLI and Tooling",
+        support:
+          "Use Vue CLI to scaffold, build, and manage Vue applications and Vue DevTools for efficient debugging.",
+      },
+      {
+        main: "Testing with Jest",
+        support:
+          "Test Vue components and applications using the Jest testing framework.",
+      },
+    ],
   },
   {
     id: 5,
@@ -164,7 +225,33 @@ const techStackImg = [
     id: 6,
     name: "Node.js",
     img: nodeJS,
-    description: [],
+    description: [
+      {
+        main: "Node.js Core Concepts",
+        support:
+          "Know core concepts of Node.js, such as the event loop, modules, streams, buffers, and the CommonJS module system.",
+      },
+      {
+        main: "Express.js Framework",
+        support:
+          "Use Express.js to build APIs and web applications. Learn about routing, middleware, and request/response handling.",
+      },
+      {
+        main: "Database Integration",
+        support:
+          "Use different databases like MongoDB, MySQL, PostgreSQL, or Redis. Know how to perform CRUD operations and manage connections.",
+      },
+      {
+        main: "Authentication and Authorization",
+        support:
+          "Implement secure authentication and authorization mechanisms using packages like Passport.js or JWT.",
+      },
+      {
+        main: "Websockets and Real-Time Applications",
+        support:
+          "implement real-time features using WebSockets and libraries like Socket.IO.",
+      },
+    ],
   },
 ];
 
@@ -203,6 +290,7 @@ const portfolioData = [
       "Fictional luxury fashion brand",
       "React for frontend development",
       "Redux for state management",
+      "Used local json data",
       "Fully responsive on mobile",
     ],
   },

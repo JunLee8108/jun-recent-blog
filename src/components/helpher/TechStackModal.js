@@ -50,6 +50,17 @@ export default function TechStackModal({
                     </div>
                   );
                 })}
+                <center>
+                  <button
+                    className="tech-stack-modal-closeBtn tech-stack-btnDark"
+                    onClick={() => {
+                      setControlStackModal(false);
+                      document.body.style.overflow = "unset";
+                    }}
+                  >
+                    CLOSE
+                  </button>
+                </center>
               </div>
             </div>
           </div>
@@ -93,6 +104,17 @@ export default function TechStackModal({
                     </div>
                   );
                 })}
+                <center>
+                  <button
+                    className="tech-stack-modal-closeBtn"
+                    onClick={() => {
+                      setControlStackModal(false);
+                      document.body.style.overflow = "unset";
+                    }}
+                  >
+                    CLOSE
+                  </button>
+                </center>
               </div>
             </div>
           </div>
