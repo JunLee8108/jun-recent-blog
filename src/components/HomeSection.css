@@ -616,7 +616,7 @@ input:checked + .slider:before {
 /* ONLY PC */
 @media (hover: hover) {
   .home-mid-textbox-flexbox:hover {
-    border: 2px solid goldenrod;
+    border: 2px solid #0ba360;
     transition: all 0.3s linear;
     transform: translateY(-3%);
     /* opacity: 0.5; */
@@ -627,6 +627,10 @@ input:checked + .slider:before {
     transition: all 0.3s linear;
     transform: translateY(0%);
     /* opacity: 1; */
+  }
+
+  .home-mid-textbox-flexbox:active {
+    border: 2px solid goldenrod;
   }
 
   li:hover {

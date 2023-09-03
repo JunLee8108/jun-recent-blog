@@ -211,6 +211,9 @@ function HomeSection() {
                 fgColor="black"
                 className="icon"
                 style={{ marginRight: "15px", width: "35px", height: "35px" }}
+                onClick={() => {
+                  document.body.style.cursor = "wait";
+                }}
               />
               <SocialIcon
                 url="https://github.com/JunLee8108"
@@ -218,6 +221,9 @@ function HomeSection() {
                 fgColor="black"
                 className="icon"
                 style={{ marginRight: "15px", width: "35px", height: "35px" }}
+                onClick={() => {
+                  document.body.style.cursor = "wait";
+                }}
               />
               <SocialIcon
                 url="https://velog.io/@lejhn1"
@@ -225,6 +231,9 @@ function HomeSection() {
                 fgColor="black"
                 className="icon"
                 style={{ width: "35px", height: "35px" }}
+                onClick={() => {
+                  document.body.style.cursor = "wait";
+                }}
               />
             </div>
 
@@ -407,7 +416,12 @@ function HomeSection() {
               return (
                 <div className="flexbox" key={index}>
                   <h2>{contactMeInfo[index].name}</h2>
-                  <a href={contactMeInfo[index].aHref}>
+                  <a
+                    href={contactMeInfo[index].aHref}
+                    onClick={() => {
+                      document.body.style.cursor = "wait";
+                    }}
+                  >
                     <img src={contactMeInfo[index].img} alt="emoticon" />
                   </a>
                 </div>
