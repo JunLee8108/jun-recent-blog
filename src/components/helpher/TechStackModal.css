@@ -95,11 +95,11 @@ h3 {
 }
 
 .animated {
-  animation: show-modal 0.7s forwards linear;
+  animation: show-modal 0.5s forwards linear;
 }
 
 .animated-hide {
-  animation: hide-modal 0.7s forwards linear;
+  animation: hide-modal 0.5s forwards linear;
 }
 
 @keyframes show-modal {
