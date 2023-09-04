@@ -9,11 +9,16 @@
 
 .tech-stack-modal {
   position: fixed;
-  top: 10%;
-  left: 35%;
+  /* top: 10%;
+  left: 35%; */
   width: 35%;
-  height: 80%;
+  max-width: 700px;
+  /* height: 80%; */
+  height: auto;
   z-index: 15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fffaed;
   display: flex;
   flex-direction: column;
@@ -90,32 +95,32 @@ h3 {
 }
 
 .animated {
-  animation: show-modal 0.2s forwards linear;
+  animation: show-modal 0.7s forwards linear;
 }
 
 .animated-hide {
-  animation: hide-modal 0.2s forwards linear;
+  animation: hide-modal 0.7s forwards linear;
 }
 
 @keyframes show-modal {
   from {
     opacity: 0;
-    transform: translateY(-10%);
+    /* transform: translateY(-10%); */
   }
   to {
     opacity: 1;
-    transform: translateY(0%);
+    /* transform: translateY(0%); */
   }
 }
 
 @keyframes hide-modal {
   from {
     opacity: 1;
-    transform: translateY(0%);
+    /* transform: translateY(0%); */
   }
   to {
     opacity: 0;
-    transform: translateY(-10%);
+    /* transform: translateY(-10%); */
   }
 }
 
@@ -172,18 +177,18 @@ h3 {
 /* MOBILE - TABLET */
 @media screen and (max-width: 1280px) {
   .tech-stack-modal {
-    top: 20%;
-    left: 10%;
+    /* top: 20%;
+    left: 10%; */
     width: 80%;
-    height: 60%;
+    /* height: 60%; */
   }
 }
 
 /* MOBILE - SMARTPHONE */
 @media screen and (max-width: 767px) {
   .tech-stack-modal {
-    top: 10%;
-    left: 7%;
+    /* top: 10%;
+    left: 7%; */
     width: 85%;
     height: 80%;
     overflow: auto;
