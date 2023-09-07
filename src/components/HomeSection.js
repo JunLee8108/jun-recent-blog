@@ -68,14 +68,15 @@ function HomeSection() {
   let [scrollPortfolio, setScrollPortfolio] = useState(false);
 
   const scrollEvent = () => {
-    let scrollHeight = Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight,
-      document.body.offsetHeight,
-      document.documentElement.offsetHeight,
-      document.body.clientHeight,
-      document.documentElement.clientHeight
-    );
+    // let scrollHeight = Math.max(
+    //   document.body.scrollHeight,
+    //   document.documentElement.scrollHeight,
+    //   document.body.offsetHeight,
+    //   document.documentElement.offsetHeight,
+    //   document.body.clientHeight,
+    //   document.documentElement.clientHeight
+    // );
+
     const BrowserWidth = document.body.scrollWidth;
 
     // 4K
@@ -179,7 +180,7 @@ function HomeSection() {
 
   const openInNewTab = (link) => {
     const BrowserWidth = document.body.scrollWidth;
-    if (BrowserWidth > 1280) {
+    if (BrowserWidth > 1280 && link !== "mailto:lejhn1@gmail.com") {
       window.open(link, "_blank");
     } else {
       // document.body.style.cursor = "wait";
@@ -481,14 +482,13 @@ function HomeSection() {
               return (
                 <div className="flexbox" key={index}>
                   <h2>{contactMeInfo[index].name}</h2>
-                  <a
-                    href={contactMeInfo[index].aHref}
+                  <img
+                    src={contactMeInfo[index].img}
+                    alt="emoticon"
                     onClick={() => {
-                      document.body.style.cursor = "wait";
+                      openInNewTab(contactMeInfo[index].aHref);
                     }}
-                  >
-                    <img src={contactMeInfo[index].img} alt="emoticon" />
-                  </a>
+                  />
                 </div>
               );
             })}
