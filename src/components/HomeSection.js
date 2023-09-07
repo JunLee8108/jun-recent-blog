@@ -199,13 +199,19 @@ function HomeSection() {
         </div>
         <div className="navbar-mobile-flexbox">
           {isModal ? (
-            <FontAwesomeIcon
-              icon="fa-solid fa-circle-xmark"
-              size="lg"
+            <button
+              style={{
+                border: "none",
+                background: "transparent",
+                color: "white",
+                marginRight: "-5px",
+              }}
               onClick={() => {
                 controlModal();
               }}
-            />
+            >
+              <FontAwesomeIcon icon="fa-solid fa-circle-xmark" size="xl" />
+            </button>
           ) : (
             <button
               style={{
@@ -214,14 +220,11 @@ function HomeSection() {
                 color: "white",
                 marginRight: "-5px",
               }}
+              onClick={() => {
+                controlModal();
+              }}
             >
-              <FontAwesomeIcon
-                icon="fa-solid fa-bars"
-                size="xl"
-                onClick={() => {
-                  controlModal();
-                }}
-              />
+              <FontAwesomeIcon icon="fa-solid fa-bars" size="xl" />
             </button>
           )}
         </div>
