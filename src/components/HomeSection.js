@@ -207,30 +207,41 @@ function HomeSection() {
               }}
             />
           ) : (
-            <FontAwesomeIcon
-              icon="fa-solid fa-bars"
-              size="lg"
-              onClick={() => {
-                controlModal();
+            <button
+              style={{
+                border: "none",
+                background: "transparent",
+                color: "white",
+                marginRight: "-5px",
               }}
-            />
+            >
+              <FontAwesomeIcon
+                icon="fa-solid fa-bars"
+                size="xl"
+                onClick={() => {
+                  controlModal();
+                }}
+              />
+            </button>
           )}
         </div>
       </div>
 
       {isModal ? (
-        <div
-          className={
-            modalDarkMode
-              ? "navbar-modal-container navbar-modal-container-darkmode"
-              : "navbar-modal-container"
-          }
-        >
-          <ul>
-            <li onClick={clickToHome}>About Me</li>
-            <li onClick={clickToPortfolio}>Portfolio</li>
-            <li onClick={clickToContact}>Contact Me</li>
-          </ul>
+        <div className="navbar-modal-bg">
+          <div
+            className={
+              modalDarkMode
+                ? "navbar-modal-container navbar-modal-container-darkmode"
+                : "navbar-modal-container"
+            }
+          >
+            <ul>
+              <li onClick={clickToHome}>About Me</li>
+              <li onClick={clickToPortfolio}>Portfolio</li>
+              <li onClick={clickToContact}>Contact Me</li>
+            </ul>
+          </div>
         </div>
       ) : null}
 
