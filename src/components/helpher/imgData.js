@@ -14,6 +14,7 @@ import me from "../../assets/user.webp";
 import portfolio from "../../assets/profile.webp";
 import contact from "../../assets/contact-information.webp";
 import developer from "../../assets/code.webp";
+import developer2 from "../../assets/code2.webp";
 import portfolio1 from "../../assets/hyundai-portfolio-1.webp";
 import portfolio2 from "../../assets/hyundai-portfolio-2.webp";
 import portfolio3 from "../../assets/hyundai-portfolio-3.webp";
@@ -340,6 +341,7 @@ export {
   portfolio,
   contact,
   developer,
+  developer2,
   portfolio1,
   portfolio2,
 };

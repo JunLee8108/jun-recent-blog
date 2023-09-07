@@ -6,7 +6,14 @@ import { darkModeMobile } from "./helpher/darkMobile";
 import SendingEmailJS from "./helpher/SendingEmailJS";
 import { techStackImg } from "./helpher/imgData";
 import { contactMeInfo } from "./helpher/imgData";
-import { jun, me, portfolio, contact, developer } from "./helpher/imgData";
+import {
+  jun,
+  me,
+  portfolio,
+  contact,
+  developer,
+  developer2,
+} from "./helpher/imgData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Portfolio from "./helpher/Portfolio";
 import TechStackModal from "./helpher/TechStackModal";
@@ -146,6 +153,31 @@ function HomeSection() {
     }
   }, [controlStackModal]);
 
+  useEffect(() => {
+    // const BrowserWidth = document.body.scrollWidth;
+    // if (BrowserWidth > 1280) {
+    let count = 0;
+    const bg1 = document.querySelector(".top-1-flexbox2-emt1");
+    const bg2 = document.querySelector(".top-1-flexbox2-emt2");
+    let timer = setInterval(() => {
+      if (count === 0) {
+        bg1.style.opacity = 1;
+        bg2.style.opacity = 0;
+        count += 1;
+      } else if (count === 1) {
+        bg1.style.opacity = 0;
+        bg2.style.opacity = 1;
+        count -= 1;
+      }
+    }, 6000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // }
+  }, []);
+
+  /// Return
   return (
     <div className="home">
       {/* Side Navbar */}
@@ -330,7 +362,16 @@ function HomeSection() {
           </div>
         </div>
         <div className="top-1-flexbox2">
-          <img src={developer} alt="Developer emoticon"></img>
+          <img
+            src={developer}
+            className="top-1-flexbox2-emt1"
+            alt="Developer emoticon"
+          ></img>
+          <img
+            src={developer2}
+            alt="Developer emoticon"
+            className="top-1-flexbox2-emt2"
+          ></img>
         </div>
       </div>
 

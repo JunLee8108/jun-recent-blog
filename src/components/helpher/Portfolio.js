@@ -2,6 +2,9 @@ import { SocialIcon } from "react-social-icons";
 import { portfolioData } from "./imgData";
 
 export default function Portfolio() {
+  const openInNewTab = (link) => {
+    window.open(link, "_blank");
+  };
   return (
     <>
       {portfolioData.map((a, index) => {
@@ -11,8 +14,9 @@ export default function Portfolio() {
               src={portfolioData[index].img}
               alt=""
               onClick={() => {
-                document.body.style.cursor = "wait";
-                window.location.href = `${portfolioData[index].iconURL1}`;
+                // document.body.style.cursor = "wait";
+                // window.location.href = `${portfolioData[index].iconURL1}`;
+                openInNewTab(portfolioData[index].iconURL1);
               }}
             />
 
@@ -39,7 +43,7 @@ export default function Portfolio() {
             <div className="home-mid-textbox">
               <h5>Demo: </h5>
               <SocialIcon
-                url={portfolioData[index].iconURL1}
+                // url={portfolioData[index].iconURL1}
                 bgColor={portfolioData[index].iconBgColor}
                 fgColor={portfolioData[index].iconFgColor}
                 className="portfolio-icon"
@@ -47,20 +51,23 @@ export default function Portfolio() {
                   width: "28px",
                   height: "28px",
                   marginRight: "30px",
+                  cursor: "pointer",
                 }}
                 onClick={() => {
-                  document.body.style.cursor = "wait";
+                  //   document.body.style.cursor = "wait";
+                  openInNewTab(portfolioData[index].iconURL1);
                 }}
               />
               <h5>Github: </h5>
               <SocialIcon
-                url={portfolioData[index].iconURL2}
+                // url={portfolioData[index].iconURL2}
                 bgColor={portfolioData[index].iconBgColor}
                 fgColor={portfolioData[index].iconFgColor}
                 className="portfolio-icon"
-                style={{ width: "28px", height: "28px" }}
+                style={{ width: "28px", height: "28px", cursor: "pointer" }}
                 onClick={() => {
-                  document.body.style.cursor = "wait";
+                  //   document.body.style.cursor = "wait";
+                  openInNewTab(portfolioData[index].iconURL2);
                 }}
               />
             </div>

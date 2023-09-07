@@ -80,6 +80,10 @@ export default function TechStackModal({
                 document.body.style.overflow = "unset";
               }
             }}
+            // tabIndex="0"
+            // onKeyDown={(e) => {
+            //   console.log(e.key);
+            // }}
           >
             <div
               className={
