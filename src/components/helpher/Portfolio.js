@@ -7,6 +7,7 @@ export default function Portfolio() {
     if (BrowserWidth > 1280) {
       window.open(link, "_blank");
     } else {
+      document.body.style.cursor = "wait";
       window.location.href = link;
     }
   };
