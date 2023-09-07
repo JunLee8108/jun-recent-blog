@@ -1,16 +1,7 @@
 import { SocialIcon } from "react-social-icons";
 import { portfolioData } from "./imgData";
 
-export default function Portfolio() {
-  const openInNewTab = (link) => {
-    const BrowserWidth = document.body.scrollWidth;
-    if (BrowserWidth > 1280) {
-      window.open(link, "_blank");
-    } else {
-      document.body.style.cursor = "wait";
-      window.location.href = link;
-    }
-  };
+export default function Portfolio({ openInNewTab }) {
   return (
     <>
       {portfolioData.map((a, index) => {
@@ -66,6 +57,7 @@ export default function Portfolio() {
               <h5>Github: </h5>
               <SocialIcon
                 // url={portfolioData[index].iconURL2}
+                network="github"
                 bgColor={portfolioData[index].iconBgColor}
                 fgColor={portfolioData[index].iconFgColor}
                 className="portfolio-icon"

@@ -177,6 +177,16 @@ function HomeSection() {
     }
   }, [controlStackModal]);
 
+  const openInNewTab = (link) => {
+    const BrowserWidth = document.body.scrollWidth;
+    if (BrowserWidth > 1280) {
+      window.open(link, "_blank");
+    } else {
+      // document.body.style.cursor = "wait";
+      window.location.href = link;
+    }
+  };
+
   /// Return
   return (
     <div className="home">
@@ -238,33 +248,47 @@ function HomeSection() {
 
             <div className="social-icons text-center">
               <SocialIcon
-                url="https://www.linkedin.com/in/jeong-hyun-lee-a5362319a/"
+                // url="https://www.linkedin.com/in/jeong-hyun-lee-a5362319a/"
+                network="linkedin"
                 bgColor="white"
                 fgColor="black"
                 className="icon"
-                style={{ marginRight: "15px", width: "35px", height: "35px" }}
+                style={{
+                  marginRight: "15px",
+                  width: "35px",
+                  height: "35px",
+                  cursor: "pointer",
+                }}
                 onClick={() => {
-                  document.body.style.cursor = "wait";
+                  openInNewTab(
+                    "https://www.linkedin.com/in/jeong-hyun-lee-a5362319a/"
+                  );
                 }}
               />
               <SocialIcon
-                url="https://github.com/JunLee8108"
+                // url="https://github.com/JunLee8108"
+                network="github"
                 bgColor="white"
                 fgColor="black"
                 className="icon"
-                style={{ marginRight: "15px", width: "35px", height: "35px" }}
+                style={{
+                  marginRight: "15px",
+                  width: "35px",
+                  height: "35px",
+                  cursor: "pointer",
+                }}
                 onClick={() => {
-                  document.body.style.cursor = "wait";
+                  openInNewTab("https://github.com/JunLee8108");
                 }}
               />
               <SocialIcon
-                url="https://velog.io/@lejhn1"
+                // url="https://velog.io/@lejhn1"
                 bgColor="white"
                 fgColor="black"
                 className="icon"
-                style={{ width: "35px", height: "35px" }}
+                style={{ width: "35px", height: "35px", cursor: "pointer" }}
                 onClick={() => {
-                  document.body.style.cursor = "wait";
+                  openInNewTab("https://velog.io/@lejhn1");
                 }}
               />
             </div>
@@ -437,7 +461,7 @@ function HomeSection() {
             scrollPortfolio && "home-mid-textbox-container-scroll-event"
           }`}
         >
-          <Portfolio />
+          <Portfolio openInNewTab={openInNewTab} />
         </div>
       </div>
 
