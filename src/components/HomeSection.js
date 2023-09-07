@@ -35,7 +35,6 @@ function HomeSection() {
           bg2.style.opacity = 0;
           count -= 1;
         }
-        console.log(1);
       }, 5000);
 
       return () => {

@@ -3,7 +3,12 @@ import { portfolioData } from "./imgData";
 
 export default function Portfolio() {
   const openInNewTab = (link) => {
-    window.open(link, "_blank");
+    const BrowserWidth = document.body.scrollWidth;
+    if (BrowserWidth > 1280) {
+      window.open(link, "_blank");
+    } else {
+      window.location.href = link;
+    }
   };
   return (
     <>
@@ -15,7 +20,6 @@ export default function Portfolio() {
               alt=""
               onClick={() => {
                 // document.body.style.cursor = "wait";
-                // window.location.href = `${portfolioData[index].iconURL1}`;
                 openInNewTab(portfolioData[index].iconURL1);
               }}
             />
