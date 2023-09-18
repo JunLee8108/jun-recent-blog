@@ -23,8 +23,8 @@ function HomeSection() {
     const BrowserWidth = document.body.scrollWidth;
     if (BrowserWidth > 1280) {
       let count = 0;
-      const bg1 = document.querySelector(".top-1-flexbox2-emt1");
-      const bg2 = document.querySelector(".top-1-flexbox2-emt2");
+      const bg1 = document.querySelector(".developer-img-1");
+      const bg2 = document.querySelector(".developer-img-2");
       let timer = setInterval(() => {
         if (count === 0) {
           bg1.style.opacity = 0;
@@ -52,15 +52,15 @@ function HomeSection() {
   const portfolioRef = useRef(null);
   const contactRef = useRef(null);
   const clickToHome = () => {
-    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+    homeRef.current?.scrollIntoView();
     setModal(false);
   };
   const clickToPortfolio = () => {
-    portfolioRef.current?.scrollIntoView({ behavior: "smooth" });
+    portfolioRef.current?.scrollIntoView();
     setModal(false);
   };
   const clickToContact = () => {
-    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+    contactRef.current?.scrollIntoView();
     setModal(false);
   };
 
@@ -68,15 +68,14 @@ function HomeSection() {
   let [scrollPortfolio, setScrollPortfolio] = useState(false);
 
   const scrollEvent = () => {
-    // let scrollHeight = Math.max(
-    //   document.body.scrollHeight,
-    //   document.documentElement.scrollHeight,
-    //   document.body.offsetHeight,
-    //   document.documentElement.offsetHeight,
-    //   document.body.clientHeight,
-    //   document.documentElement.clientHeight
-    // );
-
+    let scrollHeight = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
+    );
     const BrowserWidth = document.body.scrollWidth;
 
     // 4K
@@ -135,9 +134,26 @@ function HomeSection() {
       }
     }
 
+    // if (window.scrollY < 1030) {
+    //   document.querySelector(".navbar-item1").style.color = "black";
+    //   document.querySelector(".navbar-item2").style.color = "white";
+    //   document.querySelector(".navbar-item3").style.color = "white";
+    // } else {
+    //   document.querySelector(".navbar-item1").style.color = "white";
+    // }
+
+    // if (window.scrollY > 1030 && window.scrollY < 1820) {
+    //   document.querySelector(".navbar-item1").style.color = "white";
+    //   document.querySelector(".navbar-item2").style.color = "black";
+    //   document.querySelector(".navbar-item3").style.color = "white";
+    // } else {
+    //   document.querySelector(".navbar-item2").style.color = "white";
+    // }
+
     // console.log(document.documentElement.scrollHeight);
     // console.log(document.body.scrollWidth);
     // console.log(scrollHeight);
+    // console.log(BrowserWidth);
     // console.log(window.scrollY);
   };
 
@@ -335,15 +351,15 @@ function HomeSection() {
             </div>
 
             <div className="navbar-item">
-              <li onClick={clickToHome}>
+              <li onClick={clickToHome} className="navbar-item1">
                 <img src={me} alt="About emoticon"></img>
                 About Me
               </li>
-              <li onClick={clickToPortfolio}>
+              <li onClick={clickToPortfolio} className="navbar-item2">
                 <img src={portfolio} alt="Portfolio emoticon"></img>
                 Portfolio
               </li>
-              <li onClick={clickToContact}>
+              <li onClick={clickToContact} className="navbar-item3">
                 <img src={contact} alt="Contact emoticon"></img>
                 Contact Me
               </li>
@@ -374,11 +390,11 @@ function HomeSection() {
       </div>
 
       {/* About Me 1 - Introduction */}
-      <div className="home-top-1 container-layout" ref={homeRef}>
-        <div className="top-1-flexbox1">
+      <div className="about-me-introduction container-layout" ref={homeRef}>
+        <div className="introduction-flexbox-1">
           <h1 className="h1-green-left">Jeong Hyun Lee</h1>
-          <div className="top-1-introBox">
-            <h4 style={{ color: "grey" }}>Future Frontend Developer</h4>
+          <div className="introduction-text-box">
+            <h4>Future Frontend Developer</h4>
             <p>
               I'm a dedicated computer science student who's on a path to
               becoming a frontend developer. With a strong foundation in
@@ -394,37 +410,37 @@ function HomeSection() {
             </p>
             <button
               onClick={clickToPortfolio}
-              className="top-1-flexbox1-button"
+              className="introduction-view-portfolio-btn cursor-pointer"
             >
               View Portfolio
             </button>
           </div>
         </div>
-        <div className="top-1-flexbox2">
+        <div className="introduction-flexbox-2">
           <img
             src={developer}
-            className="top-1-flexbox2-emt1"
+            className="developer-img-1"
             alt="Developer emoticon"
           ></img>
           <img
             src={developer2}
             alt="Developer emoticon"
-            className="top-1-flexbox2-emt2"
+            className="developer-img-2"
           ></img>
         </div>
       </div>
 
       {/* About Me 2 - Tech Stack */}
-      <div className="home-top-2 container-layout">
+      <div className="about-me-tech-stack container-layout">
         <h1 className="h1-green-left">Tech Stack</h1>
-        <h4 style={{ color: "grey", paddingLeft: "20px" }}>
+        <h4 className="short-description">
           Click each icon to see the details
         </h4>
-        <div className="top-2-flex-container">
+        <div className="tech-stack-flex-container">
           {techStackImg.map(function (a, index) {
             return (
               <div
-                className="top-2-flexbox"
+                className="tech-stack-flexbox"
                 key={index}
                 onClick={() => {
                   setControlStackModal(true);
@@ -463,7 +479,7 @@ function HomeSection() {
       ) : null}
 
       {/* Portfolio */}
-      <div className="home-mid container-layout" ref={portfolioRef}>
+      <div className="portfolio container-layout" ref={portfolioRef}>
         <h1 className="h1-green-left">Portfolio</h1>
         <h4
           style={{ color: "grey", marginBottom: "30px", paddingLeft: "20px" }}
@@ -472,26 +488,29 @@ function HomeSection() {
         </h4>
 
         <div
-          className={`home-mid-textbox-container ${
-            scrollPortfolio && "home-mid-textbox-container-scroll-event"
+          className={`portfolio-flex-container ${
+            scrollPortfolio && "portfolio-flex-container-scroll-event"
           }`}
         >
-          <Portfolio openInNewTab={openInNewTab} />
+          <Portfolio
+            openInNewTab={openInNewTab}
+            scrollPortfolio={scrollPortfolio}
+          />
         </div>
       </div>
 
       {/* Contact Me */}
-      <div className="home-mid-3 container-layout" ref={contactRef}>
+      <div className="contact-me container-layout" ref={contactRef}>
         <h1 className="h1-green-left">Contact Me</h1>
         <div
-          className={`mid-3-flex-container ${
-            scrollContact && "mid-3-scroll-event"
+          className={`contact-me-flex-container ${
+            scrollContact && "contact-me-flex-container-scroll-event"
           }`}
         >
-          <div className="mid-3-flexbox1">
+          <div className="contact-me-flexbox1">
             <SendingEmailJS />
           </div>
-          <div className="mid-3-flexbox2">
+          <div className="contact-me-flexbox2">
             {contactMeInfo.map(function (a, index) {
               return (
                 <div className="flexbox" key={index}>

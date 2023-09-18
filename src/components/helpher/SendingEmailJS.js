@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
-import "../HomeSection.css";
 import { useRef } from "react";
+import "./SendingEmailJS.css";
 
 function SendingEmailJS() {
   const form = useRef();
@@ -81,7 +81,7 @@ function SendingEmailJS() {
         </div>
       </div>
 
-      <button type="submit" className="submit-button">
+      <button type="submit" className="submit-button cursor-pointer">
         Submit
       </button>
     </form>

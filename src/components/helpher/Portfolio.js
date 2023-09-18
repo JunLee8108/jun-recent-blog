@@ -6,7 +6,7 @@ export default function Portfolio({ openInNewTab }) {
     <>
       {portfolioData.map((a, index) => {
         return (
-          <div className="home-mid-textbox-flexbox" key={index}>
+          <div className="portfolio-flexbox" key={index}>
             <img
               src={portfolioData[index].img}
               alt=""
@@ -16,38 +16,30 @@ export default function Portfolio({ openInNewTab }) {
               }}
             />
 
-            <div
-              style={{
-                width: "100%",
-                textAlign: "center",
-                marginBottom: "0",
-              }}
-            >
-              <h3 className="home-mid-title">{portfolioData[index].title}</h3>
+            <div className="portfolio-flexbox-title text-center">
+              <h3 className="title">{portfolioData[index].title}</h3>
             </div>
 
-            <div className="home-mid-description">
+            <div className="portfolio-flexbox-description">
               {portfolioData[index].description.map((a, index2) => {
                 return (
-                  <h4 style={{ marginBottom: "0" }} key={index2}>
+                  <h4 key={index2}>
                     {portfolioData[index].description[index2]}
                   </h4>
                 );
               })}
             </div>
 
-            <div className="home-mid-textbox">
+            <div className="portfolio-flexbox-iconbox">
               <h5>Demo: </h5>
               <SocialIcon
                 // url={portfolioData[index].iconURL1}
                 bgColor={portfolioData[index].iconBgColor}
                 fgColor={portfolioData[index].iconFgColor}
-                className="portfolio-icon"
+                className="portfolio-icon cursor-pointer"
                 style={{
                   width: "28px",
                   height: "28px",
-                  marginRight: "30px",
-                  cursor: "pointer",
                 }}
                 onClick={() => {
                   //   document.body.style.cursor = "wait";
@@ -56,12 +48,11 @@ export default function Portfolio({ openInNewTab }) {
               />
               <h5>Github: </h5>
               <SocialIcon
-                // url={portfolioData[index].iconURL2}
                 network="github"
                 bgColor={portfolioData[index].iconBgColor}
                 fgColor={portfolioData[index].iconFgColor}
-                className="portfolio-icon"
-                style={{ width: "28px", height: "28px", cursor: "pointer" }}
+                className="portfolio-icon cursor-pointer"
+                style={{ width: "28px", height: "28px" }}
                 onClick={() => {
                   //   document.body.style.cursor = "wait";
                   openInNewTab(portfolioData[index].iconURL2);
