@@ -17,6 +17,9 @@ html {
   position: relative;
   padding: 20px;
   padding-left: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.7s 0.2s forwards;
 }
 
 .text-center {
@@ -69,6 +72,12 @@ ul {
   padding: 10px;
 }
 
+.profile {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.7s 0.2s forwards;
+}
+
 .profile img {
   width: 160px;
   height: 170px;
@@ -80,6 +89,12 @@ ul {
 .profile h3 {
   border-left: 2px dotted white;
   border-right: 2px dotted white;
+}
+
+.navbar-intro {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.7s 0.2s forwards;
 }
 
 .social-icons {
@@ -302,13 +317,11 @@ li img {
 
 .contact-me-flex-container {
   display: flex;
-  transform: translateY(-10%);
   opacity: 0;
   transition: 2s all;
 }
 
 .contact-me-flex-container-scroll-event {
-  transform: translateY(0%);
   opacity: 1;
 }
 
@@ -632,14 +645,12 @@ input:checked + .slider:before {
   .portfolio-flexbox:hover {
     border: 2px solid #0ba360;
     transition: all 0.3s linear;
-    transform: translateY(-3%);
     /* opacity: 0.5; */
   }
 
   .portfolio-flexbox:not(:hover) {
     border: 2px solid transparent;
     transition: all 0.3s linear;
-    transform: translateY(0%);
     /* opacity: 1; */
   }
 
