@@ -18,6 +18,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Portfolio from "./helpher/Portfolio";
 import TechStackModal from "./helpher/TechStackModal";
 
+//
+
 function HomeSection() {
   useEffect(() => {
     const BrowserWidth = document.body.scrollWidth;
