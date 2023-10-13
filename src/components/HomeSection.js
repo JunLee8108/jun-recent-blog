@@ -271,7 +271,7 @@ function HomeSection() {
             <img src={jun} alt="Jun's Profile" />
           </div>
 
-          <div>
+          <div className="navbar-intro">
             <p>
               ‣ Hello, my name is Jeong Hyun Lee. I'm a computer science student
               who seek a frontend developer.

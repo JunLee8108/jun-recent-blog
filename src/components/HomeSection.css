@@ -17,6 +17,9 @@ html {
   position: relative;
   padding: 20px;
   padding-left: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.7s 0.2s forwards;
 }
 
 .text-center {
@@ -69,6 +72,12 @@ ul {
   padding: 10px;
 }
 
+.profile {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.7s 0.2s forwards;
+}
+
 .profile img {
   width: 160px;
   height: 170px;
@@ -80,6 +89,12 @@ ul {
 .profile h3 {
   border-left: 2px dotted white;
   border-right: 2px dotted white;
+}
+
+.navbar-intro {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.7s 0.2s forwards;
 }
 
 .social-icons {
@@ -488,6 +503,13 @@ input:checked + .slider:before {
   border-radius: 5px;
   font-weight: bold;
   color: black;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* MOBILE - TABLET */
