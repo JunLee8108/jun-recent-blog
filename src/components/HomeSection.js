@@ -1,18 +1,19 @@
 import "./HomeSection.css";
 
 import { useRef, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-import SendingEmailJS from "./helpher/SendingEmailJS";
 import { techStackImg } from "./helpher/imgData";
-import { contactMeInfo } from "./helpher/imgData";
 import { developer, developer2 } from "./helpher/imgData";
 
-import Portfolio from "./helpher/PortfolioSection";
 import TechStackModal from "./helpher/TechStackModal";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 function HomeSection() {
-  const navigate = useNavigate();
+  const [controlStackModal, setControlStackModal] = useState(false);
+  const [techStackModal, setTechStackModal] = useState(false);
+  const [techStackName, setTechStackName] = useState("");
+  const isMounted = useRef(false);
 
   useEffect(() => {
     const BrowserWidth = document.body.scrollWidth;
@@ -38,144 +39,6 @@ function HomeSection() {
     }
   }, []);
 
-  const [controlStackModal, setControlStackModal] = useState(false);
-  const [techStackModal, setTechStackModal] = useState(false);
-  const [techStackName, setTechStackName] = useState("");
-  const isMounted = useRef(false);
-
-  const homeRef = useRef(null);
-  const portfolioRef = useRef(null);
-  const contactRef = useRef(null);
-
-  // const clickToHome = () => {
-  //   homeRef.current?.scrollIntoView();
-  //   setModal(false);
-  // };
-  // const clickToPortfolio = () => {
-  //   portfolioRef.current?.scrollIntoView();
-  //   setModal(false);
-  // };
-  // const clickToContact = () => {
-  //   contactRef.current?.scrollIntoView();
-  //   setModal(false);
-  // };
-
-  const openInNewTab = (link) => {
-    const BrowserWidth = document.body.scrollWidth;
-    if (BrowserWidth > 1280 && link !== "mailto:lejhn1@gmail.com") {
-      window.open(link, "_blank");
-    } else {
-      // document.body.style.cursor = "wait";
-      window.location.href = link;
-    }
-  };
-
-  let [scrollContact, setScrollContact] = useState(false);
-  let [scrollPortfolio, setScrollPortfolio] = useState(false);
-
-  const scrollEvent = () => {
-    let scrollHeight = Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight,
-      document.body.offsetHeight,
-      document.documentElement.offsetHeight,
-      document.body.clientHeight,
-      document.documentElement.clientHeight
-    );
-    const BrowserWidth = document.body.scrollWidth;
-
-    // 4K
-    if (BrowserWidth >= 3840) {
-      if (window.scrollY > 445) {
-        setScrollPortfolio(true);
-      } else {
-        setScrollPortfolio(false);
-      }
-      if (window.scrollY > 1300) {
-        setScrollContact(true);
-      } else {
-        setScrollContact(false);
-      }
-    }
-
-    // Laptop, FHD, QHD
-    if (BrowserWidth <= 2560) {
-      if (window.scrollY > 350) {
-        setScrollPortfolio(true);
-      } else {
-        setScrollPortfolio(false);
-      }
-      if (window.scrollY > 1015) {
-        setScrollContact(true);
-      } else {
-        setScrollContact(false);
-      }
-    }
-
-    // Tablet
-    if (BrowserWidth >= 768 && BrowserWidth <= 1280) {
-      if (window.scrollY > 1053) {
-        setScrollPortfolio(true);
-      } else {
-        setScrollPortfolio(false);
-      }
-      if (window.scrollY > 3350) {
-        setScrollContact(true);
-      } else {
-        setScrollContact(false);
-      }
-    }
-
-    // Phone
-    if (BrowserWidth < 768) {
-      if (window.scrollY > 1350) {
-        setScrollPortfolio(true);
-      } else {
-        setScrollPortfolio(false);
-      }
-      if (window.scrollY > 2400) {
-        setScrollContact(true);
-      } else {
-        setScrollContact(false);
-      }
-    }
-
-    // if (window.scrollY < 1030) {
-    //   document.querySelector(".navbar-item1").style.color = "black";
-    //   document.querySelector(".navbar-item2").style.color = "white";
-    //   document.querySelector(".navbar-item3").style.color = "white";
-    // } else {
-    //   document.querySelector(".navbar-item1").style.color = "white";
-    // }
-
-    // if (window.scrollY > 1030 && window.scrollY < 1820) {
-    //   document.querySelector(".navbar-item1").style.color = "white";
-    //   document.querySelector(".navbar-item2").style.color = "black";
-    //   document.querySelector(".navbar-item3").style.color = "white";
-    // } else {
-    //   document.querySelector(".navbar-item2").style.color = "white";
-    // }
-
-    // console.log(document.documentElement.scrollHeight);
-    // console.log(document.body.scrollWidth);
-    // console.log(scrollHeight);
-    // console.log(BrowserWidth);
-    // console.log(window.scrollY);
-  };
-
-  useEffect(() => {
-    let timer = setInterval(() => {
-      window.addEventListener("scroll", scrollEvent);
-    }, 100);
-    return () => {
-      clearInterval(timer);
-      window.removeEventListener("scroll", scrollEvent);
-    };
-  }, []);
-
-  const [modalDarkMode, setModalDarkMode] = useState(false);
-  const [isDark, setDark] = useState(false);
-
   useEffect(() => {
     if (isMounted.current) {
       let timer;
@@ -194,19 +57,20 @@ function HomeSection() {
     }
   }, [controlStackModal]);
 
-  console.log(1);
-
-  /// Return
   return (
     <div className="home">
-      {/* Side Navbar */}
-
       {/* About Me 1 - Introduction */}
-      <div className="about-me-introduction container-layout" ref={homeRef}>
+      <div className="about-me-introduction container-layout">
         <div className="introduction-flexbox-1">
-          <h1 className="h1-green-left">Jeong Hyun Lee</h1>
+          <h1 className="h1-green-left">Jeong Hyun Lee </h1>
           <div className="introduction-text-box">
-            <h4>Future Full-Stack Developer</h4>
+            <h4>
+              <FontAwesomeIcon
+                icon="fa-solid fa-laptop"
+                style={{ marginRight: "5px" }}
+              />
+              Future Full-Stack Developer
+            </h4>
             <p>
               I'm a dedicated computer science student who's on a path to
               becoming a Full-Stack developer. With a strong foundation in
@@ -240,6 +104,10 @@ function HomeSection() {
       <div className="about-me-tech-stack container-layout">
         <h1 className="h1-green-left">Tech Stack</h1>
         <h4 className="short-description">
+          <FontAwesomeIcon
+            icon="fa-solid fa-computer-mouse"
+            style={{ marginRight: "6px" }}
+          />
           Click each icon to see the details
         </h4>
         <div className="tech-stack-flex-container">
@@ -251,7 +119,6 @@ function HomeSection() {
                 onClick={() => {
                   setControlStackModal(true);
                   setTechStackName(techStackImg[index].name);
-                  document.body.style.overflow = "hidden";
                 }}
               >
                 <div style={{ width: "100%" }}>
@@ -279,8 +146,6 @@ function HomeSection() {
           setControlStackModal={setControlStackModal}
           controlStackModal={controlStackModal}
           techStackName={techStackName}
-          isDark={isDark}
-          modalDarkMode={modalDarkMode}
         />
       ) : null}
     </div>

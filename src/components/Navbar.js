@@ -65,19 +65,32 @@ function Navbar() {
 
       {isModal ? (
         <div className="navbar-modal-bg">
-          <div
-            className={
-              //   modalDarkMode
-              // ?
-              // "navbar-modal-container navbar-modal-container-darkmode"
-              // :
-              "navbar-modal-container"
-            }
-          >
+          <div className={"navbar-modal-container"}>
             <ul>
-              {/* <li onClick={clickToHome}>About Me</li>
-              <li onClick={clickToPortfolio}>Portfolio</li>
-              <li onClick={clickToContact}>Contact Me</li> */}
+              <li
+                onClick={() => {
+                  navigate("/");
+                  setModal(false);
+                }}
+              >
+                About Me
+              </li>
+              <li
+                onClick={() => {
+                  navigate("/portfolio");
+                  setModal(false);
+                }}
+              >
+                Portfolio
+              </li>
+              <li
+                onClick={() => {
+                  navigate("/contact");
+                  setModal(false);
+                }}
+              >
+                Contact Me
+              </li>
             </ul>
           </div>
         </div>

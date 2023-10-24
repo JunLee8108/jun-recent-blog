@@ -1,35 +1,3 @@
-/* common use */
-html {
-  scroll-behavior: smooth;
-}
-
-.h1-green-left {
-  padding-left: 10px;
-  padding-bottom: 5px;
-  border-left: solid #0ba360 5px;
-  border-radius: 5px;
-  margin-bottom: 30px;
-}
-
-.container-layout {
-  width: calc(100% - 300px);
-  left: 300px;
-  position: relative;
-  padding: 20px;
-  padding-left: 30px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 0.7s 0.2s forwards;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
 /* PC - LAPTOP OR DESKTOP */
 .home {
   transition: all 0.4s linear;
@@ -142,18 +110,6 @@ li img {
   color: grey;
 }
 
-.about-me-introduction .introduction-view-portfolio-btn {
-  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-  border: none;
-  width: 120px;
-  height: 50px;
-  font-weight: bold;
-  border-radius: 5px;
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .about-me-introduction .introduction-flexbox-2 {
   width: 40%;
   padding: 50px;
@@ -219,8 +175,8 @@ li img {
 /* Portfolio */
 .portfolio {
   background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-  height: 100vh;
-  /* min-height: 100vh; */
+  /* height: 100vh; */
+  min-height: 100vh;
 }
 
 .portfolio img {
@@ -237,10 +193,6 @@ li img {
   gap: 4rem;
   justify-content: center;
   margin-bottom: 25px;
-}
-
-.portfolio-flex-container-scroll-event {
-  opacity: 1;
 }
 
 .portfolio-flexbox {
@@ -278,6 +230,7 @@ li img {
 .portfolio-icon {
   margin-top: 19px;
   margin-left: 5px;
+  transition: all 0.2s linear;
 }
 
 .portfolio-icon:nth-child(2) {
@@ -286,13 +239,7 @@ li img {
 
 .portfolio-icon:hover {
   transform: scale(1.2);
-  transition: all 0.2s linear;
   opacity: 0.5;
-}
-
-.portfolio-icon:not(:hover) {
-  transform: scale(1);
-  transition: all 0.2s linear;
 }
 
 .portfolio-flexbox-description {
@@ -322,10 +269,6 @@ li img {
 .contact-me-flex-container {
   display: flex;
   transition: 2s all;
-}
-
-.contact-me-flex-container-scroll-event {
-  opacity: 1;
 }
 
 .contact-me-flexbox1 {
@@ -595,6 +538,7 @@ input:checked + .slider:before {
 
   .portfolio {
     width: 100%;
+    /* height: 100%; */
     position: static;
   }
 
@@ -689,18 +633,6 @@ input:checked + .slider:before {
     opacity: 1;
   }
 
-  .introduction-view-portfolio-btn:hover {
-    transform: scale(1.05);
-    transition: all 0.2s linear;
-    opacity: 0.6;
-  }
-
-  .introduction-view-portfolio-btn:not(:hover) {
-    transform: scale(1);
-    transition: all 0.2s linear;
-    opacity: 1;
-  }
-
   .flexbox img:hover {
     transform: scale(1.1);
     transition: all 0.15s linear;
@@ -726,11 +658,6 @@ input:checked + .slider:before {
 
 /* MOBILE - SMARTPHONE */
 @media screen and (max-width: 767px) {
-  html {
-    scroll-behavior: smooth;
-    scroll-padding: 50px;
-  }
-
   .navbar-mobile {
     position: sticky;
     top: 0;

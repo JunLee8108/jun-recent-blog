@@ -23,7 +23,6 @@ export default function TechStackModal({
               const target = document.querySelector(".tech-stack-modal-bg");
               if (e.target === target) {
                 setControlStackModal(false);
-                document.body.style.overflow = "unset";
               }
             }}
           >
@@ -55,7 +54,6 @@ export default function TechStackModal({
                     className="tech-stack-modal-closeBtn tech-stack-btnDark"
                     onClick={() => {
                       setControlStackModal(false);
-                      document.body.style.overflow = "unset";
                     }}
                   >
                     CLOSE
@@ -77,7 +75,6 @@ export default function TechStackModal({
               const target = document.querySelector(".tech-stack-modal-bg");
               if (e.target === target) {
                 setControlStackModal(false);
-                document.body.style.overflow = "unset";
               }
             }}
             // tabIndex="0"
@@ -113,7 +110,6 @@ export default function TechStackModal({
                     className="tech-stack-modal-closeBtn"
                     onClick={() => {
                       setControlStackModal(false);
-                      document.body.style.overflow = "unset";
                     }}
                   >
                     CLOSE
