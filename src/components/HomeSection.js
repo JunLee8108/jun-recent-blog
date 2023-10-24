@@ -1,26 +1,19 @@
 import "./HomeSection.css";
-import { SocialIcon } from "react-social-icons";
+
 import { useRef, useEffect, useState } from "react";
-import { darkMode } from "./helpher/dark";
-import { darkModeMobile } from "./helpher/darkMobile";
+import { useNavigate } from "react-router-dom";
+
 import SendingEmailJS from "./helpher/SendingEmailJS";
 import { techStackImg } from "./helpher/imgData";
 import { contactMeInfo } from "./helpher/imgData";
-import {
-  jun,
-  me,
-  portfolio,
-  contact,
-  developer,
-  developer2,
-} from "./helpher/imgData";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Portfolio from "./helpher/Portfolio";
+import { developer, developer2 } from "./helpher/imgData";
+
+import Portfolio from "./helpher/PortfolioSection";
 import TechStackModal from "./helpher/TechStackModal";
 
-//
-
 function HomeSection() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const BrowserWidth = document.body.scrollWidth;
     if (BrowserWidth > 1280) {
@@ -53,17 +46,28 @@ function HomeSection() {
   const homeRef = useRef(null);
   const portfolioRef = useRef(null);
   const contactRef = useRef(null);
-  const clickToHome = () => {
-    homeRef.current?.scrollIntoView();
-    setModal(false);
-  };
-  const clickToPortfolio = () => {
-    portfolioRef.current?.scrollIntoView();
-    setModal(false);
-  };
-  const clickToContact = () => {
-    contactRef.current?.scrollIntoView();
-    setModal(false);
+
+  // const clickToHome = () => {
+  //   homeRef.current?.scrollIntoView();
+  //   setModal(false);
+  // };
+  // const clickToPortfolio = () => {
+  //   portfolioRef.current?.scrollIntoView();
+  //   setModal(false);
+  // };
+  // const clickToContact = () => {
+  //   contactRef.current?.scrollIntoView();
+  //   setModal(false);
+  // };
+
+  const openInNewTab = (link) => {
+    const BrowserWidth = document.body.scrollWidth;
+    if (BrowserWidth > 1280 && link !== "mailto:lejhn1@gmail.com") {
+      window.open(link, "_blank");
+    } else {
+      // document.body.style.cursor = "wait";
+      window.location.href = link;
+    }
   };
 
   let [scrollContact, setScrollContact] = useState(false);
@@ -169,12 +173,6 @@ function HomeSection() {
     };
   }, []);
 
-  const [isModal, setModal] = useState(false);
-
-  const controlModal = () => {
-    setModal((isModal) => !isModal);
-  };
-
   const [modalDarkMode, setModalDarkMode] = useState(false);
   const [isDark, setDark] = useState(false);
 
@@ -196,210 +194,22 @@ function HomeSection() {
     }
   }, [controlStackModal]);
 
-  const openInNewTab = (link) => {
-    const BrowserWidth = document.body.scrollWidth;
-    if (BrowserWidth > 1280 && link !== "mailto:lejhn1@gmail.com") {
-      window.open(link, "_blank");
-    } else {
-      // document.body.style.cursor = "wait";
-      window.location.href = link;
-    }
-  };
+  console.log(1);
 
   /// Return
   return (
     <div className="home">
       {/* Side Navbar */}
 
-      <div className="navbar-mobile">
-        <div className="navbar-mobile-flexbox">
-          <h5>JEONG HYUN LEE</h5>
-        </div>
-        <div className="navbar-mobile-flexbox">
-          {isModal ? (
-            <button
-              style={{
-                border: "none",
-                background: "transparent",
-                color: "white",
-                marginRight: "-5px",
-              }}
-              onClick={() => {
-                controlModal();
-              }}
-            >
-              <FontAwesomeIcon icon="fa-solid fa-circle-xmark" size="xl" />
-            </button>
-          ) : (
-            <button
-              style={{
-                border: "none",
-                background: "transparent",
-                color: "white",
-                marginRight: "-5px",
-              }}
-              onClick={() => {
-                controlModal();
-              }}
-            >
-              <FontAwesomeIcon icon="fa-solid fa-bars" size="xl" />
-            </button>
-          )}
-        </div>
-      </div>
-
-      {isModal ? (
-        <div className="navbar-modal-bg">
-          <div
-            className={
-              modalDarkMode
-                ? "navbar-modal-container navbar-modal-container-darkmode"
-                : "navbar-modal-container"
-            }
-          >
-            <ul>
-              <li onClick={clickToHome}>About Me</li>
-              <li onClick={clickToPortfolio}>Portfolio</li>
-              <li onClick={clickToContact}>Contact Me</li>
-            </ul>
-          </div>
-        </div>
-      ) : null}
-
-      <div className="navbar-container">
-        <ul>
-          <div className="profile text-center">
-            <h3>Jeong Hyun Lee</h3>
-            <img src={jun} alt="Jun's Profile" />
-          </div>
-
-          <div className="navbar-intro">
-            <p>
-              ‣ Hello, my name is Jeong Hyun Lee. I'm a computer science student
-              who seek a frontend developer.
-            </p>
-
-            <div className="social-icons text-center">
-              <SocialIcon
-                // url="https://www.linkedin.com/in/jeong-hyun-lee-a5362319a/"
-                network="linkedin"
-                bgColor="white"
-                fgColor="black"
-                className="icon"
-                style={{
-                  marginRight: "15px",
-                  width: "35px",
-                  height: "35px",
-                  cursor: "pointer",
-                }}
-                onClick={() => {
-                  openInNewTab(
-                    "https://www.linkedin.com/in/jeong-hyun-lee-a5362319a/"
-                  );
-                }}
-              />
-              <SocialIcon
-                // url="https://github.com/JunLee8108"
-                network="github"
-                bgColor="white"
-                fgColor="black"
-                className="icon"
-                style={{
-                  marginRight: "15px",
-                  width: "35px",
-                  height: "35px",
-                  cursor: "pointer",
-                }}
-                onClick={() => {
-                  openInNewTab("https://github.com/JunLee8108");
-                }}
-              />
-              <SocialIcon
-                // url="https://velog.io/@lejhn1"
-                bgColor="white"
-                fgColor="black"
-                className="icon"
-                style={{ width: "35px", height: "35px", cursor: "pointer" }}
-                onClick={() => {
-                  openInNewTab("https://velog.io/@lejhn1");
-                }}
-              />
-            </div>
-
-            <div className="navbar-item-mobile">
-              <li>
-                <label className="switch" htmlFor="dark">
-                  <input
-                    type="checkbox"
-                    onClick={() => {
-                      darkModeMobile();
-                      setModalDarkMode((modalDarkMode) => !modalDarkMode);
-                    }}
-                    id="dark"
-                  />
-                  <span className="slider round"></span>
-                </label>
-                <label
-                  htmlFor="dark"
-                  style={{ cursor: "pointer", fontSize: "14px" }}
-                >
-                  <FontAwesomeIcon
-                    icon="fa-solid fa-moon"
-                    size="xl"
-                    style={{ color: "yellow" }}
-                  />
-                </label>
-              </li>
-            </div>
-
-            <div className="navbar-item">
-              <li onClick={clickToHome} className="navbar-item1">
-                <img src={me} alt="About emoticon"></img>
-                About Me
-              </li>
-              <li onClick={clickToPortfolio} className="navbar-item2">
-                <img src={portfolio} alt="Portfolio emoticon"></img>
-                Portfolio
-              </li>
-              <li onClick={clickToContact} className="navbar-item3">
-                <img src={contact} alt="Contact emoticon"></img>
-                Contact Me
-              </li>
-              <li
-                onClick={() => {
-                  darkMode();
-                  setDark((isDark) => !isDark);
-                }}
-              >
-                {isDark ? (
-                  <FontAwesomeIcon
-                    icon="fa-solid fa-toggle-on"
-                    size="xl"
-                    style={{ marginRight: "16px", color: "silver" }}
-                  />
-                ) : (
-                  <FontAwesomeIcon
-                    icon="fa-solid fa-toggle-off"
-                    size="xl"
-                    style={{ marginRight: "16px", color: "white" }}
-                  />
-                )}
-                Dark Mode
-              </li>
-            </div>
-          </div>
-        </ul>
-      </div>
-
       {/* About Me 1 - Introduction */}
       <div className="about-me-introduction container-layout" ref={homeRef}>
         <div className="introduction-flexbox-1">
           <h1 className="h1-green-left">Jeong Hyun Lee</h1>
           <div className="introduction-text-box">
-            <h4>Future Frontend Developer</h4>
+            <h4>Future Full-Stack Developer</h4>
             <p>
               I'm a dedicated computer science student who's on a path to
-              becoming a frontend developer. With a strong foundation in
+              becoming a Full-Stack developer. With a strong foundation in
               programming and a passion for creating intuitive user interfaces,
               I proficiently work with HTML/CSS, JavaScript/TypeScript, React,
               and Next.js – the modern trending languages and frameworks of web
@@ -410,12 +220,6 @@ function HomeSection() {
               the opportunity to learn and grow in the world of frontend
               development.
             </p>
-            <button
-              onClick={clickToPortfolio}
-              className="introduction-view-portfolio-btn cursor-pointer"
-            >
-              View Portfolio
-            </button>
           </div>
         </div>
         <div className="introduction-flexbox-2">
@@ -479,57 +283,6 @@ function HomeSection() {
           modalDarkMode={modalDarkMode}
         />
       ) : null}
-
-      {/* Portfolio */}
-      <div className="portfolio container-layout" ref={portfolioRef}>
-        <h1 className="h1-green-left">Portfolio</h1>
-        <h4
-          style={{ color: "grey", marginBottom: "30px", paddingLeft: "20px" }}
-        >
-          Jeong's Personal Projects
-        </h4>
-
-        <div
-          className={`portfolio-flex-container ${
-            scrollPortfolio && "portfolio-flex-container-scroll-event"
-          }`}
-        >
-          <Portfolio
-            openInNewTab={openInNewTab}
-            scrollPortfolio={scrollPortfolio}
-          />
-        </div>
-      </div>
-
-      {/* Contact Me */}
-      <div className="contact-me container-layout" ref={contactRef}>
-        <h1 className="h1-green-left">Contact Me</h1>
-        <div
-          className={`contact-me-flex-container ${
-            scrollContact && "contact-me-flex-container-scroll-event"
-          }`}
-        >
-          <div className="contact-me-flexbox1">
-            <SendingEmailJS />
-          </div>
-          <div className="contact-me-flexbox2">
-            {contactMeInfo.map(function (a, index) {
-              return (
-                <div className="flexbox" key={index}>
-                  <h2>{contactMeInfo[index].name}</h2>
-                  <img
-                    src={contactMeInfo[index].img}
-                    alt="emoticon"
-                    onClick={() => {
-                      openInNewTab(contactMeInfo[index].aHref);
-                    }}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { SocialIcon } from "react-social-icons";
 import { portfolioData } from "./imgData";
 
-export default function Portfolio({ openInNewTab }) {
+export default function PortfolioSection({ openInNewTab }) {
   return (
     <>
       {portfolioData.map((a, index) => {
