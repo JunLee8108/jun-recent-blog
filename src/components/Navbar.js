@@ -1,9 +1,11 @@
+import "./Navbar.css";
 import { jun, me, portfolio, contact } from "./helpher/imgData";
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 function Navbar() {
   const [isModal, setModal] = useState(false);
@@ -65,7 +67,7 @@ function Navbar() {
 
       {isModal ? (
         <div className="navbar-modal-bg">
-          <div className={"navbar-modal-container"}>
+          <div className="navbar-modal-container">
             <ul>
               <li
                 onClick={() => {
@@ -183,7 +185,6 @@ function Navbar() {
             </div>
 
             <div className="navbar-item">
-              {/* <li onClick={clickToHome} className="navbar-item1"> */}
               <li
                 onClick={() => {
                   navigate("/");
@@ -211,6 +212,11 @@ function Navbar() {
                 <img src={contact} alt="Contact emoticon"></img>
                 Contact Me
               </li>
+
+              <center style={{ marginTop: "30px" }}>
+                <ClimbingBoxLoader color="white" speedMultiplier={0.8} />
+              </center>
+
               {/* <li
                 onClick={() => {
                   darkMode();

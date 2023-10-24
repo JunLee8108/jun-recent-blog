@@ -11,6 +11,7 @@ function ContactMe() {
       window.location.href = link;
     }
   };
+
   return (
     <>
       {/* Contact Me */}

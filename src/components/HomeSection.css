@@ -1,18 +1,10 @@
 /* PC - LAPTOP OR DESKTOP */
-.home {
-  transition: all 0.4s linear;
-}
-
 .navbar-mobile {
   display: none;
 }
 
 .navbar-item-mobile {
   display: none;
-}
-
-.navbar-item1 {
-  transition: 1s ease-out;
 }
 
 /* side navbar */
@@ -72,6 +64,10 @@ ul {
   border-bottom: 3px solid white;
 }
 
+.icon {
+  transition: all 0.2s linear;
+}
+
 li {
   margin-bottom: 15px;
   padding: 5px;
@@ -79,6 +75,7 @@ li {
   font-weight: bold;
   cursor: pointer;
   display: flex;
+  transition: all 0.1s linear;
 }
 
 li img {
@@ -165,6 +162,7 @@ li img {
   height: 300px;
   margin-right: 10px;
   text-align: center;
+  transition: all 0.2s linear;
 }
 
 .tech-stack-flexbox img {
@@ -344,6 +342,7 @@ textarea {
   max-width: 70px;
   padding-bottom: 15px;
   cursor: pointer;
+  transition: all 0.15s linear;
   border: 2px transparent solid;
 }
 
@@ -393,71 +392,6 @@ textarea {
   margin-top: -12px;
 }
 
-/* slider */
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 35px;
-  height: 20px;
-  margin-right: 8.5px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: -3px;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  left: 4px;
-  bottom: 3px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: black;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px black;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(15px);
-  -ms-transform: translateX(15px);
-  transform: translateX(15px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
 .submit-button {
   background-color: white;
   width: 100px;
@@ -466,6 +400,7 @@ input:checked + .slider:before {
   border-radius: 5px;
   font-weight: bold;
   color: black;
+  transition: all 0.2s linear;
 }
 
 @keyframes slideUp {
@@ -619,60 +554,30 @@ input:checked + .slider:before {
   }
 
   li:hover {
-    color: black;
+    color: gold;
     transform: scale(1.1);
-    transition: all 0.1s linear;
-  }
-
-  li:not(:hover) {
-    transform: scale(1);
-    transition: all 0.1s linear;
   }
 
   .submit-button:hover {
     background-color: black;
     color: white;
     transform: scale(1.1);
-    transition: all 0.2s linear;
-  }
-
-  .submit-button:not(:hover) {
-    transform: scale(1);
-    transition: all 0.2s linear;
   }
 
   .icon:hover {
     transform: scale(1.2);
-    transition: all 0.2s linear;
     opacity: 0.5;
-  }
-
-  .icon:not(:hover) {
-    transform: scale(1);
-    transition: all 0.2s linear;
-    opacity: 1;
   }
 
   .flexbox img:hover {
     transform: scale(1.1);
-    transition: all 0.15s linear;
     border-bottom: 2px solid black;
-  }
-
-  .flexbox img:not(:hover) {
-    transform: scale(1);
-    transition: all 0.15s linear;
   }
 
   .tech-stack-flexbox:hover {
     transform: scale(1.12);
-    transition: all 0.2s linear;
-    cursor: pointer;
-  }
 
-  .tech-stack-flexbox:not(:hover) {
-    transform: scale(1);
-    transition: all 0.2s linear;
+    cursor: pointer;
   }
 }
 

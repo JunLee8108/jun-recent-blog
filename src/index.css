@@ -38,8 +38,7 @@ ul {
   padding: 20px;
   padding-left: 30px;
   opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 0.7s 0.2s forwards;
+  animation: flash 0.7s 0.2s forwards;
 }
 
 .text-center {
@@ -48,4 +47,10 @@ ul {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+@keyframes flash {
+  to {
+    opacity: 1;
+  }
 }
