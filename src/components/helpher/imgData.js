@@ -18,6 +18,8 @@ import developer2 from "../../assets/code2.webp";
 import portfolio1 from "../../assets/hyundai-portfolio-1.webp";
 import portfolio2 from "../../assets/hyundai-portfolio-2.webp";
 import portfolio3 from "../../assets/hyundai-portfolio-3.webp";
+import pg1 from "../../assets/pg1.webp";
+import pg3 from "../../assets/pg3.webp";
 
 const techStackImg = [
   {
@@ -280,7 +282,40 @@ const contactMeInfo = [
 
 const portfolioData = [
   {
+    id: 0,
+    title: "VocaVista",
+    img: pg1,
+    iconURL1: "https://voca-vista.vercel.app/",
+    iconURL2: "https://github.com/JunLee8108/VocaVista",
+    iconBgColor: "#8c65d3",
+    iconFgColor: "white",
+    description: [
+      "Korean E-Learning Platform with Adaptive Learning",
+      "Tech stack: Next.js, TypeScript, and MongoDB",
+      "Created API endpoints to fetch data from MongoDB",
+      "JWT token & bcrypt for the register and the login feature",
+      "Fancy & modern-looking design",
+      "Fully responsive on mobile",
+    ],
+  },
+  {
     id: 1,
+    title: "IntelliCart",
+    img: pg3,
+    iconURL1: "https://main.dth2vcti3zp62.amplifyapp.com/",
+    iconURL2: "https://github.com/JunLee8108/IntelliCart",
+    iconBgColor: "#39ff14",
+    iconFgColor: "white",
+    description: [
+      "AI-Powered E-Commerce Shop",
+      "Tech stack: React, TypeScript, Node.js, and Tensorflow",
+      "Currently in progress",
+      "Fancy & modern-looking design",
+      "Fully responsive on mobile",
+    ],
+  },
+  {
+    id: 2,
     title: "Refined Seoul",
     img: portfolio3,
     iconURL1: "https://main.d2t2zns6ieqh27.amplifyapp.com/",
@@ -290,14 +325,14 @@ const portfolioData = [
     description: [
       "Fictional luxury fashion brand",
       "React for frontend development",
-      "Redux for state management",
+      "Redux toolkit for state management",
       "Fetched local JSON data using Axios",
       "Completely modularized components",
       "Fully responsive on mobile",
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Hyundai Motors",
     img: portfolio1,
     iconURL1: "https://main.dv90aq3ksc428.amplifyapp.com/",
@@ -313,7 +348,7 @@ const portfolioData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Woojoon's Gallery",
     img: portfolio2,
     iconURL1: "https://main.d2uscgl8cg14gb.amplifyapp.com/",

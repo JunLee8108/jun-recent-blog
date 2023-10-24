@@ -7,27 +7,19 @@ export default function PortfolioSection({ openInNewTab }) {
       {portfolioData.map((a, index) => {
         return (
           <div className="portfolio-flexbox" key={index}>
-            <img
-              src={portfolioData[index].img}
-              alt=""
-              onClick={() => {
-                // document.body.style.cursor = "wait";
-                openInNewTab(portfolioData[index].iconURL1);
-              }}
-            />
+            <div className="portfolio-img-container">
+              <img
+                src={portfolioData[index].img}
+                alt=""
+                onClick={() => {
+                  // document.body.style.cursor = "wait";
+                  openInNewTab(portfolioData[index].iconURL1);
+                }}
+              />
+            </div>
 
             <div className="portfolio-flexbox-title text-center">
               <h3 className="title">{portfolioData[index].title}</h3>
-            </div>
-
-            <div className="portfolio-flexbox-description">
-              {portfolioData[index].description.map((a, index2) => {
-                return (
-                  <h4 key={index2}>
-                    {portfolioData[index].description[index2]}
-                  </h4>
-                );
-              })}
             </div>
 
             <div className="portfolio-flexbox-iconbox">
@@ -58,6 +50,16 @@ export default function PortfolioSection({ openInNewTab }) {
                   openInNewTab(portfolioData[index].iconURL2);
                 }}
               />
+            </div>
+
+            <div className="portfolio-flexbox-description">
+              {portfolioData[index].description.map((a, index2) => {
+                return (
+                  <h4 key={index2}>
+                    {portfolioData[index].description[index2]}
+                  </h4>
+                );
+              })}
             </div>
           </div>
         );
