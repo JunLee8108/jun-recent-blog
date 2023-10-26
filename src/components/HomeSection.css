@@ -86,6 +86,7 @@ li img {
 /* About Me 1 - Introduction */
 .about-me-introduction {
   height: auto;
+  min-height: 50vh;
   overflow: auto;
   display: flex;
   background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
@@ -139,6 +140,7 @@ li img {
 /* About Me 2 - Tech Stack */
 .about-me-tech-stack {
   height: 100%;
+  min-height: 50vh;
   background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
