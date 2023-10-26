@@ -2,6 +2,14 @@
   display: none;
 }
 
+.navbar-mobile-icon {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  color: white;
+  margin-right: -5px;
+}
+
 @media screen and (max-width: 767px) {
   .navbar-mobile-loader {
     display: block;

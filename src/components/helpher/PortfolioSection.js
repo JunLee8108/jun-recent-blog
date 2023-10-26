@@ -12,7 +12,6 @@ export default function PortfolioSection({ openInNewTab }) {
                 src={portfolioData[index].img}
                 alt=""
                 onClick={() => {
-                  // document.body.style.cursor = "wait";
                   openInNewTab(portfolioData[index].iconURL1);
                 }}
               />
@@ -25,16 +24,10 @@ export default function PortfolioSection({ openInNewTab }) {
             <div className="portfolio-flexbox-iconbox">
               <h5>Demo: </h5>
               <SocialIcon
-                // url={portfolioData[index].iconURL1}
                 bgColor={portfolioData[index].iconBgColor}
                 fgColor={portfolioData[index].iconFgColor}
                 className="portfolio-icon cursor-pointer"
-                style={{
-                  width: "28px",
-                  height: "28px",
-                }}
                 onClick={() => {
-                  //   document.body.style.cursor = "wait";
                   openInNewTab(portfolioData[index].iconURL1);
                 }}
               />
@@ -44,9 +37,7 @@ export default function PortfolioSection({ openInNewTab }) {
                 bgColor={portfolioData[index].iconBgColor}
                 fgColor={portfolioData[index].iconFgColor}
                 className="portfolio-icon cursor-pointer"
-                style={{ width: "28px", height: "28px" }}
                 onClick={() => {
-                  //   document.body.style.cursor = "wait";
                   openInNewTab(portfolioData[index].iconURL2);
                 }}
               />

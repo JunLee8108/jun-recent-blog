@@ -27,14 +27,6 @@
   overflow: auto;
 }
 
-.dark {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(98, 114, 128) 0%,
-    rgb(52, 63, 51) 90.1%
-  );
-}
-
 .tech-stack-modal h1,
 h3 {
   text-align: center;
@@ -93,10 +85,6 @@ h3 {
   font-weight: bold;
   cursor: pointer;
   color: #0ba360;
-}
-
-.tech-stack-btnDark {
-  color: red;
 }
 
 .animated {
@@ -167,15 +155,6 @@ h3 {
     color: #0ba360;
     transition: 0.2s linear all;
     background-color: transparent;
-  }
-
-  .tech-stack-btnDark:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #0ba360;
-  }
-
-  .tech-stack-btnDark:not(:hover) {
-    color: #0ba360;
   }
 }
 

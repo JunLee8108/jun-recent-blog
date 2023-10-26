@@ -9,7 +9,6 @@ function Portfolio() {
     if (BrowserWidth > 1280 && link !== "mailto:lejhn1@gmail.com") {
       window.open(link, "_blank");
     } else {
-      // document.body.style.cursor = "wait";
       window.location.href = link;
     }
   };
@@ -18,7 +17,7 @@ function Portfolio() {
     <>
       <div className="portfolio container-layout">
         <h1 className="h1-green-left">Portfolio</h1>
-        <h4 style={{ color: "grey", marginBottom: "30px", paddingLeft: "5px" }}>
+        <h4 className="portfolio-subtitle">
           <FontAwesomeIcon
             icon="fa-solid fa-file"
             style={{ marginRight: "5px" }}

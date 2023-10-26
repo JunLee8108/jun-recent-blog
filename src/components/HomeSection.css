@@ -15,9 +15,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  /* background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%); */
   background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-  overflow: auto;
   color: white;
 }
 
@@ -35,7 +33,7 @@ ul {
 .profile {
   opacity: 0;
   transform: translateY(20px);
-  animation: slideUp 0.7s 0.2s forwards;
+  animation: flash 0.7s 0.2s forwards;
 }
 
 .profile img {
@@ -54,17 +52,20 @@ ul {
 .navbar-intro {
   opacity: 0;
   transform: translateY(20px);
-  animation: slideUp 0.7s 0.2s forwards;
+  animation: flash 0.7s 0.2s forwards;
 }
 
-.social-icons {
+.navbar-social-icon-container {
   margin-top: 25px;
   margin-bottom: 30px;
   padding-bottom: 35px;
   border-bottom: 3px solid white;
 }
 
-.icon {
+.navbar-social-icon {
+  width: 35px !important;
+  height: 35px !important;
+  cursor: pointer;
   transition: all 0.2s linear;
 }
 
@@ -232,9 +233,9 @@ li img {
 .portfolio-flexbox-iconbox {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 800px;
-
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -243,9 +244,10 @@ li img {
 }
 
 .portfolio-icon {
-  margin-top: 19px;
   margin-left: 5px;
   transition: all 0.2s linear;
+  width: 28px !important;
+  height: 28px !important;
 }
 
 .portfolio-icon:nth-child(2) {
@@ -387,12 +389,6 @@ textarea {
   animation: slideUpModalBg 0.3s forwards;
 }
 
-@keyframes flash {
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes slideDownModal {
   from {
     opacity: 0;
@@ -437,10 +433,6 @@ textarea {
   }
 }
 
-.navbar-modal-container-darkmode {
-  background: grey;
-}
-
 .navbar-modal-container ul {
   display: flex;
   flex-direction: column;
@@ -470,13 +462,6 @@ textarea {
   font-weight: bold;
   color: black;
   transition: all 0.2s linear;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* MOBILE - TABLET */
@@ -633,7 +618,7 @@ textarea {
     transform: scale(1.1);
   }
 
-  .icon:hover {
+  .navbar-social-icon:hover {
     transform: scale(1.2);
     opacity: 0.5;
   }
@@ -757,8 +742,8 @@ textarea {
   }
 
   .portfolio-icon {
-    margin-top: 15px;
-    margin-left: 5px;
+    width: 24px !important;
+    height: 24px !important;
   }
 
   .portfolio-flexbox-description h4 {
