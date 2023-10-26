@@ -1,6 +1,7 @@
 import "./Navbar.css";
+import "./HomeSection.css";
 import { jun, me, portfolio, contact } from "./helpher/imgData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
@@ -9,11 +10,12 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 function Navbar() {
   const [isModal, setModal] = useState(false);
+  const [controlModalState, setControlModalState] = useState(false);
 
   const navigate = useNavigate();
 
   const controlModal = () => {
-    setModal((isModal) => !isModal);
+    setControlModalState((controlModalState) => !controlModalState);
   };
 
   const openInNewTab = (link) => {
@@ -26,6 +28,21 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    let timer;
+    if (controlModalState) {
+      setModal(true);
+    } else {
+      timer = setTimeout(() => {
+        setModal(false);
+      }, 300);
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [controlModalState]);
+
   return (
     <>
       <div className="navbar-mobile">
@@ -33,7 +50,7 @@ function Navbar() {
           <h5>JEONG HYUN LEE</h5>
         </div>
         <div className="navbar-mobile-flexbox">
-          {isModal ? (
+          {controlModalState ? (
             <button
               style={{
                 border: "none",
@@ -52,6 +69,7 @@ function Navbar() {
               style={{
                 border: "none",
                 background: "transparent",
+                padding: "10px",
                 color: "white",
                 marginRight: "-5px",
               }}
@@ -66,13 +84,27 @@ function Navbar() {
       </div>
 
       {isModal ? (
-        <div className="navbar-modal-bg">
-          <div className="navbar-modal-container">
+        <div
+          className="navbar-modal-bg"
+          onClick={(e) => {
+            const target = document.querySelector(".navbar-modal-bg");
+            if (e.target === target) {
+              setControlModalState(false);
+            }
+          }}
+        >
+          <div
+            className={
+              controlModalState
+                ? "navbar-modal-container animation"
+                : "navbar-modal-container animation-hide"
+            }
+          >
             <ul>
               <li
                 onClick={() => {
                   navigate("/");
-                  setModal(false);
+                  setControlModalState(false);
                 }}
               >
                 About Me
@@ -80,7 +112,7 @@ function Navbar() {
               <li
                 onClick={() => {
                   navigate("/portfolio");
-                  setModal(false);
+                  setControlModalState(false);
                 }}
               >
                 Portfolio
@@ -88,7 +120,7 @@ function Navbar() {
               <li
                 onClick={() => {
                   navigate("/contact");
-                  setModal(false);
+                  setControlModalState(false);
                 }}
               >
                 Contact Me
@@ -158,31 +190,11 @@ function Navbar() {
               />
             </div>
 
-            <div className="navbar-item-mobile">
-              <li>
-                <label className="switch" htmlFor="dark">
-                  <input
-                    type="checkbox"
-                    onClick={() => {
-                      //   darkModeMobile();
-                      //   setModalDarkMode((modalDarkMode) => !modalDarkMode);
-                    }}
-                    id="dark"
-                  />
-                  <span className="slider round"></span>
-                </label>
-                <label
-                  htmlFor="dark"
-                  style={{ cursor: "pointer", fontSize: "14px" }}
-                >
-                  <FontAwesomeIcon
-                    icon="fa-solid fa-moon"
-                    size="xl"
-                    style={{ color: "yellow" }}
-                  />
-                </label>
-              </li>
-            </div>
+            <center>
+              <div className="navbar-mobile-loader">
+                <ClimbingBoxLoader color="white" speedMultiplier={0.8} />
+              </div>
+            </center>
 
             <div className="navbar-item">
               <li
