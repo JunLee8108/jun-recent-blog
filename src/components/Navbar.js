@@ -55,6 +55,7 @@ function Navbar() {
               style={{
                 border: "none",
                 background: "transparent",
+                padding: "10px",
                 color: "white",
                 marginRight: "-5px",
               }}
@@ -85,7 +86,11 @@ function Navbar() {
 
       {isModal ? (
         <div
-          className="navbar-modal-bg"
+          className={
+            controlModalState
+              ? "navbar-modal-bg animation-bg"
+              : "navbar-modal-bg animation-bg-hide"
+          }
           onClick={(e) => {
             const target = document.querySelector(".navbar-modal-bg");
             if (e.target === target) {
