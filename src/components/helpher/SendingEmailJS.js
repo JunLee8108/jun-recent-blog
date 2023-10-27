@@ -64,7 +64,7 @@ function SendingEmailJS() {
         </div>
       </div>
 
-      <div style={{ display: "flex" }}>
+      <div className="display-flex">
         <div style={{ width: "100%" }}>
           <label htmlFor="EM">
             <h4>Email</h4>
@@ -72,7 +72,7 @@ function SendingEmailJS() {
           <input name="email" type="email" id="EM"></input>
         </div>
       </div>
-      <div style={{ display: "flex" }}>
+      <div className="display-flex">
         <div style={{ width: "100%" }}>
           <label htmlFor="MA">
             <h4>Message</h4>

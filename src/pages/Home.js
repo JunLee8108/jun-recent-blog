@@ -109,14 +109,14 @@ function Home() {
           Click each icon to see the details
         </h4>
         <div className="tech-stack-flex-container">
-          {techStackImg.map(function (a, index) {
+          {techStackImg.map(function (content, index) {
             return (
               <div
                 className="tech-stack-flexbox"
                 key={index}
                 onClick={() => {
                   setControlStackModal(true);
-                  setTechStackName(techStackImg[index].name);
+                  setTechStackName(content.name);
                   const BrowserWidth = document.body.scrollWidth;
                   if (BrowserWidth <= 1280) {
                     document.body.style.overflow = "hidden";
@@ -126,17 +126,14 @@ function Home() {
                 <div style={{ width: "100%" }}>
                   {index === 0 ? (
                     <>
-                      <img src={techStackImg[index].img} alt="tech-stack"></img>
-                      <img
-                        src={techStackImg[index].img2}
-                        alt="tech-stack"
-                      ></img>
+                      <img src={content.img} alt="tech-stack"></img>
+                      <img src={content.img2} alt="tech-stack"></img>
                     </>
                   ) : (
-                    <img src={techStackImg[index].img} alt="tech-stack"></img>
+                    <img src={content.img} alt="tech-stack"></img>
                   )}
                 </div>
-                <h4>{techStackImg[index].name}</h4>
+                <h4>{content.name}</h4>
               </div>
             );
           })}

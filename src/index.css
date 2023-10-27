@@ -1,10 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap");
 
+:root {
+  --navbar-background-color: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+  --container-background-color: linear-gradient(
+    135deg,
+    #fdfcfb 0%,
+    #e2d1c3 100%
+  );
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans JP", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--container-background-color);
 }
 
 div {
@@ -38,6 +48,7 @@ ul {
   padding: 20px;
   padding-left: 30px;
   opacity: 0;
+  background: var(--container-background-color);
   animation: flash 0.7s 0.2s forwards;
 }
 
@@ -47,6 +58,10 @@ ul {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.display-flex {
+  display: flex;
 }
 
 @keyframes flash {

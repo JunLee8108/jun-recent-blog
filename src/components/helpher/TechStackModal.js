@@ -46,10 +46,10 @@ export default function TechStackModal({
               return (
                 <div key={index}>
                   <li className="tech-stack-description-main">
-                    {data[0].description[index].main}
+                    {content.main}
                   </li>
                   <li className="tech-stack-description-sub">
-                    {data[0].description[index].support}
+                    {content.support}
                   </li>
                 </div>
               );

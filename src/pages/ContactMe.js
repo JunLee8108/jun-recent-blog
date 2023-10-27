@@ -7,7 +7,6 @@ function ContactMe() {
     if (BrowserWidth > 1280 && link !== "mailto:lejhn1@gmail.com") {
       window.open(link, "_blank");
     } else {
-      // document.body.style.cursor = "wait";
       window.location.href = link;
     }
   };
@@ -22,16 +21,14 @@ function ContactMe() {
             <SendingEmailJS />
           </div>
           <div className="contact-me-flexbox2">
-            {contactMeInfo.map(function (a, index) {
+            {contactMeInfo.map(function (content, index) {
               return (
                 <div className="flexbox" key={index}>
-                  <h2>{contactMeInfo[index].name}</h2>
+                  <h2>{content.name}</h2>
                   <img
-                    src={contactMeInfo[index].img}
+                    src={content.img}
                     alt="emoticon"
-                    onClick={() => {
-                      openInNewTab(contactMeInfo[index].aHref);
-                    }}
+                    onClick={() => openInNewTab(content.aHref)}
                   />
                 </div>
               );
