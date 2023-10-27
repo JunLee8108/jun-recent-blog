@@ -155,11 +155,11 @@ function Navbar() {
             </div>
 
             {/* MOBILE LOADER */}
-            {/* <center>
+            <center>
               <div className="navbar-mobile-loader">
                 <ClimbingBoxLoader color="white" speedMultiplier={0.8} />
               </div>
-            </center> */}
+            </center>
 
             <div className="navbar-item">
               <li onClick={() => navigate("/")} className="navbar-item1">
