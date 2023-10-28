@@ -17,10 +17,10 @@ function ContactMe() {
       <div className="contact-me container-layout">
         <h1 className="h1-green-left">Contact Me</h1>
         <div className="contact-me-flex-container">
-          <div className="contact-me-flexbox1">
+          <div className="contact-me-flexbox">
             <SendingEmailJS />
           </div>
-          <div className="contact-me-flexbox2">
+          <div className="contact-me-flexbox">
             {contactMeInfo.map(function (content, index) {
               return (
                 <div className="flexbox" key={index}>

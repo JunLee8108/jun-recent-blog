@@ -162,7 +162,7 @@ function Navbar() {
             </center>
 
             <div className="navbar-item">
-              <li onClick={() => navigate("/")} className="navbar-item1">
+              <li onClick={() => navigate("/")}>
                 <img src={me} alt="About emoticon"></img>
                 About Me
               </li>
