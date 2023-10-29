@@ -4,16 +4,18 @@ import { jun, me, portfolio, contact } from "./helpher/imgData";
 import { useState, useEffect, useRef } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 function Navbar() {
   const [isModal, setModal] = useState(false);
   const [controlModalState, setControlModalState] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   const isMounted = useRef(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const controlModal = () => {
     setControlModalState((controlModalState) => !controlModalState);
@@ -41,24 +43,40 @@ function Navbar() {
   };
 
   useEffect(() => {
-    if (isMounted.current) {
-      let timer;
-      if (controlModalState) {
-        setModal(true);
-      } else {
-        timer = setTimeout(() => {
-          setModal(false);
-        }, 300);
-      }
+    const BrowserWidth = document.body.scrollWidth;
+    if (BrowserWidth <= 1280) {
+      if (isMounted.current) {
+        let timer;
+        if (controlModalState) {
+          setModal(true);
+        } else {
+          timer = setTimeout(() => {
+            setModal(false);
+          }, 300);
+        }
 
-      return () => {
-        clearTimeout(timer);
-      };
-    } else {
-      isMounted.current = true;
-      return;
+        return () => {
+          clearTimeout(timer);
+        };
+      } else {
+        isMounted.current = true;
+        return;
+      }
     }
   }, [controlModalState]);
+
+  useEffect(() => {
+    const BrowserWidth = document.body.scrollWidth;
+    if (BrowserWidth > 1280) {
+      if (location.pathname === "/") {
+        setActiveIndex(-1);
+      } else if (location.pathname === "/portfolio") {
+        setActiveIndex(0);
+      } else {
+        setActiveIndex(1);
+      }
+    }
+  }, [location.pathname]);
 
   return (
     <>
@@ -162,15 +180,24 @@ function Navbar() {
             </center>
 
             <div className="navbar-item">
-              <li onClick={() => navigate("/")}>
+              <li
+                onClick={() => navigate("/")}
+                className={activeIndex === -1 ? "li-gold" : null}
+              >
                 <img src={me} alt="About emoticon"></img>
                 About Me
               </li>
-              <li onClick={() => navigate("/portfolio")}>
+              <li
+                onClick={() => navigate("/portfolio")}
+                className={activeIndex === 0 ? "li-gold" : null}
+              >
                 <img src={portfolio} alt="Portfolio emoticon"></img>
                 Portfolio
               </li>
-              <li onClick={() => navigate("/contact")}>
+              <li
+                onClick={() => navigate("/contact")}
+                className={activeIndex === 1 ? "li-gold" : null}
+              >
                 <img src={contact} alt="Contact emoticon"></img>
                 Contact Me
               </li>

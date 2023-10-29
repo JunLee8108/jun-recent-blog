@@ -75,6 +75,10 @@ li {
   transition: all 0.1s linear;
 }
 
+.li-gold {
+  color: gold;
+}
+
 li img {
   width: 12%;
   margin-right: 15px;
