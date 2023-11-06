@@ -79,11 +79,11 @@ function Navbar() {
     const BrowserWidth = document.body.scrollWidth;
     if (BrowserWidth > 1280) {
       if (location.pathname === "/") {
-        setActiveIndex(-1);
-      } else if (location.pathname === "/portfolio") {
         setActiveIndex(0);
-      } else if (location.pathname === "/contact") {
+      } else if (location.pathname === "/portfolio") {
         setActiveIndex(1);
+      } else if (location.pathname === "/contact") {
+        setActiveIndex(2);
       }
     }
   }, [location.pathname]);
@@ -192,21 +192,21 @@ function Navbar() {
             <div className="navbar-item">
               <li
                 onClick={() => handleNavigation("/")}
-                className={activeIndex === -1 ? "li-gold" : null}
+                className={activeIndex === 0 ? "li-gold" : null}
               >
                 <img src={me} alt="About emoticon"></img>
                 About Me
               </li>
               <li
                 onClick={() => handleNavigation("/portfolio")}
-                className={activeIndex === 0 ? "li-gold" : null}
+                className={activeIndex === 1 ? "li-gold" : null}
               >
                 <img src={portfolio} alt="Portfolio emoticon"></img>
                 Portfolio
               </li>
               <li
                 onClick={() => handleNavigation("/contact")}
-                className={activeIndex === 1 ? "li-gold" : null}
+                className={activeIndex === 2 ? "li-gold" : null}
               >
                 <img src={contact} alt="Contact emoticon"></img>
                 Contact Me

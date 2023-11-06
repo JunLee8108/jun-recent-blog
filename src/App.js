@@ -17,6 +17,7 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const ContactMe = lazy(() => import("./pages/ContactMe"));
+const Page404 = lazy(() => import("./pages/Page404"));
 
 function App() {
   return (
@@ -43,8 +44,14 @@ function App() {
             </Suspense>
           }
         />
-
-        <Route path="*" element={<div>Something Went Wrong!</div>}></Route>
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Page404 />
+            </Suspense>
+          }
+        />
       </Routes>
     </div>
   );
