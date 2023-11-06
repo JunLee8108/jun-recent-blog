@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ScrollToTop from "./components/helpher/ScrollToTop";
 import Loading from "./components/helpher/Loading";
+import Empty from "./components/helpher/Empty";
 
 import { Routes, Route } from "react-router-dom";
 // import the library
@@ -24,6 +25,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="refresh" element={<Empty />} />
+
         <Route
           path="/portfolio"
           element={
@@ -40,6 +43,7 @@ function App() {
             </Suspense>
           }
         />
+
         <Route path="*" element={<div>Something Went Wrong!</div>}></Route>
       </Routes>
     </div>

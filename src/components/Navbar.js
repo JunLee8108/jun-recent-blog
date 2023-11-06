@@ -29,7 +29,7 @@ function Navbar() {
   };
 
   const mobileNavigate = (path) => {
-    navigate(path);
+    handleNavigation(path);
     setControlModalState(false);
   };
 
@@ -39,6 +39,16 @@ function Navbar() {
       window.open(link, "_blank");
     } else {
       window.location.href = link;
+    }
+  };
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    if (location.pathname.includes(path)) {
+      navigate("refresh");
+      setTimeout(() => {
+        navigate(path);
+      }, 100);
     }
   };
 
@@ -72,7 +82,7 @@ function Navbar() {
         setActiveIndex(-1);
       } else if (location.pathname === "/portfolio") {
         setActiveIndex(0);
-      } else {
+      } else if (location.pathname === "/contact") {
         setActiveIndex(1);
       }
     }
@@ -181,21 +191,21 @@ function Navbar() {
 
             <div className="navbar-item">
               <li
-                onClick={() => navigate("/")}
+                onClick={() => handleNavigation("/")}
                 className={activeIndex === -1 ? "li-gold" : null}
               >
                 <img src={me} alt="About emoticon"></img>
                 About Me
               </li>
               <li
-                onClick={() => navigate("/portfolio")}
+                onClick={() => handleNavigation("/portfolio")}
                 className={activeIndex === 0 ? "li-gold" : null}
               >
                 <img src={portfolio} alt="Portfolio emoticon"></img>
                 Portfolio
               </li>
               <li
-                onClick={() => navigate("/contact")}
+                onClick={() => handleNavigation("/contact")}
                 className={activeIndex === 1 ? "li-gold" : null}
               >
                 <img src={contact} alt="Contact emoticon"></img>

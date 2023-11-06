@@ -48,7 +48,7 @@ function SendingEmailJS() {
   return (
     <form ref={form} onSubmit={handleSubmit}>
       <h2>Get In Touch With Me</h2>
-      <div className="input-flex-container">
+      <div className="input-flex-container mg-left-right-auto">
         <div className="input-flexbox">
           <label htmlFor="FN">
             <h4>First Name</h4>
@@ -65,7 +65,7 @@ function SendingEmailJS() {
       </div>
 
       <div className="display-flex">
-        <div style={{ width: "100%" }}>
+        <div className="email-container mg-left-right-auto">
           <label htmlFor="EM">
             <h4>Email</h4>
           </label>
