@@ -344,7 +344,7 @@ const portfolioData = [
     title: "Hyundai Motors",
     img: portfolio1,
     iconURL1: "https://main.dv90aq3ksc428.amplifyapp.com/",
-    iconURL2: "https://github.com/JunLee8108",
+    iconURL2: "https://github.com/JunLee8108/Hyundai",
     iconBgColor: "black",
     iconFgColor: "white",
     description: [
