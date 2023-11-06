@@ -7,6 +7,7 @@ import react from "../../assets/react.webp";
 import vue from "../../assets/vue.webp";
 import nextJS from "../../assets/nextjs.webp";
 import nodeJS from "../../assets/nodejs.webp";
+import mongo from "../../assets/mongo.webp";
 import email from "../../assets/mail.webp";
 import resume from "../../assets/resume.webp";
 import linkedin from "../../assets/linkedin.webp";
@@ -291,11 +292,12 @@ const portfolioData = [
     iconFgColor: "white",
     description: [
       "Korean E-Learning Platform with Adaptive Learning",
-      "Tech stack: Next.js, TypeScript, and MongoDB",
       "Created API endpoints to fetch data from MongoDB",
-      "JWT token & bcrypt for the register and the login feature",
-      "Fancy & modern-looking design",
-      "Fully responsive on mobile",
+      "Utilized JWT & bcrypt for the register and the login feature",
+      "Developed a community feature for users to write, edit, and delete posts",
+      "Implemented fancy & modern-looking design using updated CSS skills",
+      "Optimized for mobile devices",
+      "Tech stack: Next.js, TypeScript, CSS and MongoDB",
     ],
   },
   {
@@ -308,10 +310,13 @@ const portfolioData = [
     iconFgColor: "white",
     description: [
       "AI-Powered E-Commerce Shop",
-      "Tech stack: React, TypeScript, Node.js, and Tensorflow",
-      "Currently in progress",
-      "Fancy & modern-looking design",
-      "Fully responsive on mobile",
+      "Implemented secure login authentication and authorization mechanisms using JWT in Node.js",
+      "Developed the user email verfication using Nodemailer for the register and forgot password feature",
+      "Used React lazy loading feature to increase the initial loading speed",
+      "Developed AI chatbot system",
+      "Implemented fancy & modern-looking design using updated CSS skills",
+      "Optimized for mobile devices",
+      "Tech stack: React, TypeScript, CSS, Node.js, and Tensorflow",
     ],
   },
   {
@@ -327,8 +332,9 @@ const portfolioData = [
       "React for frontend development",
       "Redux toolkit for state management",
       "Fetched local JSON data using Axios",
-      "Completely modularized components",
+      "Modularized components for code maintenance",
       "Fully responsive on mobile",
+      "Tech stack: React & CSS",
     ],
   },
   {
@@ -345,6 +351,7 @@ const portfolioData = [
       "Used CSS-in-JS libraries styled-components",
       "3D car models using Three.js (currently in progress)",
       "Fully responsive on mobile",
+      "Tech stack: React & CSS",
     ],
   },
   {
@@ -360,6 +367,7 @@ const portfolioData = [
       "Virtual art gallery concept",
       "React for frontend development",
       "Fully responsive on mobile",
+      "Tech stack: React & CSS",
     ],
   },
 ];
