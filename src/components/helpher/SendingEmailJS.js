@@ -77,7 +77,11 @@ function SendingEmailJS() {
           <label htmlFor="MA">
             <h4>Message</h4>
           </label>
-          <textarea name="message" id="MA"></textarea>
+          <textarea
+            name="message"
+            id="MA"
+            className="message-textarea"
+          ></textarea>
         </div>
       </div>
 

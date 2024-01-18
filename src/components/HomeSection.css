@@ -211,6 +211,7 @@ li img {
 .portfolio-img-container img {
   position: absolute;
   border-radius: 5px 5px 0 0;
+  border-bottom: 1px dotted green;
   left: 0;
   top: 0;
 }
@@ -283,7 +284,6 @@ li img {
 
 .contact-me-flex-container {
   display: flex;
-  transition: 2s all;
   gap: 30px;
 }
 

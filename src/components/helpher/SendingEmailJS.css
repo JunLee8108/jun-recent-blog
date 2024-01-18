@@ -15,6 +15,7 @@ input {
 input[type="text"] {
   height: 35px;
   width: 100%;
+  max-width: 250px;
   margin-bottom: 30px;
   border-radius: 5px;
   border: none;
@@ -28,10 +29,15 @@ input[type="text"] {
 input[type="email"] {
   height: 35px;
   width: 100%;
+  max-width: 250px;
   margin-bottom: 30px;
   border-radius: 5px;
   border: none;
   padding: 20px 10px 20px 10px;
+}
+
+.message-textarea {
+  max-width: 500px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -47,6 +53,10 @@ input[type="email"] {
   input[type="email"] {
     width: 60%;
   }
+
+  .message-textarea {
+    max-width: 400px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -56,5 +66,9 @@ input[type="email"] {
 
   input[type="email"] {
     width: 100%;
+  }
+
+  .message-textarea {
+    max-width: 250px;
   }
 }

@@ -21,6 +21,7 @@ import portfolio2 from "../../assets/hyundai-portfolio-2.webp";
 import portfolio3 from "../../assets/hyundai-portfolio-3.webp";
 import pg1 from "../../assets/pg1.webp";
 import pg3 from "../../assets/pg3.webp";
+import expense from "../../assets/9.webp";
 
 const techStackImg = [
   {
@@ -317,11 +318,28 @@ const portfolioData = [
       "Developed an AI chatbot system",
       "Implemented a modern and stylish design using updated CSS skills",
       "Optimized for mobile devices",
-      "Tech stack: React, TypeScript, CSS, Node.js, MongoDB, and Tensorflow",
+      "Tech stack: React, TypeScript, CSS, Node.js, MongoDB, and TensorFlow",
     ],
   },
   {
     id: 2,
+    title: "Income & Expense Manager",
+    img: expense,
+    iconURL1: "https://main.d2bfocmofxkmj4.amplifyapp.com/",
+    iconURL2: "https://github.com/JunLee8108/hanara-income-expense-manager",
+    iconBgColor: "brown",
+    iconFgColor: "white",
+    description: [
+      "Desktop Application to manage expenses and income used in real-world business",
+      "Data can be inserted, modified, and deleted, and all necessary functions such as search, sorting, and filtering data are included",
+      "Data can be graphed to make it easier for users to analyze and track income and expenses efficiently",
+      "Save and load data locally as a JSON file, and import an Excel file as data and export the data as an Excel file ",
+      "Receipt scanning feature for faster data input (in progress)",
+      "Tech stack: React and CSS",
+    ],
+  },
+  {
+    id: 3,
     title: "Refined Seoul",
     img: portfolio3,
     iconURL1: "https://main.d2t2zns6ieqh27.amplifyapp.com/",
@@ -340,7 +358,7 @@ const portfolioData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Hyundai Motors",
     img: portfolio1,
     iconURL1: "https://main.dv90aq3ksc428.amplifyapp.com/",
@@ -355,8 +373,9 @@ const portfolioData = [
       "Tech stack: React and CSS",
     ],
   },
+
   {
-    id: 4,
+    id: 5,
     title: "Woojoon's Gallery",
     img: portfolio2,
     iconURL1: "https://main.d2uscgl8cg14gb.amplifyapp.com/",
