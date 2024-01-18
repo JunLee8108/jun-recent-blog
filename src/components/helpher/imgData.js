@@ -278,7 +278,7 @@ const contactMeInfo = [
     name: "RESUME",
     img: resume,
     aHref:
-      "https://drive.google.com/file/d/14UDP8z1ogfYVtx4Z5vE08H7toz7ZxRkt/view?usp=sharing",
+      "https://drive.google.com/file/d/1TCtspC80FUrizNhB9umvJLR6SqF6ayDa/view?usp=sharing",
   },
 ];
 
