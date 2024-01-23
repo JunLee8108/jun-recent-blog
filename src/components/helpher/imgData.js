@@ -52,6 +52,11 @@ const techStackImg = [
         support:
           "Proficient in optimizing C++ code for performance, including memory and CPU usage.",
       },
+      {
+        main: "Performance Optimization",
+        support:
+          "Keeping up-to-date with modern C++ standards (C++11, C++14, C++17, and beyond).",
+      },
     ],
   },
   {
@@ -79,6 +84,11 @@ const techStackImg = [
         main: "Machine Learning and Data Analysis",
         support:
           "Knowledge of machine learning libraries like scikit-learn, TensorFlow, and PyTorch.",
+      },
+      {
+        main: "Best Practices and Code Quality",
+        support:
+          "Writing clean, maintainable, and well-documented Python code.",
       },
     ],
   },
