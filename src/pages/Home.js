@@ -150,6 +150,7 @@ function Home() {
                   )}
                 </div>
                 <h4>{content.name}</h4>
+                <div className="tech-stack-border-line"></div>
               </div>
             );
           })}

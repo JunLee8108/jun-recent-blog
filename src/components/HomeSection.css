@@ -152,7 +152,7 @@ li img {
   justify-content: center; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 1rem 3rem;
+  grid-gap: 0.5rem 3rem;
   justify-content: center;
   align-items: center;
 }
@@ -163,7 +163,6 @@ li img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* background-color: red; */
   padding: 20px;
   height: auto;
   margin-right: 10px;
@@ -174,6 +173,13 @@ li img {
 .tech-stack-flexbox img {
   width: 40%;
   max-width: 75px;
+}
+
+.tech-stack-border-line {
+  width: 0%;
+  height: 2px;
+  transition: all 1s ease;
+  background-color: #0ba360;
 }
 
 /* Portfolio */
@@ -571,6 +577,10 @@ textarea {
   .tech-stack-flexbox:hover {
     transform: scale(1.12);
     cursor: pointer;
+  }
+
+  .tech-stack-flexbox:hover .tech-stack-border-line {
+    width: 100px;
   }
 }
 
