@@ -7,6 +7,8 @@ import react from "../../assets/react.webp";
 import vue from "../../assets/vue.webp";
 import nextJS from "../../assets/nextjs.webp";
 import nodeJS from "../../assets/nodejs.webp";
+import cplusplus from "../../assets/c++.webp";
+import python from "../../assets/python.webp";
 import mongo from "../../assets/mongo.webp";
 import electron from "../../assets/electron.webp";
 import email from "../../assets/mail.webp";
@@ -27,6 +29,61 @@ import expense from "../../assets/9.webp";
 const techStackImg = [
   {
     id: 0,
+    name: "C++",
+    img: cplusplus,
+    description: [
+      {
+        main: "C++ Core Concepts",
+        support:
+          "Proficient in C++ syntax, data types, pointers, and memory management.",
+      },
+      {
+        main: "Standard Template Library (STL)",
+        support:
+          "Skilled in using STL containers like vectors, maps, sets, and algorithms for efficient data handling.",
+      },
+      {
+        main: "Advanced Features",
+        support:
+          "Knowledge of advanced C++ features like templates, lambda expressions, and smart pointers.",
+      },
+      {
+        main: "Performance Optimization",
+        support:
+          "Proficient in optimizing C++ code for performance, including memory and CPU usage.",
+      },
+    ],
+  },
+  {
+    id: 1,
+    name: "Python",
+    img: python,
+
+    description: [
+      {
+        main: "Python Core Concepts",
+        support:
+          "Mastery of Python syntax, data structures (lists, tuples, dictionaries, sets), and control flow.",
+      },
+      {
+        main: "Libraries and Frameworks",
+        support:
+          "Proficient in using Python libraries such as NumPy, Pandas for data manipulation, Matplotlib for data visualization, and Flask or Django for web development.",
+      },
+      {
+        main: "Scripting and Automation",
+        support:
+          "Skilled in writing Python scripts for automation of tasks, data scraping, and system administration.",
+      },
+      {
+        main: "Machine Learning and Data Analysis",
+        support:
+          "Knowledge of machine learning libraries like scikit-learn, TensorFlow, and PyTorch.",
+      },
+    ],
+  },
+  {
+    id: 2,
     name: "HTML & CSS",
     img: html,
     img2: css,
@@ -59,7 +116,7 @@ const techStackImg = [
     ],
   },
   {
-    id: 1,
+    id: 3,
     name: "JavaScript",
     img: js,
     description: [
@@ -91,7 +148,7 @@ const techStackImg = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     name: "TypeScript",
     img: ts,
     description: [
@@ -123,7 +180,7 @@ const techStackImg = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     name: "React",
     img: react,
     description: [
@@ -155,7 +212,7 @@ const techStackImg = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     name: "Vue.js",
     img: vue,
     description: [
@@ -191,7 +248,7 @@ const techStackImg = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     name: "Next.js",
     img: nextJS,
     description: [
@@ -228,7 +285,7 @@ const techStackImg = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     name: "Node.js",
     img: nodeJS,
     description: [
@@ -260,7 +317,7 @@ const techStackImg = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     name: "Electron.js",
     img: electron,
     description: [

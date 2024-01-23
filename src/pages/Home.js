@@ -140,7 +140,7 @@ function Home() {
                 }}
               >
                 <div style={{ width: "100%" }}>
-                  {index === 0 ? (
+                  {index === 2 ? (
                     <>
                       <img src={content.img} alt="tech-stack"></img>
                       <img src={content.img2} alt="tech-stack"></img>

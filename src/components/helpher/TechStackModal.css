@@ -54,6 +54,7 @@ h3 {
   display: list-item;
   list-style-type: disc;
   margin-bottom: 5px;
+  line-height: 20px;
 }
 
 .tech-stack-description-sub {
