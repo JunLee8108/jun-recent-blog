@@ -9,9 +9,12 @@
 
 .tech-stack-modal {
   position: fixed;
-  width: 35%;
-  max-width: 700px;
+  width: 40%;
+  max-width: 550px;
   height: auto;
+  max-height: 750px;
+  /* height: 80%; */
+  /* max-height: 800px; */
   z-index: 15;
   top: 50%;
   left: 50%;
@@ -43,7 +46,7 @@ h3 {
   width: 80%;
   max-width: 500px;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .tech-stack-description-main {
@@ -65,23 +68,22 @@ h3 {
 }
 
 .tech-stack-modal-closeBtn {
-  width: 80px;
-  height: 50px;
+  padding: 20px;
   font-size: 13px;
   border: none;
   background-color: transparent;
   font-weight: bold;
   cursor: pointer;
-  color: #0ba360;
-  transition: 0.3s all;
+  color: red;
+  transition: 0.3s all ease;
 }
 
 .animated {
-  animation: show-modal 0.5s forwards linear;
+  animation: show-modal 0.3s forwards ease;
 }
 
 .animated-hide {
-  animation: hide-modal 0.5s forwards linear;
+  animation: hide-modal 0.3s forwards ease;
 }
 
 @keyframes show-modal {
@@ -103,11 +105,11 @@ h3 {
 }
 
 .animated-bg {
-  animation: show-modal-bg 0.2s forwards linear;
+  animation: show-modal-bg 0.3s forwards ease;
 }
 
 .animated-hide-bg {
-  animation: hide-modal-bg 0.2s forwards linear;
+  animation: hide-modal-bg 0.3s forwards ease;
 }
 
 @keyframes show-modal-bg {
@@ -130,7 +132,8 @@ h3 {
 
 @media (hover: hover) {
   .tech-stack-modal-closeBtn:hover {
-    color: red;
+    transform: scale(1.2);
+    opacity: 0.5;
   }
 }
 

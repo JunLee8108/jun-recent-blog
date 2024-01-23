@@ -8,6 +8,7 @@ import vue from "../../assets/vue.webp";
 import nextJS from "../../assets/nextjs.webp";
 import nodeJS from "../../assets/nodejs.webp";
 import mongo from "../../assets/mongo.webp";
+import electron from "../../assets/electron.webp";
 import email from "../../assets/mail.webp";
 import resume from "../../assets/resume.webp";
 import linkedin from "../../assets/linkedin.webp";
@@ -17,7 +18,7 @@ import contact from "../../assets/contact-information.webp";
 import developer from "../../assets/code.webp";
 import developer2 from "../../assets/code2.webp";
 import portfolio1 from "../../assets/hyundai-portfolio-1.webp";
-import portfolio2 from "../../assets/hyundai-portfolio-2.webp";
+import portfolio2 from "../../assets/hanara-sushi.webp";
 import portfolio3 from "../../assets/hyundai-portfolio-3.webp";
 import pg1 from "../../assets/pg1.webp";
 import pg3 from "../../assets/pg3.webp";
@@ -258,6 +259,43 @@ const techStackImg = [
       },
     ],
   },
+  {
+    id: 7,
+    name: "Electron.js",
+    img: electron,
+    description: [
+      {
+        main: "Electron.js Core Concepts",
+        support:
+          "Understand the architecture of Electron.js, including main and renderer processes, and their communication methods.",
+      },
+      {
+        main: "User Interface Development",
+        support:
+          "Design and develop user interfaces using HTML, CSS, and JavaScript within the Electron framework.",
+      },
+      {
+        main: "Integration with Node.js and Third-Party Modules",
+        support:
+          "Leverage Node.js capabilities within Electron for file system access, network operations, and other backend functionalities.",
+      },
+      {
+        main: "Performance Optimization and Debugging",
+        support:
+          "Optimize Electron applications for performance, memory usage, and responsiveness.",
+      },
+      {
+        main: "Security Best Practices",
+        support:
+          "Implement security best practices in Electron applications, such as handling remote content and securing IPC communication.",
+      },
+      {
+        main: "Application Packaging and Distribution",
+        support:
+          "Knowledge of packaging Electron applications for different operating systems (Windows, MacOS, Linux).",
+      },
+    ],
+  },
 ];
 
 const contactMeInfo = [
@@ -335,7 +373,7 @@ const portfolioData = [
       "Data can be graphed to make it easier for users to analyze and track income and expenses efficiently",
       "Save and load data locally as a JSON file, and import an Excel file as data and export the data as an Excel file ",
       "Receipt scanning feature for faster data input (in progress)",
-      "Tech stack: React and CSS",
+      "Tech stack: Electron.js, Node.js, React and CSS",
     ],
   },
   {
@@ -354,11 +392,27 @@ const portfolioData = [
       "Implemented Lazy loading of components using React's 'lazy' and 'Suspense'",
       "Used scroll events to trigger dynamic web animations and effects",
       "Optimized for mobile devices",
-      "Tech stack: React and CSS",
+      "Tech stack: React & CSS",
     ],
   },
   {
     id: 4,
+    title: "Hanara Sushi",
+    img: portfolio2,
+    iconURL1: "https://main.d3r03epqwbcn8r.amplifyapp.com/",
+    iconURL2: "https://github.com/JunLee8108/woojoon-gallery",
+    iconBgColor: "orange",
+    iconFgColor: "white",
+    description: [
+      "Real business website for Hanara Sushi",
+      "Sleek UI/UX design with rapid loading speeds for an efficient and user-friendly experience",
+      "Modularized components for improved code maintenance",
+      "Optimized for mobile devices",
+      "Tech stack: React & CSS",
+    ],
+  },
+  {
+    id: 5,
     title: "Hyundai Motors",
     img: portfolio1,
     iconURL1: "https://main.dv90aq3ksc428.amplifyapp.com/",
@@ -370,23 +424,7 @@ const portfolioData = [
       "Used CSS-in-JS libraries styled-components",
       "Implemented 3D car models using Three.js (currently in progress)",
       "Optimized for mobile devices",
-      "Tech stack: React and CSS",
-    ],
-  },
-
-  {
-    id: 5,
-    title: "Woojoon's Gallery",
-    img: portfolio2,
-    iconURL1: "https://main.d2uscgl8cg14gb.amplifyapp.com/",
-    iconURL2: "https://github.com/JunLee8108/woojoon-gallery",
-    iconBgColor: "#77DD66",
-    iconFgColor: "white",
-    description: [
-      "Fine art painter Woojoon Kim's gallery",
-      "Designed Virtual art gallery concept",
-      "Optimized for mobile devices",
-      "Tech stack: React and CSS",
+      "Tech stack: React & CSS",
     ],
   },
 ];

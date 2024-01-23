@@ -69,7 +69,7 @@ function Home() {
               />
               Future Full-Stack Developer
             </h4>
-            <p>
+            {/* <p>
               I'm a dedicated computer science student who's on a path to
               becoming a Full-Stack developer. With a strong foundation in
               programming and a passion for creating intuitive user interfaces,
@@ -81,6 +81,22 @@ function Home() {
               creativity to craft engaging web experiences. I'm excited about
               the opportunity to learn and grow in the world of frontend
               development.
+            </p> */}
+            <p>
+              As a dedicated Computer Science student at Texas A&M University, I
+              have honed my full-stack development skills through a blend of
+              academic rigor and extensive hands-on experience. My technical
+              repertoire includes advanced proficiency in C++ and Python,
+              alongside substantial project work in web development using React,
+              Next.js, Node.js, Vue.js, TypeScript and MongoDB, as well as
+              desktop application development with Electron.js.
+            </p>
+            <p>
+              These experiences have not only sharpened my technical acumen but
+              also reinforced my ability to work effectively in team-oriented
+              environments and adapt to evolving technological landscapes. Eager
+              to apply my diverse skills in a dynamic team, I am poised to make
+              impactful contributions in the realm of full-stack development.
             </p>
           </div>
         </div>
