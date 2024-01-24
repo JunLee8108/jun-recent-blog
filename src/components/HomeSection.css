@@ -175,7 +175,7 @@ li img {
 .tech-stack-border-line {
   width: 0%;
   height: 2px;
-  transition: all 1s ease;
+  transition: all 0.8s ease;
   background-color: #0ba360;
 }
 
