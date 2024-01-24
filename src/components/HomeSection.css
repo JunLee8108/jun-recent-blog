@@ -147,9 +147,6 @@ li img {
 }
 
 .about-me-tech-stack .tech-stack-flex-container {
-  /* display: flex;
-  width: 100%;
-  justify-content: center; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 0.5rem 3rem;
@@ -613,6 +610,14 @@ textarea {
 
   .about-me-introduction {
     height: 100%;
+  }
+
+  .about-me-tech-stack .tech-stack-flex-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 0.5rem 3rem;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-me-flexbox:nth-child(1),

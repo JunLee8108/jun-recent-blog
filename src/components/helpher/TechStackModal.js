@@ -55,12 +55,15 @@ export default function TechStackModal({
               );
             })}
             <center>
-              <button
-                className="tech-stack-modal-closeBtn"
-                onClick={closeTechStackModal}
-              >
-                CLOSE
-              </button>
+              <div className="tech-stack-modal-btn-container">
+                <button
+                  className="tech-stack-modal-closeBtn"
+                  onClick={closeTechStackModal}
+                >
+                  CLOSE
+                </button>
+                <div className="tech-stack-modal-border"></div>
+              </div>
             </center>
           </div>
         </div>
