@@ -62,7 +62,7 @@ function Navbar() {
         } else {
           timer = setTimeout(() => {
             setModal(false);
-          }, 300);
+          }, 450);
         }
 
         return () => {
