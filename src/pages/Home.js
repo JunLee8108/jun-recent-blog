@@ -45,7 +45,7 @@ function Home() {
       } else if (!controlStackModal) {
         timer = setTimeout(() => {
           setTechStackModal(false);
-        }, 200);
+        }, 400);
       }
       return () => {
         clearTimeout(timer);
