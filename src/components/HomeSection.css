@@ -135,6 +135,26 @@ li img {
   transition: 1s ease-out;
 }
 
+.introduction-view-button {
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: #3cba92;
+  color: white;
+  font-weight: bold;
+  transition: 0.4s all;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+}
+
+.introduction-view-button:hover {
+  background-color: #0ba360;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+  /* transform: translateY(-15px); */
+}
+
 /* About Me 2 - Tech Stack */
 .about-me-tech-stack {
   height: 100%;
@@ -538,6 +558,10 @@ textarea {
 
   .flexbox img {
     width: 20%;
+  }
+
+  .introduction-view-button {
+    display: none;
   }
 }
 

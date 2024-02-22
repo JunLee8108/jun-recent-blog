@@ -5,6 +5,7 @@ import { developer, developer2 } from "../components/helpher/imgData";
 
 import { useRef, useEffect, useState } from "react";
 
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
   const [techStackModal, setTechStackModal] = useState(false);
   const [techStackName, setTechStackName] = useState("");
   const isMounted = useRef(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const BrowserWidth = document.body.scrollWidth;
@@ -69,19 +71,6 @@ function Home() {
               />
               Future Full-Stack Developer
             </h4>
-            {/* <p>
-              I'm a dedicated computer science student who's on a path to
-              becoming a Full-Stack developer. With a strong foundation in
-              programming and a passion for creating intuitive user interfaces,
-              I proficiently work with HTML/CSS, JavaScript/TypeScript, React,
-              and Next.js – the modern trending languages and frameworks of web
-              development. Moreover, I am adept at utilizing Express with
-              Node.js for backend development, enabling me to create full-stack
-              applications. I'm eager to combine my technical skills with
-              creativity to craft engaging web experiences. I'm excited about
-              the opportunity to learn and grow in the world of frontend
-              development.
-            </p> */}
             <p>
               As a dedicated Computer Science student at Texas A&M University, I
               have honed my full-stack development skills through a blend of
@@ -98,6 +87,12 @@ function Home() {
               to apply my diverse skills in a dynamic team, I am poised to make
               impactful contributions in the realm of full-stack development.
             </p>
+            <button
+              className="introduction-view-button"
+              onClick={() => navigate("/portfolio")}
+            >
+              View Portfolio
+            </button>
           </div>
         </div>
         <div className="introduction-flexbox-2">
