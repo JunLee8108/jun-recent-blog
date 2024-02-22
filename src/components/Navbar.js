@@ -192,21 +192,27 @@ function Navbar() {
             <div className="navbar-item">
               <li
                 onClick={() => handleNavigation("/")}
-                className={activeIndex === 0 ? "li-gold" : null}
+                className={
+                  activeIndex === 0 ? "navbar-list li-gold" : "navbar-list"
+                }
               >
                 <img src={me} alt="About emoticon"></img>
                 About Me
               </li>
               <li
                 onClick={() => handleNavigation("/portfolio")}
-                className={activeIndex === 1 ? "li-gold" : null}
+                className={
+                  activeIndex === 1 ? "navbar-list li-gold" : "navbar-list"
+                }
               >
                 <img src={portfolio} alt="Portfolio emoticon"></img>
                 Portfolio
               </li>
               <li
                 onClick={() => handleNavigation("/contact")}
-                className={activeIndex === 2 ? "li-gold" : null}
+                className={
+                  activeIndex === 2 ? "navbar-list li-gold" : "navbar-list"
+                }
               >
                 <img src={contact} alt="Contact emoticon"></img>
                 Contact Me

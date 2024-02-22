@@ -194,7 +194,7 @@ li img {
 .portfolio-flex-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 4rem 4rem;
+  grid-gap: 3rem 3rem;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
@@ -564,7 +564,7 @@ textarea {
     border: 2px solid goldenrod;
   }
 
-  li:hover {
+  .navbar-list:hover {
     color: gold;
     transform: scale(1.1);
   }
