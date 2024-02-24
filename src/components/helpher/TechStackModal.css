@@ -80,8 +80,16 @@ h3 {
   background-color: transparent;
   font-weight: bold;
   cursor: pointer;
-  color: red;
-  transition: 0.3s all ease;
+  /* color: #e62e2e;
+  transition: 0.3s all ease; */
+  color: #0000;
+  background: linear-gradient(90deg, red 50%, #000 0) var(--_p, 100%) / 200%
+    no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: 0.8s all ease;
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 3px rgba(232, 11, 11, 0.2);
 }
 
 .tech-stack-modal-border {
@@ -145,8 +153,9 @@ h3 {
 
 @media (hover: hover) {
   .tech-stack-modal-closeBtn:hover {
-    transform: scale(1.2);
-    opacity: 0.5;
+    /* transform: scale(1.2); */
+    /* opacity: 0.5; */
+    --_p: 0%;
   }
 
   .tech-stack-modal-btn-container:hover .tech-stack-modal-border {
@@ -179,9 +188,5 @@ h3 {
 
   .tech-stack-description-sub {
     font-size: 13px;
-  }
-
-  .tech-stack-modal-closeBtn {
-    color: red;
   }
 }

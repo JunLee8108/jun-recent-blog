@@ -62,7 +62,8 @@ export default function TechStackModal({
                 >
                   CLOSE
                 </button>
-                <div className="tech-stack-modal-border"></div>
+
+                {/* <div className="tech-stack-modal-border"></div> */}
               </div>
             </center>
           </div>

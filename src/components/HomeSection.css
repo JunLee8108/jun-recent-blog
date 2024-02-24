@@ -72,7 +72,7 @@ li {
   font-weight: bold;
   cursor: pointer;
   display: flex;
-  transition: all 0.1s linear;
+  transition: all 0.3s ease;
 }
 
 .li-gold {
@@ -152,6 +152,7 @@ li img {
   background-color: #0ba360;
   border-radius: 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   /* transform: translateY(-15px); */
 }
 
@@ -185,6 +186,10 @@ li img {
   margin-right: 10px;
   text-align: center;
   transition: all 0.2s linear;
+}
+
+.tech-stack-title {
+  transition: 0.5s all;
 }
 
 .tech-stack-flexbox img {
@@ -591,6 +596,7 @@ textarea {
   .navbar-list:hover {
     color: gold;
     transform: scale(1.1);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   }
 
   .submit-button:hover {
@@ -611,6 +617,10 @@ textarea {
   .tech-stack-flexbox:hover {
     transform: scale(1.12);
     cursor: pointer;
+  }
+
+  .tech-stack-flexbox:hover .tech-stack-title {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   }
 
   .tech-stack-flexbox:hover .tech-stack-border-line {

@@ -31,7 +31,7 @@ function Home() {
           bg2.style.opacity = 0;
           count -= 1;
         }
-      }, 5000);
+      }, 4000);
 
       return () => {
         clearTimeout(timer);
@@ -62,7 +62,7 @@ function Home() {
       {/* About Me 1 - Introduction */}
       <div className="about-me-introduction container-layout">
         <div className="introduction-flexbox-1">
-          <h1 className="h1-green-left">Jeong Hyun Lee </h1>
+          <h1 className="h1-green-left">Introduction </h1>
           <div className="introduction-text-box">
             <h4>
               <FontAwesomeIcon
@@ -71,14 +71,16 @@ function Home() {
               />
               Future Full-Stack Developer
             </h4>
+
             <p>
-              As a dedicated Computer Science student at Texas A&M University, I
-              have honed my full-stack development skills through a blend of
-              academic rigor and extensive hands-on experience. My technical
-              repertoire includes advanced proficiency in C++ and Python,
-              alongside substantial project work in web development using React,
-              Next.js, Node.js, Vue.js, TypeScript and MongoDB, as well as
-              desktop application development with Electron.js.
+              Hello, my name is Jeong Hyun Lee, and as a dedicated Computer
+              Science student at Texas A&M University, I have honed my
+              full-stack development skills through a blend of academic rigor
+              and extensive hands-on experience. My technical repertoire
+              includes advanced proficiency in C++ and Python, alongside
+              substantial project work in web development using React, Next.js,
+              Node.js, Vue.js, TypeScript and MongoDB, as well as desktop
+              application development with Electron.js.
             </p>
             <p>
               These experiences have not only sharpened my technical acumen but
@@ -144,7 +146,7 @@ function Home() {
                     <img src={content.img} alt="tech-stack"></img>
                   )}
                 </div>
-                <h4>{content.name}</h4>
+                <h4 className="tech-stack-title">{content.name}</h4>
                 <div className="tech-stack-border-line"></div>
               </div>
             );
