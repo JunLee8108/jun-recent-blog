@@ -15,9 +15,7 @@ export default function PortfolioSection({ openInNewTab }) {
               />
             </div>
 
-            <div className="portfolio-flexbox-title text-center">
-              <h3 className="title">{content.title}</h3>
-            </div>
+            <h3 className="portfolio-flexbox-title">{content.title}</h3>
 
             <div className="portfolio-flexbox-iconbox">
               <h5>Demo: </h5>
