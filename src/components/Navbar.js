@@ -191,7 +191,7 @@ function Navbar() {
 
             <div className="navbar-item">
               <li
-                onClick={() => handleNavigation("/")}
+                onClick={() => navigate("/")}
                 className={
                   activeIndex === 0 ? "navbar-list li-gold" : "navbar-list"
                 }
