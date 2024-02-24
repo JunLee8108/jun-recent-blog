@@ -256,9 +256,10 @@ li img {
   text-shadow: 1px 1px 2px grey;
   letter-spacing: 2px;
   margin-bottom: 0;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 1.3rem;
   transition: 0.5s all;
+  line-height: 30px;
 }
 
 .portfolio-flexbox-iconbox {
@@ -694,7 +695,6 @@ textarea {
 
   .portfolio-flexbox-title {
     font-size: 1.2rem;
-    line-height: 30px;
     padding: 5px 20px;
   }
 }
