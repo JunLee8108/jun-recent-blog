@@ -258,6 +258,7 @@ li img {
   margin-bottom: 0;
   padding: 10px;
   font-size: 1.3rem;
+  transition: 0.5s all;
 }
 
 .portfolio-flexbox-iconbox {
@@ -589,6 +590,11 @@ textarea {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
     border: 3px solid #0ba360;
     transform: translateY(-10px);
+  }
+
+  .portfolio-flexbox:hover .portfolio-flexbox-title {
+    color: red;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
 
   .navbar-list:hover {
