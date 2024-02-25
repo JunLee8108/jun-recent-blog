@@ -1,5 +1,6 @@
-import SendingEmailJS from "../components/helpher/SendingEmailJS";
-import { contactMeInfo } from "../components/helpher/imgData";
+import "./ContactMe.css";
+import { contactMeInfo } from "../../components/helpher/imgData";
+import SendingEmailJS from "../../components/helpher/SendingEmailJS";
 
 function ContactMe() {
   const openInNewTab = (link) => {

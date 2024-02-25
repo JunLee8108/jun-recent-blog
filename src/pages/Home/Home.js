@@ -1,7 +1,7 @@
-import "../components/HomeSection.css";
-import TechStackModal from "../components/helpher/TechStackModal";
-import { techStackImg } from "../components/helpher/imgData";
-import { developer, developer2 } from "../components/helpher/imgData";
+import "./Home.css";
+import TechStackModal from "../../components/helpher/TechStackModal";
+import { techStackImg } from "../../components/helpher/imgData";
+import { developer, developer2 } from "../../components/helpher/imgData";
 
 import { useRef, useEffect, useState } from "react";
 
@@ -58,8 +58,8 @@ function Home() {
   }, [controlStackModal]);
 
   return (
-    <div className="home">
-      {/* About Me 1 - Introduction */}
+    <>
+      {/* Introduction */}
       <div className="about-me-introduction container-layout">
         <div className="introduction-flexbox-1">
           <h1 className="h1-green-left">Introduction </h1>
@@ -114,7 +114,7 @@ function Home() {
       {/* About Me 2 - Tech Stack */}
       <div className="about-me-tech-stack container-layout">
         <h1 className="h1-green-left">Tech Stack</h1>
-        <h4 className="short-description">
+        <h4 className="tech-stack-short-description">
           <FontAwesomeIcon
             icon="fa-solid fa-computer-mouse"
             style={{ marginRight: "6px" }}
@@ -161,7 +161,7 @@ function Home() {
           techStackName={techStackName}
         />
       ) : null}
-    </div>
+    </>
   );
 }
 

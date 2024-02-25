@@ -1,10 +1,12 @@
 import { Suspense, lazy } from "react";
 
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import ScrollToTop from "./components/helpher/ScrollToTop";
-import Loading from "./components/helpher/Loading";
-import Empty from "./components/helpher/Empty";
+import ScrollToTop from "./components/common/ScrollToTop";
+
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/Home/Home";
+
+import Loading from "./components/common/Loading";
+import Empty from "./components/common/Empty";
 
 import { Routes, Route } from "react-router-dom";
 // import the library
@@ -15,9 +17,9 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 
-const Portfolio = lazy(() => import("./pages/Portfolio"));
-const ContactMe = lazy(() => import("./pages/ContactMe"));
-const Page404 = lazy(() => import("./pages/Page404"));
+const Portfolio = lazy(() => import("./pages/Portfolio/Portfolio"));
+const ContactMe = lazy(() => import("./pages/ContactMe/ContactMe"));
+const Page404 = lazy(() => import("./components/common/Page404"));
 
 function App() {
   return (
@@ -36,6 +38,7 @@ function App() {
             </Suspense>
           }
         />
+
         <Route
           path="/contact"
           element={
@@ -44,6 +47,7 @@ function App() {
             </Suspense>
           }
         />
+
         <Route
           path="*"
           element={

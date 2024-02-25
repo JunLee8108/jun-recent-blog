@@ -1,0 +1,173 @@
+.about-me-introduction {
+  min-height: 50vh;
+  display: flex;
+}
+
+.introduction-flexbox-1 {
+  width: 60%;
+}
+
+.introduction-text-box {
+  padding-left: 20px;
+}
+
+.introduction-text-box p {
+  line-height: 35px;
+}
+
+.introduction-text-box h4 {
+  color: grey;
+}
+
+.introduction-view-button {
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: #3cba92;
+  color: white;
+  font-weight: bold;
+  transition: 0.4s all;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+}
+
+.introduction-flexbox-2 {
+  width: 40%;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.introduction-flexbox-2 img {
+  width: 35%;
+  max-width: 180px;
+  object-fit: fill;
+}
+
+.introduction-flexbox-2 .developer-img-1 {
+  opacity: 1;
+  transition: 1s ease-out;
+}
+
+.introduction-flexbox-2 .developer-img-2 {
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s ease-out;
+}
+
+.about-me-tech-stack {
+  height: 100%;
+  min-height: 50vh;
+}
+
+.tech-stack-short-description {
+  color: grey;
+  padding-left: 20px;
+}
+
+.tech-stack-flex-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 0.5rem 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-stack-flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  height: auto;
+  margin-right: 10px;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+
+.tech-stack-flexbox img {
+  width: 40%;
+  max-width: 75px;
+}
+
+.tech-stack-title {
+  transition: 0.5s all;
+}
+
+.tech-stack-border-line {
+  width: 0%;
+  height: 2px;
+  transition: all 0.8s ease;
+  background-color: #0ba360;
+}
+
+@media (hover: hover) {
+  .introduction-view-button:hover {
+    background-color: #0ba360;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .tech-stack-flexbox:hover {
+    transform: scale(1.12);
+    cursor: pointer;
+  }
+
+  .tech-stack-flexbox:hover .tech-stack-title {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .tech-stack-flexbox:hover .tech-stack-border-line {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .about-me-introduction {
+    width: 100%;
+    position: static;
+    height: auto;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    min-height: unset;
+  }
+
+  .introduction-flexbox-1 {
+    width: 100%;
+  }
+
+  .introduction-view-button {
+    display: none;
+  }
+
+  .introduction-flexbox-2 {
+    display: none;
+  }
+
+  .about-me-tech-stack {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me-introduction {
+    height: 100%;
+  }
+
+  .tech-stack-flex-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 0.5rem 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+}

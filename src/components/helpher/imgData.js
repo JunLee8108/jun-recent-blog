@@ -9,7 +9,6 @@ import nextJS from "../../assets/nextjs.webp";
 import nodeJS from "../../assets/nodejs.webp";
 import cplusplus from "../../assets/c++.webp";
 import python from "../../assets/python.webp";
-import mongo from "../../assets/mongo.webp";
 import electron from "../../assets/electron.webp";
 import email from "../../assets/mail.webp";
 import resume from "../../assets/resume.webp";

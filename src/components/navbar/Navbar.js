@@ -1,6 +1,6 @@
 import "./Navbar.css";
-import "./HomeSection.css";
-import { jun, me, portfolio, contact } from "./helpher/imgData";
+
+import { jun, me, portfolio, contact } from "../helpher/imgData";
 import { useState, useEffect, useRef } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -127,9 +127,24 @@ function Navbar() {
             }
           >
             <ul>
-              <li onClick={() => mobileNavigate("/")}>About Me</li>
-              <li onClick={() => mobileNavigate("/portfolio")}>Portfolio</li>
-              <li onClick={() => mobileNavigate("/contact")}>Contact Me</li>
+              <li
+                onClick={() => mobileNavigate("/")}
+                className="navber-mobile-list"
+              >
+                About Me
+              </li>
+              <li
+                onClick={() => mobileNavigate("/portfolio")}
+                className="navber-mobile-list"
+              >
+                Portfolio
+              </li>
+              <li
+                onClick={() => mobileNavigate("/contact")}
+                className="navber-mobile-list"
+              >
+                Contact Me
+              </li>
             </ul>
           </div>
         </div>
@@ -138,7 +153,7 @@ function Navbar() {
       {/* PC NAVBAR */}
       <div className="navbar-container">
         <ul>
-          <div className="profile text-center">
+          <div className="navbar-profile text-center">
             <h3>Jeong Hyun Lee</h3>
             <img src={jun} alt="Jun's Profile" />
           </div>
@@ -193,7 +208,9 @@ function Navbar() {
               <li
                 onClick={() => navigate("/")}
                 className={
-                  activeIndex === 0 ? "navbar-list li-gold" : "navbar-list"
+                  activeIndex === 0
+                    ? "navbar-list navbar-list-active"
+                    : "navbar-list"
                 }
               >
                 <img src={me} alt="About emoticon"></img>
@@ -202,7 +219,9 @@ function Navbar() {
               <li
                 onClick={() => handleNavigation("/portfolio")}
                 className={
-                  activeIndex === 1 ? "navbar-list li-gold" : "navbar-list"
+                  activeIndex === 1
+                    ? "navbar-list navbar-list-active"
+                    : "navbar-list"
                 }
               >
                 <img src={portfolio} alt="Portfolio emoticon"></img>
@@ -211,7 +230,9 @@ function Navbar() {
               <li
                 onClick={() => handleNavigation("/contact")}
                 className={
-                  activeIndex === 2 ? "navbar-list li-gold" : "navbar-list"
+                  activeIndex === 2
+                    ? "navbar-list navbar-list-active"
+                    : "navbar-list"
                 }
               >
                 <img src={contact} alt="Contact emoticon"></img>

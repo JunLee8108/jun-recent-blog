@@ -1,0 +1,258 @@
+ul {
+  width: 75%;
+  padding: 10px;
+}
+
+/* MOBILE */
+.navbar-mobile-icon {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  color: white;
+  margin-right: -5px;
+}
+
+.navbar-modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  opacity: 0;
+}
+
+.navbar-modal-container {
+  position: fixed;
+  width: 100%;
+  top: 45px;
+  padding-left: 1px;
+  background: var(--navbar-background-color);
+  z-index: 10;
+}
+
+.navbar-modal-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.navbar-modal-container li {
+  font-size: 13px;
+  margin-left: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+  display: list-item;
+  list-style-type: circle;
+}
+
+.navbar-modal-container li:nth-child(1) {
+  margin-top: -12px;
+}
+
+.animation {
+  animation: slideDownModal 0.4s forwards ease;
+}
+
+.animation-hide {
+  animation: slideUpModal 0.4s forwards ease;
+}
+
+.animation-bg {
+  animation: slideDownModalBg 0.4s forwards ease;
+}
+
+.animation-bg-hide {
+  animation: slideUpModalBg 0.4s forwards ease;
+}
+
+@keyframes slideDownModal {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideUpModal {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes slideDownModalBg {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpModalBg {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* PC - LAPTOP OR DESKTOP */
+.navbar-mobile {
+  display: none;
+}
+
+.navbar-mobile-loader {
+  display: none;
+}
+
+.navbar-container {
+  position: fixed;
+  z-index: 10;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: var(--navbar-background-color);
+  color: white;
+}
+
+.navbar-container p {
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+}
+
+.navbar-profile {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: flash 0.7s 0.2s forwards;
+}
+
+.navbar-profile img {
+  width: 160px;
+  height: 170px;
+  margin-top: 10px;
+  background-color: snow;
+  border-radius: 100px;
+}
+
+.navbar-profile h3 {
+  border-left: 2px dotted white;
+  border-right: 2px dotted white;
+}
+
+.navbar-intro {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: flash 0.7s 0.2s forwards;
+}
+
+.navbar-social-icon-container {
+  margin-top: 25px;
+  margin-bottom: 30px;
+  padding-bottom: 35px;
+  border-bottom: 3px solid white;
+}
+
+.navbar-social-icon {
+  width: 35px !important;
+  height: 35px !important;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.navbar-list,
+.navber-mobile-list {
+  margin-bottom: 15px;
+  padding: 5px;
+  list-style-type: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.navbar-list img {
+  width: 12%;
+  margin-right: 15px;
+}
+
+.navbar-list-active {
+  color: gold;
+}
+
+@media (hover: hover) {
+  .navbar-social-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+
+  .navbar-list:hover {
+    color: gold;
+    transform: scale(1.1);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .navbar-mobile {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 50px;
+    z-index: 5;
+  }
+
+  .navbar-mobile-flexbox {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    color: white;
+    background: linear-gradient(to top, #0ba360 0%, #3cba92 0%);
+  }
+
+  .navbar-mobile-flexbox:nth-child(1) {
+    justify-content: flex-start;
+    padding-left: 15px;
+  }
+
+  .navbar-mobile-flexbox:nth-child(2) {
+    justify-content: flex-end;
+    padding-right: 15px;
+  }
+
+  .navbar-mobile-loader {
+    display: block;
+  }
+
+  .navbar-container {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .navbar-profile h3 {
+    display: none;
+  }
+
+  .navbar-item {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+}
