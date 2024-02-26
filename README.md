@@ -27,4 +27,4 @@ Here is a link: https://main.dv6dnnn7mevg7.amplifyapp.com/
 
 ## ✅ Tech Stack
 - React: For crafting a dynamic and responsive user interface.
-- AWS Amplify: Leveraging AWS Amplify for hosting my portfolio website
+- AWS Amplify: Leveraging AWS Amplify for hosting my portfolio website.
