@@ -1,6 +1,6 @@
 import "./Navbar.css";
 
-import { jun, me, portfolio, contact } from "../helpher/imgData";
+import { jun, me, portfolio, blog, contact } from "../helpher/imgData";
 import { useState, useEffect, useRef } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -82,8 +82,10 @@ function Navbar() {
         setActiveIndex(0);
       } else if (location.pathname === "/portfolio") {
         setActiveIndex(1);
-      } else if (location.pathname === "/contact") {
+      } else if (location.pathname === "/blog") {
         setActiveIndex(2);
+      } else if (location.pathname === "/contact") {
+        setActiveIndex(3);
       }
     }
   }, [location.pathname]);
@@ -138,6 +140,12 @@ function Navbar() {
                 className="navber-mobile-list"
               >
                 Portfolio
+              </li>
+              <li
+                onClick={() => mobileNavigate("/blog")}
+                className="navber-mobile-list"
+              >
+                Blog
               </li>
               <li
                 onClick={() => mobileNavigate("/contact")}
@@ -228,9 +236,20 @@ function Navbar() {
                 Portfolio
               </li>
               <li
-                onClick={() => handleNavigation("/contact")}
+                onClick={() => handleNavigation("/blog")}
                 className={
                   activeIndex === 2
+                    ? "navbar-list navbar-list-active"
+                    : "navbar-list"
+                }
+              >
+                <img src={blog} alt="Blog emoticon"></img>
+                Blog
+              </li>
+              <li
+                onClick={() => handleNavigation("/contact")}
+                className={
+                  activeIndex === 3
                     ? "navbar-list navbar-list-active"
                     : "navbar-list"
                 }

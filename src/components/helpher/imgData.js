@@ -15,6 +15,7 @@ import resume from "../../assets/resume.webp";
 import linkedin from "../../assets/linkedin.webp";
 import me from "../../assets/user.webp";
 import portfolio from "../../assets/profile.webp";
+import blog from "../../assets/blog.webp";
 import contact from "../../assets/contact-information.webp";
 import developer from "../../assets/code.webp";
 import developer2 from "../../assets/code2.webp";
@@ -495,6 +496,23 @@ const portfolioData = [
   },
 ];
 
+const blogData = [
+  {
+    id: 0,
+    date: "02/26/2024",
+    title: "First Post",
+    content: "Hello, this is my first post for my portfolio website",
+    tag: "etc",
+  },
+  // {
+  //   id: 0,
+  //   date: "02/27/2024",
+  //   title: "Second Post",
+  //   content: "Nope",
+  //   tag: "React",
+  // },
+];
+
 export {
   jun,
   techStackImg,
@@ -505,9 +523,11 @@ export {
   linkedin,
   me,
   portfolio,
+  blog,
   contact,
   developer,
   developer2,
   portfolio1,
   portfolio2,
+  blogData,
 };

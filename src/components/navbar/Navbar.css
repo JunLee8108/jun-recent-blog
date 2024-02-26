@@ -184,6 +184,7 @@ ul {
   cursor: pointer;
   display: flex;
   transition: all 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .navbar-list img {

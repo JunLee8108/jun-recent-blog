@@ -18,6 +18,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 
 const Portfolio = lazy(() => import("./pages/Portfolio/Portfolio"));
+const Blog = lazy(() => import("./pages/Blog/Blog"));
 const ContactMe = lazy(() => import("./pages/ContactMe/ContactMe"));
 const Page404 = lazy(() => import("./components/common/Page404"));
 
@@ -29,6 +30,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="refresh" element={<Empty />} />
+
+        <Route
+          path="/blog"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Blog />
+            </Suspense>
+          }
+        />
 
         <Route
           path="/portfolio"
