@@ -53,7 +53,7 @@ export default function Blog() {
                           <h1 className="blog-post-title">{item.title}</h1>
                           <p className="blog-post-date">{item.date}</p>
                         </div>
-                        <p>{item.content}</p>
+                        <p className="blog-post-content">{item.content}</p>
                         <button className="blog-post-tag">{item.tag}</button>
                       </div>
                     );
@@ -74,7 +74,7 @@ export default function Blog() {
                   <h1 className="blog-post-title">{item.title}</h1>
                   <p className="blog-post-date">{item.date}</p>
                 </div>
-                <p>{item.content}</p>
+                <p className="blog-post-content">{item.content}</p>
                 <button className="blog-post-tag">{item.tag}</button>
               </div>
             );

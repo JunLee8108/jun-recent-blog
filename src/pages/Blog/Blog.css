@@ -38,6 +38,7 @@
   transition: 0.5s all ease;
   outline: none;
   border: 2px solid transparent;
+  font-size: 17px;
 }
 
 .blog-search:focus {
@@ -101,6 +102,10 @@
 .blog-post-title {
   font-size: 1.8rem;
   margin-bottom: 0;
+}
+
+.blog-post-content {
+  line-height: 25px;
 }
 
 .blog-post-tag {
