@@ -82,7 +82,7 @@ function Navbar() {
         setActiveIndex(0);
       } else if (location.pathname === "/portfolio") {
         setActiveIndex(1);
-      } else if (location.pathname === "/blog") {
+      } else if (location.pathname.includes("/blog")) {
         setActiveIndex(2);
       } else if (location.pathname === "/contact") {
         setActiveIndex(3);

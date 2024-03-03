@@ -3,11 +3,18 @@ import { blogData } from "../../components/helpher/imgData";
 
 import { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 export default function Blog() {
   const [searchInput, setSearchInput] = useState("");
+  const navigate = useNavigate();
 
   const handleSearch = (e) => {
     setSearchInput(e.target.value);
+  };
+
+  const handlePost = (id) => () => {
+    navigate(`/blog/${id}`);
   };
 
   const searchedData = searchInput
@@ -69,7 +76,11 @@ export default function Blog() {
         <div className="blog-post-container">
           {blogData.map((item, index) => {
             return (
-              <div className="blog-post" key={index}>
+              <div
+                className="blog-post"
+                key={index}
+                onClick={handlePost(item.id)}
+              >
                 <div className="blog-post-title-date-container">
                   <h1 className="blog-post-title">{item.title}</h1>
                   <p className="blog-post-date">{item.date}</p>

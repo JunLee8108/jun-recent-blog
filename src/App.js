@@ -19,6 +19,7 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 
 const Portfolio = lazy(() => import("./pages/Portfolio/Portfolio"));
 const Blog = lazy(() => import("./pages/Blog/Blog"));
+const BlogDetail = lazy(() => import("./pages/BlogDetail/BlogDetail"));
 const ContactMe = lazy(() => import("./pages/ContactMe/ContactMe"));
 const Page404 = lazy(() => import("./components/common/Page404"));
 
@@ -36,6 +37,16 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <Blog />
+            </Suspense>
+          }
+          exact
+        />
+
+        <Route
+          path="/blog/:id"
+          element={
+            <Suspense fallback={<Loading />}>
+              <BlogDetail />
             </Suspense>
           }
         />
