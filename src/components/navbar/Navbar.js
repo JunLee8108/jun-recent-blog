@@ -209,6 +209,7 @@ function Navbar() {
             <center>
               <div className="navbar-mobile-loader">
                 <ClimbingBoxLoader color="white" speedMultiplier={0.8} />
+                <p className="loader-title">Keep Growing..</p>
               </div>
             </center>
 
@@ -260,6 +261,7 @@ function Navbar() {
 
               <center style={{ marginTop: "30px" }}>
                 <ClimbingBoxLoader color="white" speedMultiplier={0.8} />
+                <p className="loader-title">Keep Growing..</p>
               </center>
             </div>
           </div>

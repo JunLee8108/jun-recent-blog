@@ -16,12 +16,17 @@
   text-align: center;
   letter-spacing: 0.5px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blog-detail-post-tag-date-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 70%;
+  margin: auto;
 }
 
 .blog-detail-tag-container {
@@ -34,8 +39,8 @@
 .blog-detail-post-content {
   font-size: 1.1rem;
   line-height: 50px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 70%;
+  margin: 20px auto;
   word-wrap: break-word;
 }
 
@@ -44,18 +49,26 @@
     width: 100%;
     position: static;
   }
+
+  .blog-detail-post-title {
+    line-height: 45px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .blog-detail-post-title {
     font-size: 1.4rem;
     line-height: 30px;
+    width: 100%;
+  }
+
+  .blog-detail-post-tag-date-container {
+    width: 100%;
   }
 
   .blog-detail-post-content {
     font-size: 1.1rem;
     line-height: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    width: 100%;
   }
 }
