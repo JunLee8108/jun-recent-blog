@@ -170,10 +170,12 @@ function Navbar() {
           </div>
 
           <div className="navbar-intro">
-            <p>
+            <p className="navbar-intro-text">
               ‣ Hello, my name is Jeong Hyun Lee. I'm a computer science student
               who seek a Full-Stack developer.
             </p>
+
+            <p className="navbar-intro-text-mobile">Jeong Hyun Lee</p>
 
             <div className="navbar-social-icon-container text-center">
               <SocialIcon
