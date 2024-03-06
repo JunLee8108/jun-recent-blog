@@ -46,7 +46,7 @@ li {
   padding-left: 30px;
   opacity: 0;
   background: var(--container-background-color);
-  animation: flash 1s 0.2s forwards ease;
+  animation: flash 0.8s 0.2s forwards ease;
 }
 
 @keyframes flash {
