@@ -55,7 +55,7 @@ li {
   padding-left: 30px;
   opacity: 0;
   background: var(--container-background-color);
-  transform: translateY(10px);
+  transform: translateY(20px);
   animation: flash 0.7s 0.2s forwards ease-out;
 }
 

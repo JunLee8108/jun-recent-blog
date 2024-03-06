@@ -509,7 +509,7 @@ const blogData = [
     tag: "etc",
   },
   {
-    id: 0,
+    id: 1,
     date: "02/26/2024",
     title: "Jun's UI Design Lab has been published!",
     content:
@@ -520,7 +520,7 @@ const blogData = [
     tag: "etc",
   },
   {
-    id: 0,
+    id: 2,
     date: "02/26/2024",
     title: "Jun's UI Design Lab has been published!",
     content:
@@ -531,7 +531,7 @@ const blogData = [
     tag: "etc",
   },
   {
-    id: 0,
+    id: 3,
     date: "02/26/2024",
     title: "Jun's UI Design Lab has been published!",
     content:
@@ -542,7 +542,7 @@ const blogData = [
     tag: "etc",
   },
   {
-    id: 0,
+    id: 4,
     date: "02/26/2024",
     title: "Jun's UI Design Lab has been published!",
     content:
@@ -553,7 +553,7 @@ const blogData = [
     tag: "etc",
   },
   {
-    id: 0,
+    id: 5,
     date: "02/26/2024",
     title: "Jun's UI Design Lab has been published!",
     content:
