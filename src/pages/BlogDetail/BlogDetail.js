@@ -15,7 +15,7 @@ export default function BlogDetail() {
   };
 
   const handleBackButton = () => {
-    navigate(-1);
+    navigate("/blog");
   };
 
   return (
@@ -47,7 +47,7 @@ export default function BlogDetail() {
             className="blog-detail-back-button"
             onClick={handleBackButton}
           >
-            Back
+            Go Back to Blog
           </button>
         </center>
       </div>

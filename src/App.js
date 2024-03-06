@@ -29,17 +29,17 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route exact path="/" element={<Home />}></Route>
         <Route path="refresh" element={<Empty />} />
 
         <Route
+          exact
           path="/blog"
           element={
             <Suspense fallback={<Loading />}>
               <Blog />
             </Suspense>
           }
-          exact
         />
 
         <Route
