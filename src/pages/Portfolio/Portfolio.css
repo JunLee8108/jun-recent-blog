@@ -46,6 +46,7 @@
   border-radius: 5px 5px 0 0;
   height: 250px;
   display: flex;
+  overflow: hidden; /* 이미지가 컨테이너 밖으로 나가지 않도록 함 */
 }
 
 .portfolio-img-container img {
@@ -54,6 +55,14 @@
   border-bottom: 1px dotted green;
   left: 0;
   top: 0;
+  width: 100%; /* 이미지가 컨테이너를 꽉 채우도록 함 */
+  height: 100%; /* 이미지가 컨테이너를 꽉 채우도록 함 */
+  object-fit: cover; /* 이미지 비율을 유지하며 컨테이너에 맞춤 */
+  transition: filter 0.5s ease; /* 필터 전환 효과 */
+}
+
+.portfolio-img-container img.loading {
+  filter: blur(5px); /* 로딩 중 이미지에 흐릿한 효과 적용 */
 }
 
 .portfolio-flexbox-title {

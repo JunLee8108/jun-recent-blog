@@ -1,6 +1,8 @@
 import "./Portfolio.css";
 import { portfolioData } from "../../components/helpher/imgData";
 
+import { useState } from "react";
+
 import { SocialIcon } from "react-social-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -13,6 +15,8 @@ function Portfolio() {
       window.location.href = link;
     }
   };
+
+  const [isLoaded, setIsLoaded] = useState(false); // 이미지 로드 상태를 추적하는 state
 
   return (
     <>
@@ -35,6 +39,8 @@ function Portfolio() {
                     src={content.img}
                     alt=""
                     onClick={() => openInNewTab(content.iconURL1)}
+                    className={!isLoaded ? "loading" : ""} // 로드 상태에 따라 클래스를 조정
+                    onLoad={() => setIsLoaded(true)} // 이미지 로드 완료 시 상태 업데이트
                   />
                 </div>
 

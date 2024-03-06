@@ -4,7 +4,7 @@ import { jun, me, portfolio, blog, contact } from "../helpher/imgData";
 import { useState, useEffect, useRef } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
@@ -98,7 +98,9 @@ function Navbar() {
       {/* MOBILE NAVBAR */}
       <div className="navbar-mobile">
         <div className="navbar-mobile-flexbox">
-          <h5 onClick={() => mobileNavigate("/")}>JEONG HYUN LEE</h5>
+          <Link to="/" className="link-no-decoration">
+            <h5>JEONG HYUN LEE</h5>
+          </Link>
         </div>
         <div className="navbar-mobile-flexbox">
           {controlModalState ? (
