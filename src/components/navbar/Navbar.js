@@ -30,7 +30,10 @@ function Navbar() {
 
   const mobileNavigate = (path) => {
     setControlModalState(false);
-    handleNavigation(path);
+
+    setTimeout(() => {
+      handleNavigation(path);
+    }, 200);
   };
 
   const openInNewTab = (link) => {
