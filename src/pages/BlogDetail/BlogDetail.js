@@ -2,6 +2,8 @@ import "./BlogDetail.css";
 import "../Blog/Blog.css";
 import { blogData } from "../../components/helpher/imgData";
 
+import { useEffect } from "react";
+
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
@@ -12,6 +14,10 @@ export default function BlogDetail() {
   const convertNewlinesToHTML = (str) => {
     return str.replace(/\n/g, "<br />");
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
