@@ -123,6 +123,11 @@
 .tech-stack-flexbox img {
   width: 40%;
   max-width: 75px;
+  transition: filter 0.5s ease; /* 필터 전환 효과 */
+}
+
+.tech-stack-loading {
+  filter: blur(2px); /* 로딩 중 이미지에 흐릿한 효과 적용 */
 }
 
 .tech-stack-title {

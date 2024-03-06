@@ -62,7 +62,7 @@
 }
 
 .portfolio-img-container img.loading {
-  filter: blur(5px); /* 로딩 중 이미지에 흐릿한 효과 적용 */
+  filter: blur(2px); /* 로딩 중 이미지에 흐릿한 효과 적용 */
 }
 
 .portfolio-flexbox-title {
