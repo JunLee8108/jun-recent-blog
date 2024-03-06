@@ -3,18 +3,13 @@ import { blogData } from "../../components/helpher/imgData";
 
 import { useState } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Blog() {
   const [searchInput, setSearchInput] = useState("");
-  const navigate = useNavigate();
 
   const handleSearch = (e) => {
     setSearchInput(e.target.value);
-  };
-
-  const handlePost = (id) => () => {
-    navigate(`/blog/${id}`);
   };
 
   const searchedData = searchInput
@@ -74,18 +69,20 @@ export default function Blog() {
         <div className="blog-post-container">
           {blogData.map((item, index) => {
             return (
-              <div
-                className="blog-post"
+              <Link
+                to={`/blog/${item.id}`}
                 key={index}
-                onClick={handlePost(item.id)}
+                className="blog-post-link"
               >
-                <div className="blog-post-title-date-container">
-                  <h1 className="blog-post-title">{item.title}</h1>
-                  <p className="blog-post-date">{item.date}</p>
+                <div className="blog-post">
+                  <div className="blog-post-title-date-container">
+                    <h1 className="blog-post-title">{item.title}</h1>
+                    <p className="blog-post-date">{item.date}</p>
+                  </div>
+                  <p className="blog-post-content">{item.content}</p>
+                  <button className="blog-post-tag">{item.tag}</button>
                 </div>
-                <p className="blog-post-content">{item.content}</p>
-                <button className="blog-post-tag">{item.tag}</button>
-              </div>
+              </Link>
             );
           })}
         </div>

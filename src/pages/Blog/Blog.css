@@ -82,6 +82,10 @@
   margin-top: 2.3rem;
 }
 
+.blog-post-link {
+  text-decoration: none;
+}
+
 .blog-post {
   width: 100%;
   height: 100%;

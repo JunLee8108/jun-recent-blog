@@ -29,11 +29,11 @@ function Navbar() {
   };
 
   const mobileNavigate = (path) => {
-    setControlModalState(false);
-
     setTimeout(() => {
-      handleNavigation(path);
-    }, 200);
+      setControlModalState(false);
+    }, 300);
+
+    handleNavigation(path);
   };
 
   const openInNewTab = (link) => {
