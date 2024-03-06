@@ -136,11 +136,11 @@ ul {
   letter-spacing: 0.5px;
 }
 
-/* .navbar-profile {
+.navbar-profile {
   opacity: 0;
   transform: translateY(20px);
-  animation: flash 0.7s 0.2s forwards;
-} */
+  animation: flash 1s 0.2s forwards ease-out;
+}
 
 .navbar-profile img {
   width: 160px;
@@ -155,11 +155,11 @@ ul {
   border-right: 2px dotted white;
 }
 
-/* .navbar-intro {
+.navbar-intro {
   opacity: 0;
   transform: translateY(20px);
-  animation: flash 0.7s 0.2s forwards;
-} */
+  animation: flash 1s 0.2s forwards ease-out;
+}
 
 .navbar-social-icon-container {
   margin-top: 25px;

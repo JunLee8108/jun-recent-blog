@@ -44,9 +44,15 @@ li {
   position: relative;
   padding: 20px;
   padding-left: 30px;
-  /* opacity: 0; */
+  opacity: 0;
   background: var(--container-background-color);
-  /* animation: flash 0.7s 0.3s forwards; */
+  animation: flash 1s 0.2s forwards ease;
+}
+
+@keyframes flash {
+  to {
+    opacity: 1;
+  }
 }
 
 .text-center {
@@ -64,12 +70,6 @@ li {
 .mg-left-right-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-@keyframes flash {
-  to {
-    opacity: 1;
-  }
 }
 
 @media screen and (max-width: 767px) {
