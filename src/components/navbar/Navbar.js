@@ -44,12 +44,12 @@ function Navbar() {
 
   const handleNavigation = (path) => {
     navigate(path);
-    if (location.pathname.includes(path)) {
-      navigate("refresh");
-      setTimeout(() => {
-        navigate(path);
-      }, 100);
-    }
+    // if (location.pathname.includes(path)) {
+    //   navigate("refresh");
+    //   setTimeout(() => {
+    //     navigate(path);
+    //   }, 100);
+    // }
   };
 
   useEffect(() => {

@@ -84,9 +84,9 @@
     line-height: 45px;
   }
 
-  .blog-detail-back-button {
+  /* .blog-detail-back-button {
     display: none;
-  }
+  } */
 }
 
 @media screen and (max-width: 767px) {
