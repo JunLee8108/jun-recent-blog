@@ -2,6 +2,10 @@
   min-height: 100vh;
 }
 
+.blog-h1-green-left {
+  max-width: 1200px;
+}
+
 .blog-search-container {
   position: relative;
   display: flex;

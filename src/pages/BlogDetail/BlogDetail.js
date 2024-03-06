@@ -16,7 +16,7 @@ export default function BlogDetail() {
   return (
     <>
       <div className="blog-detail container-layout">
-        <h1 className="h1-green-left">Post</h1>
+        <h1 className="h1-green-left blog-detail-h1-green-left">Post</h1>
 
         <div className="blog-detail-post-container">
           <h1 className="blog-detail-post-title">{post[0].title}</h1>

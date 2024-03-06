@@ -34,7 +34,7 @@ export default function Blog() {
   return (
     <>
       <div className="blog container-layout">
-        <h1 className="h1-green-left">Blog</h1>
+        <h1 className="h1-green-left blog-h1-green-left">Blog</h1>
 
         <div className="blog-search-container">
           <input

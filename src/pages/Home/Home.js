@@ -60,10 +60,10 @@ function Home() {
   return (
     <>
       {/* Introduction */}
-      <div className="about-me-introduction container-layout">
-        <div className="introduction-flexbox-1">
-          <h1 className="h1-green-left">Introduction </h1>
-          <div className="introduction-text-box">
+      <div className="home-container container-layout">
+        <h1 className="h1-green-left">Introduction </h1>
+        <div className="about-me-introduction">
+          <div className="introduction-flexbox-1">
             <h4>
               <FontAwesomeIcon
                 icon="fa-solid fa-laptop"
@@ -71,86 +71,88 @@ function Home() {
               />
               Future Full-Stack Developer
             </h4>
-
-            <p>
-              Hello, my name is Jeong Hyun Lee, and as a dedicated Computer
-              Science student at Texas A&M University, I have honed my
-              full-stack development skills through a blend of academic rigor
-              and extensive hands-on experience. My technical repertoire
-              includes advanced proficiency in C++ and Python, alongside
-              substantial project work in web development using React, Next.js,
-              Node.js, Vue.js, TypeScript and MongoDB, as well as desktop
-              application development with Electron.js.
-            </p>
-            <p>
-              These experiences have not only sharpened my technical acumen but
-              also reinforced my ability to work effectively in team-oriented
-              environments and adapt to evolving technological landscapes. Eager
-              to apply my diverse skills in a dynamic team, I am poised to make
-              impactful contributions in the realm of full-stack development.
-            </p>
-            <button
-              className="introduction-view-button"
-              onClick={() => navigate("/portfolio")}
-            >
-              View Portfolio
-            </button>
+            <div className="introduction-text-box">
+              <p>
+                Hello, my name is Jeong Hyun Lee, and as a dedicated Computer
+                Science student at Texas A&M University, I have honed my
+                full-stack development skills through a blend of academic rigor
+                and extensive hands-on experience. My technical repertoire
+                includes advanced proficiency in C++ and Python, alongside
+                substantial project work in web development using React,
+                Next.js, Node.js, Vue.js, TypeScript and MongoDB, as well as
+                desktop application development with Electron.js.
+              </p>
+              <p>
+                These experiences have not only sharpened my technical acumen
+                but also reinforced my ability to work effectively in
+                team-oriented environments and adapt to evolving technological
+                landscapes. Eager to apply my diverse skills in a dynamic team,
+                I am poised to make impactful contributions in the realm of
+                full-stack development.
+              </p>
+              <button
+                className="introduction-view-button"
+                onClick={() => navigate("/portfolio")}
+              >
+                View Portfolio
+              </button>
+            </div>
+          </div>
+          <div className="introduction-flexbox-2">
+            <img
+              src={developer}
+              className="developer-img-1"
+              alt="Developer emoticon"
+            ></img>
+            <img
+              src={developer2}
+              alt="Developer emoticon"
+              className="developer-img-2"
+            ></img>
           </div>
         </div>
-        <div className="introduction-flexbox-2">
-          <img
-            src={developer}
-            className="developer-img-1"
-            alt="Developer emoticon"
-          ></img>
-          <img
-            src={developer2}
-            alt="Developer emoticon"
-            className="developer-img-2"
-          ></img>
-        </div>
-      </div>
 
-      {/* About Me 2 - Tech Stack */}
-      <div className="about-me-tech-stack container-layout">
+        {/* About Me 2 - Tech Stack */}
         <h1 className="h1-green-left">Tech Stack</h1>
-        <h4 className="tech-stack-short-description">
-          <FontAwesomeIcon
-            icon="fa-solid fa-computer-mouse"
-            style={{ marginRight: "6px" }}
-          />
-          Click each icon to see the details
-        </h4>
-        <div className="tech-stack-flex-container">
-          {techStackImg.map(function (content, index) {
-            return (
-              <div
-                className="tech-stack-flexbox"
-                key={index}
-                onClick={() => {
-                  setControlStackModal(true);
-                  setTechStackName(content.name);
-                  const BrowserWidth = document.body.scrollWidth;
-                  if (BrowserWidth <= 1280) {
-                    document.body.style.overflow = "hidden";
-                  }
-                }}
-              >
-                <div style={{ width: "100%" }}>
-                  {index === 2 ? (
-                    <>
+        <div className="about-me-tech-stack ">
+          <h4 className="tech-stack-short-description">
+            <FontAwesomeIcon
+              icon="fa-solid fa-computer-mouse"
+              style={{ marginRight: "6px" }}
+            />
+            Click each icon to see the details
+          </h4>
+          <div className="tech-stack-flex-container">
+            {techStackImg.map(function (content, index) {
+              return (
+                <div
+                  className="tech-stack-flexbox"
+                  key={index}
+                  onClick={() => {
+                    setControlStackModal(true);
+                    setTechStackName(content.name);
+                    const BrowserWidth = document.body.scrollWidth;
+                    if (BrowserWidth <= 1280) {
+                      document.body.style.overflow = "hidden";
+                    }
+                  }}
+                >
+                  <div style={{ width: "100%" }}>
+                    {index === 2 ? (
+                      <>
+                        <img src={content.img} alt="tech-stack"></img>
+                        <img src={content.img2} alt="tech-stack"></img>
+                      </>
+                    ) : (
                       <img src={content.img} alt="tech-stack"></img>
-                      <img src={content.img2} alt="tech-stack"></img>
-                    </>
-                  ) : (
-                    <img src={content.img} alt="tech-stack"></img>
-                  )}
+                    )}
+                  </div>
+                  <h4 className="tech-stack-title">{content.name}</h4>
+                  <div className="tech-stack-border-line"></div>
                 </div>
-                <h4 className="tech-stack-title">{content.name}</h4>
-                <div className="tech-stack-border-line"></div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
 

@@ -2,6 +2,10 @@
   min-height: 100vh;
 }
 
+.blog-detail-h1-green-left {
+  max-width: 1100px;
+}
+
 .blog-detail-post-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 30px;
@@ -78,6 +82,10 @@
 
   .blog-detail-post-title {
     line-height: 45px;
+  }
+
+  .blog-detail-back-button {
+    display: none;
   }
 }
 

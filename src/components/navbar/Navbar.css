@@ -139,7 +139,7 @@ ul {
 .navbar-profile {
   opacity: 0;
   transform: translateY(20px);
-  animation: flash 1s 0.2s forwards ease-out;
+  animation: flash 0.7s 0.2s forwards ease-out;
 }
 
 .navbar-profile img {
@@ -158,7 +158,7 @@ ul {
 .navbar-intro {
   opacity: 0;
   transform: translateY(20px);
-  animation: flash 1s 0.2s forwards ease-out;
+  animation: flash 0.7s 0.2s forwards ease-out;
 }
 
 .navbar-social-icon-container {
