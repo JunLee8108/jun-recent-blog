@@ -1,10 +1,12 @@
 .about-me-introduction {
   min-height: 50vh;
   display: flex;
+  justify-content: space-between;
 }
 
 .introduction-flexbox-1 {
   width: 60%;
+  max-width: 1200px;
 }
 
 .introduction-text-box {
@@ -20,9 +22,9 @@
 }
 
 .introduction-view-button {
-  padding: 15px;
+  padding: 19px;
   border: none;
-  border-radius: 50px;
+  border-radius: 20px;
   background-color: #3cba92;
   color: white;
   font-weight: bold;
@@ -30,6 +32,7 @@
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   margin-bottom: 10px;
+  font-size: 0.9rem;
 }
 
 .introduction-flexbox-2 {

@@ -1,14 +1,21 @@
 import "./BlogDetail.css";
 import "../Blog/Blog.css";
 import { blogData } from "../../components/helpher/imgData";
+
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 export default function BlogDetail() {
   let { id } = useParams();
   const post = blogData.filter((item) => item.id === Number(id));
+  const navigate = useNavigate();
 
   const convertNewlinesToHTML = (str) => {
     return str.replace(/\n/g, "<br />");
+  };
+
+  const handleBackButton = () => {
+    navigate(-1);
   };
 
   return (
@@ -34,6 +41,15 @@ export default function BlogDetail() {
             className="blog-detail-post-content"
           />
         </div>
+
+        <center>
+          <button
+            className="blog-detail-back-button"
+            onClick={handleBackButton}
+          >
+            Back
+          </button>
+        </center>
       </div>
     </>
   );

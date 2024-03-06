@@ -97,11 +97,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0 2rem;
 }
 
 .blog-post-title {
   font-size: 1.8rem;
-  margin-bottom: 0;
 }
 
 .blog-post-content {
@@ -115,6 +116,7 @@
 
 .blog-post-tag {
   padding: 5px 10px;
+
   border-radius: 50px;
   border: none;
   color: white;

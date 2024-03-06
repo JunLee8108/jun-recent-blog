@@ -31,8 +31,6 @@ export default function Blog() {
       )
     : null;
 
-  //push
-
   return (
     <>
       <div className="blog container-layout">
