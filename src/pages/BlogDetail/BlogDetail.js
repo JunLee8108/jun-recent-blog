@@ -2,22 +2,17 @@ import "./BlogDetail.css";
 import "../Blog/Blog.css";
 import { blogData } from "../../components/helpher/imgData";
 
-import { useEffect } from "react";
-
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 export default function BlogDetail() {
   let { id } = useParams();
   const post = blogData.filter((item) => item.id === Number(id));
+  const navigate = useNavigate();
 
   const convertNewlinesToHTML = (str) => {
     return str.replace(/\n/g, "<br />");
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <>
@@ -44,9 +39,12 @@ export default function BlogDetail() {
         </div>
 
         <center>
-          <Link to={-1}>
-            <button className="blog-detail-back-button">Go Back to Blog</button>
-          </Link>
+          <button
+            className="blog-detail-back-button"
+            onClick={() => navigate(-1)}
+          >
+            Go Back to Blog
+          </button>
         </center>
       </div>
     </>
