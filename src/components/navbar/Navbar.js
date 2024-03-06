@@ -29,8 +29,8 @@ function Navbar() {
   };
 
   const mobileNavigate = (path) => {
-    handleNavigation(path);
     setControlModalState(false);
+    handleNavigation(path);
   };
 
   const openInNewTab = (link) => {
