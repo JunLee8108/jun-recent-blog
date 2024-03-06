@@ -27,7 +27,7 @@ const Page404 = lazy(() => import("./components/common/Page404"));
 function App() {
   return (
     <div className="App">
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
