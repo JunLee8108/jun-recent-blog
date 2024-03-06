@@ -1,7 +1,7 @@
 import "./Blog.css";
 import { blogData } from "../../components/helpher/imgData";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -30,6 +30,10 @@ export default function Blog() {
             .includes(searchInput.replaceAll(" ", "").toLocaleLowerCase())
       )
     : null;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
