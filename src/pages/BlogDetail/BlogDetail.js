@@ -2,20 +2,15 @@ import "./BlogDetail.css";
 import "../Blog/Blog.css";
 import { blogData } from "../../components/helpher/imgData";
 
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 export default function BlogDetail() {
   let { id } = useParams();
   const post = blogData.filter((item) => item.id === Number(id));
-  const navigate = useNavigate();
 
   const convertNewlinesToHTML = (str) => {
     return str.replace(/\n/g, "<br />");
-  };
-
-  const handleBackButton = () => {
-    navigate("/blog");
   };
 
   return (
@@ -43,12 +38,9 @@ export default function BlogDetail() {
         </div>
 
         <center>
-          <button
-            className="blog-detail-back-button"
-            onClick={handleBackButton}
-          >
-            Go Back to Blog
-          </button>
+          <Link to={-1}>
+            <button className="blog-detail-back-button">Go Back to Blog</button>
+          </Link>
         </center>
       </div>
     </>
