@@ -43,6 +43,10 @@ function Navbar() {
   };
 
   const handleNavigation = (path) => {
+    window.scrollTo({
+      top: 0,
+      // behavior: "smooth",
+    });
     navigate(path);
     if (location.pathname.includes(path)) {
       navigate("refresh");

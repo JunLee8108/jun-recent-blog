@@ -4,6 +4,7 @@ import ScrollToTop from "./components/common/ScrollToTop";
 
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home/Home";
+import BlogDetail from "./pages/BlogDetail/BlogDetail";
 
 import Loading from "./components/common/Loading";
 import Empty from "./components/common/Empty";
@@ -19,7 +20,7 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 
 const Portfolio = lazy(() => import("./pages/Portfolio/Portfolio"));
 const Blog = lazy(() => import("./pages/Blog/Blog"));
-const BlogDetail = lazy(() => import("./pages/BlogDetail/BlogDetail"));
+// const BlogDetail = lazy(() => import("./pages/BlogDetail/BlogDetail"));
 const ContactMe = lazy(() => import("./pages/ContactMe/ContactMe"));
 const Page404 = lazy(() => import("./components/common/Page404"));
 
