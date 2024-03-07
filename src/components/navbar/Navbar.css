@@ -138,7 +138,7 @@ ul {
 
 .navbar-profile {
   opacity: 0;
-  transform: translateY(10px);
+  /* transform: translateY(10px); */
   animation: flash 0.7s 0.2s forwards ease-out;
 }
 
@@ -157,7 +157,7 @@ ul {
 
 .navbar-intro {
   opacity: 0;
-  transform: translateY(10px);
+  /* transform: translateY(10px); */
   animation: flash 0.7s 0.2s forwards ease-out;
 }
 
