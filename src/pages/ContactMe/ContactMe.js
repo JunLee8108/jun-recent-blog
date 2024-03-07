@@ -2,7 +2,13 @@ import "./ContactMe.css";
 import { contactMeInfo } from "../../components/helpher/imgData";
 import SendingEmailJS from "../../components/helpher/SendingEmailJS";
 
+import { useEffect } from "react";
+
 function ContactMe() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const openInNewTab = (link) => {
     const BrowserWidth = document.body.scrollWidth;
     if (BrowserWidth > 1280 && link !== "mailto:lejhn1@gmail.com") {

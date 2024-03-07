@@ -31,7 +31,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="refresh" element={<Empty />} />
+        {/* <Route path="refresh" element={<Empty />} /> */}
 
         <Route
           exact
