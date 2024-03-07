@@ -53,8 +53,8 @@ li {
   position: relative;
   padding: 20px;
   padding-left: 30px;
-  opacity: 0;
   background: var(--container-background-color);
+  opacity: 0;
   transform: translateY(10px);
   animation: flash 0.7s 0.2s forwards ease-out;
 }

@@ -57,11 +57,29 @@
   width: 100%; /* 이미지가 컨테이너를 꽉 채우도록 함 */
   height: 100%; /* 이미지가 컨테이너를 꽉 채우도록 함 */
   object-fit: cover; /* 이미지 비율을 유지하며 컨테이너에 맞춤 */
-  transition: filter 0.5s ease; /* 필터 전환 효과 */
+  transition: all 0.5s ease; /* 필터 전환 효과 */
 }
 
 .portfolio-img-container img.loading {
-  filter: blur(2px); /* 로딩 중 이미지에 흐릿한 효과 적용 */
+  /* filter: blur(2px); 로딩 중 이미지에 흐릿한 효과 적용 */
+  /* background-color: rgba(0, 0, 0, 0.3);
+  animation: 1s shine linear infinite; */
+  background-color: rgba(0, 0, 0, 0.2); /* 밝은 배경색 */
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.546) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  animation: shine 1.5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center; /* 배경 이미지를 오른쪽으로 이동시켜 "빛나는" 효과 생성 */
+  }
 }
 
 .portfolio-flexbox-title {
