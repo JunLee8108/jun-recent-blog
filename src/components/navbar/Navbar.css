@@ -51,29 +51,31 @@ ul {
 }
 
 .animation {
-  animation: slideDownModal 0.4s forwards ease;
+  animation: slideDownModal 0.6s forwards ease;
 }
 
 .animation-hide {
-  animation: slideUpModal 0.4s forwards ease;
+  animation: slideUpModal 0.6s forwards ease;
 }
 
 .animation-bg {
-  animation: slideDownModalBg 0.4s forwards ease;
+  animation: slideDownModalBg 0.8s forwards ease;
 }
 
 .animation-bg-hide {
-  animation: slideUpModalBg 0.4s forwards ease;
+  animation: slideUpModalBg 0.3s forwards ease;
 }
 
 @keyframes slideDownModal {
   from {
     opacity: 0;
     transform: translateY(-20px);
+    height: 0;
   }
 
   to {
     opacity: 1;
+    height: 100%;
     transform: translateY(0);
   }
 }
@@ -81,11 +83,13 @@ ul {
 @keyframes slideUpModal {
   from {
     opacity: 1;
+    height: 100%;
     transform: translateY(0);
   }
 
   to {
     opacity: 0;
+    height: 0;
     transform: translateY(-20px);
   }
 }
