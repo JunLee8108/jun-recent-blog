@@ -16,7 +16,7 @@ function ContactMe() {
     <>
       {/* Contact Me */}
       <div className="contact-me container-layout">
-        <h1 className="h1-green-left">Contact Me</h1>
+        <h1 className="h1-green-left h1-green-left-contact-me">Contact Me</h1>
         <div className="contact-me-flex-container">
           <div className="contact-me-flexbox">
             <SendingEmailJS />
