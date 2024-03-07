@@ -61,9 +61,6 @@
 }
 
 .portfolio-img-container img.loading {
-  /* filter: blur(2px); 로딩 중 이미지에 흐릿한 효과 적용 */
-  /* background-color: rgba(0, 0, 0, 0.3);
-  animation: 1s shine linear infinite; */
   background-color: rgba(0, 0, 0, 0.2); /* 밝은 배경색 */
   background-image: linear-gradient(
     to right,

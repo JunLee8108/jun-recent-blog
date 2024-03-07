@@ -12,6 +12,7 @@ function Home() {
   const [controlStackModal, setControlStackModal] = useState(false);
   const [techStackModal, setTechStackModal] = useState(false);
   const [techStackName, setTechStackName] = useState("");
+
   const [isLoaded, setIsLoaded] = useState(false); // 이미지 로드 상태를 추적하는 state
 
   const isMounted = useRef(false);
@@ -139,31 +140,24 @@ function Home() {
                     }
                   }}
                 >
-                  <div style={{ width: "100%" }}>
+                  <div
+                    style={{ width: "100%" }}
+                    className={!isLoaded ? "tech-stack-loading" : ""}
+                  >
                     {index === 2 ? (
                       <>
-                        <img
-                          src={content.img}
-                          alt="tech-stack"
-                          className={!isLoaded ? "tech-stack-loading" : ""} // 로드 상태에 따라 클래스를 조정
-                          onLoad={() => setIsLoaded(true)} // 이미지 로드 완료 시 상태 업데이트
-                        ></img>
-                        <img
-                          src={content.img2}
-                          alt="tech-stack"
-                          className={!isLoaded ? "tech-stack-loading" : ""} // 로드 상태에 따라 클래스를 조정
-                          onLoad={() => setIsLoaded(true)} // 이미지 로드 완료 시 상태 업데이트
-                        ></img>
+                        <img src={content.img} alt="tech-stack"></img>
+                        <img src={content.img2} alt="tech-stack"></img>
                       </>
                     ) : (
                       <img
+                        onLoad={() => setIsLoaded(true)}
                         src={content.img}
                         alt="tech-stack"
-                        className={!isLoaded ? "tech-stack-loading" : ""} // 로드 상태에 따라 클래스를 조정
-                        onLoad={() => setIsLoaded(true)} // 이미지 로드 완료 시 상태 업데이트
                       ></img>
                     )}
                   </div>
+
                   <h4 className="tech-stack-title">{content.name}</h4>
                   <div className="tech-stack-border-line"></div>
                 </div>
