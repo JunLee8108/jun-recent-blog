@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home";
 import BlogDetail from "./pages/BlogDetail/BlogDetail";
 
 import Loading from "./components/common/Loading";
-import Empty from "./components/common/Empty";
+// import Empty from "./components/common/Empty";
 
 import { Routes, Route } from "react-router-dom";
 // import the library
