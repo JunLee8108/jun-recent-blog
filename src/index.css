@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* html에 overflow-y: scroll; */
+
 :root {
   --navbar-background-color: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
   --container-background-color: linear-gradient(
@@ -14,7 +18,7 @@
 
 body {
   margin: 0;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--container-background-color);

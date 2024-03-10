@@ -383,7 +383,7 @@ const contactMeInfo = [
     name: "RESUME",
     img: resume,
     aHref:
-      "https://drive.google.com/file/d/1TCtspC80FUrizNhB9umvJLR6SqF6ayDa/view?usp=sharing",
+      "https://drive.google.com/file/d/1_EP8613vyZL0BBwtRhlCicwsxFxBt0t2/view?usp=drive_link",
   },
 ];
 

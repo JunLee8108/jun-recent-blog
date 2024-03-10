@@ -122,6 +122,7 @@ ul {
 .navbar-container {
   position: fixed;
   z-index: 10;
+  overflow-y: auto;
   width: 300px;
   height: 100%;
   display: flex;
@@ -133,6 +134,7 @@ ul {
 .navbar-intro-text {
   font-size: 14px;
   line-height: 25px;
+  font-weight: normal;
   letter-spacing: 0.5px;
 }
 

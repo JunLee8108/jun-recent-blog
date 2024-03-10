@@ -171,8 +171,8 @@ function Navbar() {
 
           <div className="navbar-intro">
             <p className="navbar-intro-text">
-              ‣ Hello, my name is Jeong Hyun Lee. I'm a computer science student
-              who seek a Full-Stack developer.
+              ‣ Hello, I'm a computer science student who seek a Full-Stack
+              developer.
             </p>
 
             <p className="navbar-intro-text-mobile">Jeong Hyun Lee</p>

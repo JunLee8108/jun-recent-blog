@@ -43,7 +43,7 @@
 
 .blog-detail-post-content {
   font-size: 1.1rem;
-  line-height: 50px;
+  line-height: 40px;
   width: 70%;
   max-width: 1200px;
   margin: 20px auto;
@@ -52,6 +52,7 @@
 
 .blog-detail-back-button {
   margin-top: 40px;
+  margin-bottom: 40px;
   padding: 20px 30px;
   border-radius: 50px;
   border: none;
@@ -102,7 +103,7 @@
 
   .blog-detail-post-content {
     font-size: 1.1rem;
-    line-height: 40px;
+    line-height: 35px;
     width: 100%;
   }
 }
