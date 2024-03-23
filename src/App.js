@@ -1,5 +1,4 @@
 import { Suspense, lazy } from "react";
-import { useEffect } from "react";
 
 import ScrollToTop from "./components/common/ScrollToTop";
 
@@ -19,11 +18,10 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 
-import React from "react";
-import ReactGA from "react-ga";
+import React, { useEffect } from "react";
+import ReactGA4 from "react-ga4";
 
-const TRACKING_ID = "G-7QEZP8TRFH"; // 실제 Google Analytics 추적 ID로 바꾸세요
-ReactGA.initialize(TRACKING_ID);
+ReactGA4.initialize("G-7QEZP8TRFH"); // 'G-XXXXXXXXXX'를 실제 GA4 추적 ID로 변경하세요.
 
 const Portfolio = lazy(() => import("./pages/Portfolio/Portfolio"));
 const Blog = lazy(() => import("./pages/Blog/Blog"));
@@ -33,10 +31,12 @@ const Page404 = lazy(() => import("./components/common/Page404"));
 
 function App() {
   useEffect(() => {
-    // 페이지 뷰를 기록
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []); // 의존성 배열을 비워서 컴포넌트가 마운트될 때만 실행되게 합니다.
-
+    // 페이지가 변경될 때마다 페이지 뷰를 기록
+    ReactGA4.send({
+      hitType: "pageview",
+      page: window.location.pathname + window.location.search,
+    });
+  }, []); // 의존성 배열을 비워서 컴포넌트가 마운트될 때만 실행되도록 합니다.
   return (
     <div className="App">
       <ScrollToTop />
