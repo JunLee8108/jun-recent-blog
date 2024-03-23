@@ -1,7 +1,7 @@
 import "./Blog.css";
 import { blogData } from "../../components/helpher/imgData";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -15,6 +15,10 @@ export default function Blog() {
 
   const handleClickPost = (id) => () => {
     navigate(`/blog/${id}`);
+  };
+
+  const handleFocusOut = () => {
+    setSearchInput("");
   };
 
   const searchedData = searchInput
@@ -31,6 +35,16 @@ export default function Blog() {
       )
     : null;
 
+  useEffect(() => {
+    if (searchInput) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [searchInput]);
+
+  console.log(!searchedData);
+
   return (
     <>
       <div className="blog container-layout">
@@ -43,6 +57,8 @@ export default function Blog() {
             placeholder="🔍 Search Post..."
             className="blog-search"
             onChange={handleSearch}
+            onBlur={handleFocusOut}
+            value={searchInput}
           ></input>
           <label htmlFor="blog-search-id">Search</label>
 
@@ -50,7 +66,9 @@ export default function Blog() {
             <div className="blog-search-result">
               {searchedData.length > 0 ? (
                 <>
-                  <h2 className="blog-search-result-title">Search Result</h2>
+                  <h2 className="blog-search-result-title">
+                    Search Result - {searchedData.length} results
+                  </h2>
                   {searchedData.map((item, index) => {
                     return (
                       <div className="blog-post" key={index}>

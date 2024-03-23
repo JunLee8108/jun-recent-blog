@@ -4,6 +4,7 @@
 
 :root {
   --navbar-background-color: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+  /* --navbar-background-color: #186049; */
   --container-background-color: linear-gradient(
     135deg,
     #fdfcfb 0%,

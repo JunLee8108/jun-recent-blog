@@ -19,6 +19,7 @@ function Navbar() {
 
   const controlModal = () => {
     setControlModalState((controlModalState) => !controlModalState);
+    document.body.style.overflow = "unset";
   };
 
   const closeModalWhenYouClickBG = (e) => {
